@@ -1,0 +1,10 @@
+1_Tienda Online o Pagina de Cursos 
+2_Proyecto 3D
+3_Juego del Tateti
+4_Crear Chat
+5_Crear calculadora
+6_Buscadore de peliculas
+7_Generador de Facturas
+8_App de celular
+9_ahorcado
+10_Encriptador
