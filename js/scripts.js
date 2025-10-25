@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // NAVEGACIÓN SUAVE
     // ========================================
-    const smoothScroll = () => {
+    const desplazamientoSuave = () => {
         const links = document.querySelectorAll('a[href^="#"]');
         
         links.forEach(link => {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // EFECTO DE NAVEGACIÓN ACTIVA
     // ========================================
-    const activeNavigation = () => {
+    const navegacionActiva = () => {
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('nav a[href^="#"]');
         
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             navLinks.forEach(link => {
-                link.classList.remove('active');
+                link.classList.remove('activo');
                 if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
+                    link.classList.add('activo');
                 }
             });
         });
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // VALIDACIÓN DE FORMULARIO
     // ========================================
-    const formValidation = () => {
+    const validacionFormulario = () => {
         const form = document.querySelector('form');
         if (!form) return;
         
@@ -68,41 +68,41 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Validación en tiempo real
         inputs.forEach(input => {
-            input.addEventListener('blur', validateField);
-            input.addEventListener('input', clearError);
+            input.addEventListener('blur', validarCampo);
+            input.addEventListener('input', limpiarError);
         });
         
         // Envío del formulario
-        form.addEventListener('submit', handleSubmit);
+        form.addEventListener('submit', manejarEnvio);
     };
 
-    const validateField = (e) => {
+    const validarCampo = (e) => {
         const field = e.target;
         const value = field.value.trim();
         
         // Remover errores previos
-        clearError(e);
+        limpiarError(e);
         
         // Validaciones específicas
         if (field.type === 'email') {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(value)) {
-                showError(field, 'Por favor ingresa un email válido');
+                mostrarError(field, 'Por favor ingresa un email válido');
             }
         } else if (field.name === 'name') {
             if (value.length < 2) {
-                showError(field, 'El nombre debe tener al menos 2 caracteres');
+                mostrarError(field, 'El nombre debe tener al menos 2 caracteres');
             }
         } else if (field.name === 'message') {
             if (value.length < 10) {
-                showError(field, 'El mensaje debe tener al menos 10 caracteres');
+                mostrarError(field, 'El mensaje debe tener al menos 10 caracteres');
             }
         }
     };
 
-    const showError = (field, message) => {
+    const mostrarError = (field, message) => {
         const errorDiv = document.createElement('div');
-        errorDiv.className = 'error-message';
+        errorDiv.className = 'mensaje-error';
         errorDiv.textContent = message;
         errorDiv.style.color = '#e74c3c';
         errorDiv.style.fontSize = '12px';
@@ -112,17 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
         field.parentNode.appendChild(errorDiv);
     };
 
-    const clearError = (e) => {
+    const limpiarError = (e) => {
         const field = e.target;
         field.style.borderColor = '';
         
-        const errorMessage = field.parentNode.querySelector('.error-message');
+        const errorMessage = field.parentNode.querySelector('.mensaje-error');
         if (errorMessage) {
             errorMessage.remove();
         }
     };
 
-    const handleSubmit = (e) => {
+    const manejarEnvio = (e) => {
         e.preventDefault();
         
         const formData = new FormData(e.target);
@@ -134,21 +134,21 @@ document.addEventListener('DOMContentLoaded', function() {
         
         inputs.forEach(input => {
             if (!input.value.trim()) {
-                showError(input, 'Este campo es obligatorio');
+                mostrarError(input, 'Este campo es obligatorio');
                 isValid = false;
             }
         });
         
         if (isValid) {
             // Simular envío (aquí conectarías con tu backend)
-            showSuccessMessage();
+            mostrarMensajeExito();
             e.target.reset();
         }
     };
 
-    const showSuccessMessage = () => {
+    const mostrarMensajeExito = () => {
         const successDiv = document.createElement('div');
-        successDiv.className = 'success-message';
+        successDiv.className = 'mensaje-exito';
         successDiv.innerHTML = `
             <div style="
                 background: #27ae60;
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // ANIMACIONES DE SCROLL
     // ========================================
-    const scrollAnimations = () => {
+    const animacionesScroll = () => {
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -191,9 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }, observerOptions);
 
         // Elementos a animar
-        const animatedElements = document.querySelectorAll('.card, .project, .section');
+        const elementosAnimados = document.querySelectorAll('.tarjeta, .proyecto, .seccion');
         
-        animatedElements.forEach(el => {
+        elementosAnimados.forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -204,32 +204,141 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // INICIALIZAR TODAS LAS FUNCIONES
     // ========================================
-    smoothScroll();
-    activeNavigation();
-    formValidation();
-    scrollAnimations();
+    desplazamientoSuave();
+    navegacionActiva();
+    validacionFormulario();
+    animacionesScroll();
 
     // ========================================
     // CSS ADICIONAL PARA ANIMACIONES
     // ========================================
     const style = document.createElement('style');
     style.textContent = `
-        nav a.active {
-            color: var(--accent);
+        nav a.activo {
+            color: var(--acento);
             font-weight: 600;
         }
         
-        .btn:hover {
+        .boton:hover {
             transform: translateY(-2px);
             transition: transform 0.2s ease;
         }
         
-        .project:hover {
+        .proyecto:hover {
             transform: translateY(-4px);
             transition: transform 0.3s ease;
         }
     `;
     document.head.appendChild(style);
+
+    // ========================================
+    // FUNCIONES GLOBALES PARA CV Y NAVEGACIÓN
+    // ========================================
+    window.descargarCV = function() {
+        try {
+            // Verificar que el archivo existe antes de intentar descargarlo
+            fetch('recursos/CV_Jonatan__Mendez.pdf')
+                .then(response => {
+                    if (response.ok) {
+                        // Crear un enlace temporal para descargar el CV
+                        const enlace = document.createElement('a');
+                        enlace.href = 'recursos/CV_Jonatan__Mendez.pdf';
+                        enlace.download = 'CV_Jonatan_Mendez.pdf';
+                        enlace.target = '_blank';
+                        
+                        // Agregar el enlace al DOM temporalmente
+                        document.body.appendChild(enlace);
+                        
+                        // Intentar la descarga
+                        enlace.click();
+                        
+                        // Remover el enlace después de la descarga
+                        setTimeout(() => {
+                            if (enlace.parentNode) {
+                                document.body.removeChild(enlace);
+                            }
+                        }, 100);
+                        
+                        // Mostrar mensaje de confirmación
+                        mostrarNotificacion('CV descargado correctamente', 'exito');
+                    } else {
+                        throw new Error('Archivo no encontrado');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al verificar/descargar CV:', error);
+                    mostrarNotificacion('Error: No se pudo encontrar el archivo CV', 'error');
+                });
+            
+        } catch (error) {
+            console.error('Error al descargar CV:', error);
+            mostrarNotificacion('Error al descargar el CV. Verifica que el archivo existe.', 'error');
+        }
+    };
+
+    window.scrollToContact = function() {
+        const seccionContacto = document.getElementById('contacto');
+        if (seccionContacto) {
+            const offsetTop = seccionContacto.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    // Función para mostrar notificaciones
+    function mostrarNotificacion(mensaje, tipo = 'info') {
+        const notificacion = document.createElement('div');
+        notificacion.className = `notificacion notificacion-${tipo}`;
+        notificacion.innerHTML = `
+            <div style="
+                background: ${tipo === 'exito' ? '#27ae60' : tipo === 'error' ? '#e74c3c' : '#3498db'};
+                color: white;
+                padding: 12px 16px;
+                border-radius: 8px;
+                margin: 10px 0;
+                font-weight: 600;
+                font-size: 14px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                animation: slideIn 0.3s ease;
+            ">
+                ${mensaje}
+            </div>
+        `;
+        
+        // Agregar estilos de animación
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateY(-20px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+            .notificacion {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+                max-width: 300px;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Insertar notificación
+        document.body.appendChild(notificacion);
+        
+        // Remover después de 3 segundos
+        setTimeout(() => {
+            if (notificacion.parentNode) {
+                notificacion.style.animation = 'slideIn 0.3s ease reverse';
+                setTimeout(() => {
+                    if (notificacion.parentNode) {
+                        notificacion.remove();
+                    }
+                }, 300);
+            }
+        }, 3000);
+    }
 
     console.log('🚀 Portfolio JavaScript cargado correctamente');
 });
