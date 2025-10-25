@@ -1,341 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonatan Mendez - Desarrollador Full Stack</title>
-    <meta name="description" content="Portafolio de Jonatan Mendez - Desarrollador Full Stack especializado en C#, .NET, JavaScript y tecnologías web. Experiencia en INDRA, I2T y 2D Soluciones.">
-    <meta name="keywords" content="desarrollador full stack, C#, .NET, JavaScript, HTML, CSS, SQL Server, Azure DevOps, desarrollador web">
-    <meta name="author" content="Jonatan Mendez">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Jonatan Mendez - Desarrollador Full Stack">
-    <meta property="og:description" content="Desarrollador Full Stack con experiencia en empresas líderes. Especializado en desarrollo web y aplicaciones empresariales.">
-    <meta property="og:image" content="Imagenes/Mi_foto.jpeg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Jonatan Mendez - Desarrollador Full Stack">
-    <meta property="twitter:description" content="Desarrollador Full Stack con experiencia en empresas líderes.">
-    
-    <link rel="icon" type="image/png" href="Imagenes/Logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jonatan Mendez — Desarrollador FullStack</title>
+  <meta name="description" content="Portafolio de Jonatan Mendez - Desarrollador FullStack .NET" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!--MENU NAVEGACIÓN-->
-    <header class="Contenedor-Menu">
-        <nav class="Menu">
-            <a href="#SobreMi">Sobre Mi</a>
-            <a href="#Experiencias">Experiencias</a>
-            <a href="#Tecnologias">Tecnologias</a>
-            <a href="#Proyectos">Proyectos</a>
-            <a href="#Contactos">Contacto</a>
-            <a href="#Inicio"><img src="Imagenes/Logo.png" alt="Logo Jonatan Mendez" class="Logo"></a>
-        </nav>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div>
+            <img src="/imagenes/Logo.png" class="logo">
+        </div>
+        <div>
+          <div style="font-weight:800">Jonatan Mendez</div>
+          <div style="font-size:13px;color:var(--muted)">Desarrollador Full Stack • Analista en Sistemas</div>
+        </div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <a href="#about">Sobre mí</a>
+        <a href="#experiences">Experiencias</a>
+        <a href="#portfolio">Proyectos</a>
+        <a href="#technologies">Tecnologías</a>
+        <a href="#contact">Contacto</a>
+      </nav>
     </header>
 
     <main>
-    <!--PORTADA-->
-    <div> 
-        <div id="Inicio" class="Cuadro-Titulo">
-            <video src="Videos/red-45961.mp4" autoplay="true" muted="true" loop="true" class="Img_Portada"></video>
-            <div class="Titulo-Principal">               
-                <h2 class="hola-soy">Hola soy</h2>
-                <h1 class="Jonatan-Mendez">Jonatan Mendez</h1>
-                <h2 class="Info">Desarrollador Full Stack | Estudiante de Tecnicatura en Informatica
-                    <span>&nbsp;</span>
-                </h2>
-                <div class="iconos-redes">
-                    <a href="https://www.linkedin.com/in/jonatan-ezequiel-mendez-6aa1a3176/" target="_blank"><img src="Imagenes/Linkedin.png" alt="LinkedIn de Jonatan Mendez" class="Icono-P"></a>
-                    <a href="mailto:jonatanmendez17@hmail.com"><img src="Imagenes/Correo.png" alt="Enviar email a Jonatan Mendez" class="Icono-P"></a>
-                    <a href="https://github.com/JonatanMendez17/Portafolio.git" target="_blank"><img src="Imagenes/Git.png" alt="GitHub de Jonatan Mendez" class="Icono-P"></a>
-                    <a href="https://wa.me/5493424071523" target="_blank"><img src="Imagenes/Whatsapp.png" alt="WhatsApp de Jonatan Mendez" class="Icono-P"></a>
-                </div>
-            </div>
+      <section class="hero">
+        <div class="card">
+          <h1 class="headline">Hola — soy <span style="background:linear-gradient(90deg,var(--accent),#3b82f6);-webkit-background-clip:text;background-clip:text;color:transparent">Jonatan Mendez</span></h1>
+          <p class="sub">Desarrollador FullStack con experiencia en empresas líderes como INDRA, I2T y 2D Soluciones. Me especializo en desarrollo web, aplicaciones empresariales y tecnologías .NET.</p>
+          <div class="cta-row">
+            <button class="btn btn-primary">Contratarme</button>
+            <button class="btn btn-ghost">Ver CV</button>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><div style="font-size:18px">+7</div><small>Años de experiencia</small></div>
+            <div class="stat"><div style="font-size:18px">+3</div><small>Proyectos</small></div>
+            <div class="stat"><div style="font-size:18px">28</div><small>Años de edad</small></div>
+          </div>
+
         </div>
-    </div>
 
-    <!--SOBRE MI-->    
-    <div class="Contenedor-SobreMi">
-        <section class="Tarjeta-Pres">
-            <div class="Barra_1"></div>
-            <div id="SobreMi" class="Sobre-Mi">
-                <div class="Boton-imagen">
-                    <img src="Imagenes/Mi_foto.jpeg" alt="Foto de Jonatan Mendez" class="Mi-Foto">
-                    <button class="Des-cv">Descargar CV</button>
-                </div>
-                <div class="Contenedor-Info">
-                    <h2>Sobre Mi</h2>
-                    <p class="Texto_SobreMi">Tengo 25 años y soy de la ciudad de Santa Fe, Argentina. Desde pequeño tuve un gran interés por la tecnología. A los 14 años, en mi familia, solía ser el "técnico" que descubría cómo solucionar algunos problemas en la computadora de casa, televisores y celulares. Poco a poco, me fui interiorizando cada vez más en el mundo informático, tomando pequeños cursos hasta que decidí comenzar una carrera universitaria.</p>
-                    <p class="Texto_SobreMi">Actualmente, trabajo en el rubro de IT como Analista Desarrollador y, al mismo tiempo, continúo mis estudios en la Universidad Nacional del Litoral, donde curso la Tecnicatura Universitaria en Informática de Gestión. Estoy felizmente casado con Mariana, la mujer de mi vida. Juntos, tenemos un pequeño niño de seis años llamado Caleb, quienes son mi gran motivación todos los días. Mi objetivo es recibirme y seguir creciendo en el área de IT, más específicamente como desarrollador.</p>
-                </div>
-            </div>
-        </section>
-    </div>
+        <aside class="profile card">
+          <div class="avatar">
+            <img src="/imagenes/JM.jpg" class="avatar">
+          </div>
+          <div>
+            <div class="role">Desarrollador Full Stack</div>
+            <p style="color:var(--muted);margin:8px 0;max-width:260px">Especializado en desarrollo web, aplicaciones empresariales y tecnologías .NET. Experiencia en análisis funcional y desarrollo backend.</p>
+          </div>
+        </aside>
+      </section>
 
-    <!--MIS CLIENTES-->  
-    <section>
-        <h3>Clientes</h3>
-        <div>
-            <h3>Clientes satisfechos</h3>
-            <h1>5</h1>
+      <section id="about" class="section card">
+        <div class="grid-2">
+          <div>
+            <h3 style="margin-top:0">Sobre mí</h3>
+            <p style="color:var(--muted)">Tengo 25 años y soy de la ciudad de Santa Fe, Argentina. Desde pequeño tuve un gran interés por la tecnología. Actualmente, trabajo en el rubro de IT como Analista Desarrollador y continúo mis estudios en la Universidad Nacional del Litoral, donde curso la Tecnicatura Universitaria en Informática de Gestión.</p>
+
+            <h4 style="margin-bottom:8px">Me dedido a</h4>
+            <ul style="color:var(--muted);margin-top:0">
+              <li>Desarrollo de aplicaciones web y empresariales</li>
+              <li>Análisis funcional y diseño de sistemas</li>
+              <li>Implementación de soluciones backend con C# y .NET</li>
+            </ul>
+          </div>
         </div>
-        <div>
-            <h3>Tazas de cafe</h3>
-            <h1>80</h1>
+      </section>
+
+      <section id="experiences" class="section card">
+        <h3>Experiencias Profesionales</h3>
+        <div style="display:grid;gap:16px;margin-top:12px">
+          <div style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.02)">
+            <div style="font-weight:800;color:var(--accent)">INDRA</div>
+            <div style="color:var(--muted);font-size:13px;margin:4px 0">Analista Funcional</div>
+            <div style="color:var(--muted);font-size:14px">Proyecto con el Poder Judicial de la provincia de Santa Fe colaborando en implementación de Sistema Integral de Expedientes Judiciales, revelamiento de procesos, análisis, alcance y diseño del sistema.</div>
+          </div>
+          
+          <div style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.02)">
+            <div style="font-weight:800;color:var(--accent)">I2T SOL. DE SOFTWARE</div>
+            <div style="color:var(--muted);font-size:13px;margin:4px 0">Desarrollador WordPress & Back-end</div>
+            <div style="color:var(--muted);font-size:14px">Proyecto con tienda Toselli Hogar colaborando en la creación de página web para presentación de sus productos e implementando ecommerce. También desarrollo Back-end para Jerarquicos Salud.</div>
+          </div>
+          
+          <div style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.02)">
+            <div style="font-weight:800;color:var(--accent)">2D SOLUCIONES</div>
+            <div style="color:var(--muted);font-size:13px;margin:4px 0">Analista Desarrollador</div>
+            <div style="color:var(--muted);font-size:14px">Proyecto con la empresa Telecom Argentina colaborando en aplicación web para usuario final. Realizando pruebas y mejoras funcionales para las mejoras técnicas y nuevas funcionalidades.</div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- EXPERIENCIAS-->
-    <section id="Experiencias" class="Experiencias">
-        <div class="Barra_2"><h2 class="Titulo_exp">Experiencias</h2></div>
-        <article class="Contenedor-Exp">
-                <div class="Sub-Titulo">
-                    <img src="Imagenes/Portafolio_work.png" alt="" class="Portafolio-work1">
-                    <h3 class="Titulo_exp">INDRA</h3>
-                </div>
-                <p class="Texto_exp">
-                    Analista Funcional, Proyecto con el Poder Judicial de la provincia de Santa Fe colaborando en implementación de Sistema Integral de Expedientes Judiciales, revelamiento de procesos, análisis, alcance y diseño del sistema. Especificaciones de requerimientos, elaboración de manuales de usuario, capacitación a usuario finales, mesa de ayuda. Pruebas unitarias, de integración y aceptación, detección de error y participación en mejoras continuas, desarrollar y ejecuciòn de casos de prueba, reporte de defectos, reportes de bugs y pruebas en entregas posteriores. (Utilizando Jira, Mantis Bug Tracker, SQL Developor)
-                </p>
-        </article>
-        <article class="Contenedor-Exp">
-                <div class="Sub-Titulo">
-                    <img src="Imagenes/Portafolio_work.png" alt="" class="Portafolio-work1">
-                    <h3 class="Titulo_exp">I2T SOL. DE SOFTWARE</h3>
-                </div>
-                <p class="Texto_exp">Desarrollador WordPress, Proyecto con tienda Toselli Hogar colaborando en la creacion de pagina web para presentacion de sus productos e implementando ecommerce. Diseño web, interfaz de usuario y testing funcional. (Utilizando en parte HTML5, CSS3)</p>
-                <p></p>
-                <p class="Texto_exp">Desarrollador Back-end, Proyecto con la mutual Jerarquicos Salud colaborando en la mejora continua de los procesos para aplicaciones de gestion internas y desarrollando nuevos procesos. Creacion de los consultas en la base de datos para interaccion en back-end y diseño de interfaz de usuario. (Utilizando Visual Basic, Git, Azure DevOps, SQL Serven)</p>
-        </article>
-        <article class="Contenedor-Exp">
-                <div class="Sub-Titulo">
-                    <img src="Imagenes/Portafolio_work.png" alt="" class="Portafolio-work1">
-                    <h3 class="Titulo_exp">2D SOLUCIONES</h3>
-                </div>
-                <p class="Texto_exp">
-                    Analista Desarrollador, Proyecto con la empresa Telecom Argentina colaborando en aplicacion web para usuario final. Realizando pruebas y mejoras funcionales para las mejoras tecnicas y nuevas funcionalidades. Documentando casos de pruebas y manual de usuario. Analisis en el desarrollo de la base de datos, con inclinacion progresiva al desarrollo Back-end. Empleando el marco de trabajo para desarrollo ágil de software, Scrum. (Utilizando Jira, Confluence, Bizagi, Postman, C#, SQL Developer)            
-                </p>
-        </article>
-    </section>
+      <section id="portfolio" class="section">
+        <h3>Proyectos destacados</h3>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px">
+          <div class="project">
+            <div class="thumb">Calculadora Web</div>
+            <div class="meta">
+              <div style="font-weight:800">Calculadora Web</div>
+              <div style="color:var(--muted);font-size:13px">Calculadora interactiva desarrollada con JavaScript puro, HTML5 y CSS3. Incluye operaciones básicas y avanzadas.</div>
+            </div>
+          </div>
 
-    <!-- TECNOLOGIAS Y HERRAMIENTAS-->
-    <section id="Tecnologias" class="Tecnologias-herramientas">
-        <div class="Barra_1"></div>
-        <div class="Tarj-tecno"><p>En esta seccion se mostrara las tecnologias que conozco y tambien las herramientos que utilice en varios proyectos</p></div>
-        <div>
-            <article class="Carrucel-Tecno">
-                <div><h2 class="Tit-tecno">Tecnologias</h2></div>
-                <div class="Iconos-T">
-                    <Div class="Diseño1">
-                        <img src="Imagenes/HTML.png" alt="">
-                        <h4>HTML</h4>
-                    </Div>
-                    <div class="Diseño2">
-                        <img src="Imagenes/CSS.png" alt="">
-                        <h4>CSS</h4>
-                    </div>
-                    <div class="Diseño3">
-                        <img src="Imagenes/JavaScript.png" alt="">
-                        <h4>JavaScript</h4>
-                    </div>
-                    <div class="Diseño4">
-                        <img src="Imagenes/C-shard.png" alt="">
-                        <h4>C#</h4>
-                    </div>
-                    <div class="Diseño5">
-                        <img src="Imagenes/NET.png" alt="">
-                        <h4>.NET</h4>
-                    </div>
-                    <div class="Diseño6">
-                        <img src="Imagenes/Git-S.png" alt="">
-                    <h4>GitHub</h4>
-                    </div>
-                </div>
-            </article>
-            <article  class="Carrucel-Herram">
-                <div><h2 class="Tit-tecno">Herramientas</h2></div>
-                <div class="Iconos-H">
-                    <div class="Diseño7">
-                        <img src="Imagenes/Wordpress.png" alt="">
-                        <h4>Wordpress</h4>
-                    </div>
-                    <div class="Diseño8">
-                        <img src="Imagenes/Figma.png" alt="">
-                        <h4>Figma</h4>
-                    </div>
-                    <div class="Diseño9">
-                        <img src="Imagenes/Bitbucket.png" alt="">
-                        <h4>Bitbucket</h4>
-                    </div>
-                    <div class="Diseño10">
-                        <img src="Imagenes/Confluence.png" alt="">
-                        <h4>Confluence</h4>
-                    </div>
-                    <div class="Diseño11">
-                        <img src="Imagenes/Jira.png" alt="">
-                        <h4>Jira</h4>
-                    </div>
-                    <div class="Diseño12">
-                        <img src="Imagenes/Azure.png" alt="">
-                        <h4>Azure DevOps</h4>
-                    </div>
-                    <div class="Diseño13">
-                        <img src="Imagenes/Trello.png" alt="">
-                        <h4>Trello</h4>
-                    </div>
-                    <div class="Diseño14">
-                        <img src="Imagenes/Mantis.png" alt="">
-                        <h4>Mantis Tracker</h4>
-                    </div>
-                    <div class="Diseño15">
-                        <img src="Imagenes/SQLDeveloper.png" alt="">
-                        <h4>SQL Developer</h4>
-                    </div>
-                    <div class="Diseño16">
-                        <img src="Imagenes/SQLServer.png" alt="">
-                        <h4>SQL Server</h4>
-                    </div>
-                    <div class="Diseño17">
-                        <img src="Imagenes/Postman.png" alt="">
-                        <h4>Postman</h4>
-                    </div>
-                    <div class="Diseño18">
-                        <img src="Imagenes/Bizzagi.png" alt="">
-                        <h4>Bizzagi</h4>
-                    </div>
-                    <div class="Diseño19">
-                            <img src="Imagenes/Gitt.png" alt="">
-                        <h4>GitHub</h4>
-                    </div>
-                    <div class="Diseño20">
-                            <img src="Imagenes/Gitlab.png" alt="">
-                            <h4>GitLab</h4>
-                    </div>
-                </div>
-        </article>
+          <div class="project">
+            <div class="thumb">Buscador de Películas</div>
+            <div class="meta">
+              <div style="font-weight:800">Buscador de Películas</div>
+              <div style="color:var(--muted);font-size:13px">Aplicación web que consume API de películas para mostrar información detallada, trailers y calificaciones.</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="thumb">Generador de Facturas</div>
+            <div class="meta">
+              <div style="font-weight:800">Generador de Facturas</div>
+              <div style="color:var(--muted);font-size:13px">Sistema de facturación desarrollado en C# con .NET Framework para gestión empresarial.</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="thumb">Tienda Online</div>
+            <div class="meta">
+              <div style="font-weight:800">Tienda Online</div>
+              <div style="color:var(--muted);font-size:13px">E-commerce completo desarrollado con WordPress, WooCommerce y plugins personalizados.</div>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- PROYECTOS-->
-    <section id="Proyectos" class="Proyectos">
-        <div class="Barra_4"></div>
-        <h2>Proyectos Destacados</h2>
-        <div class="Marco_proyecto">
-            <div class="Pre-Proyecto">
-                <div class="proyecto-imagen">
-                    <img src="Imagenes/Portafolio_work.png" alt="Calculadora JavaScript" class="img-proyecto">
-                </div>
-                <h3>Calculadora Web</h3>
-                <p class="descripcion-proyecto">Calculadora interactiva desarrollada con JavaScript puro, HTML5 y CSS3. Incluye operaciones básicas y avanzadas.</p>
-                <div class="tecnologias-proyecto">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <div class="proyecto-links">
-                    <a href="#" class="btn-proyecto demo">Ver Demo</a>
-                    <a href="https://github.com/JonatanMendez17" target="_blank" class="btn-proyecto github">GitHub</a>
-                </div>
-            </div>
-            
-            <div class="Pre-Proyecto">
-                <div class="proyecto-imagen">
-                    <img src="Imagenes/Portafolio_work.png" alt="Buscador de Películas" class="img-proyecto">
-                </div>
-                <h3>Buscador de Películas</h3>
-                <p class="descripcion-proyecto">Aplicación web que consume API de películas para mostrar información detallada, trailers y calificaciones.</p>
-                <div class="tecnologias-proyecto">
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">API REST</span>
-                    <span class="tech-tag">CSS3</span>
-                </div>
-                <div class="proyecto-links">
-                    <a href="#" class="btn-proyecto demo">Ver Demo</a>
-                    <a href="https://github.com/JonatanMendez17" target="_blank" class="btn-proyecto github">GitHub</a>
-                </div>
-            </div>
-            
-            <div class="Pre-Proyecto">
-                <div class="proyecto-imagen">
-                    <img src="Imagenes/Portafolio_work.png" alt="Generador de Facturas" class="img-proyecto">
-                </div>
-                <h3>Generador de Facturas</h3>
-                <p class="descripcion-proyecto">Sistema de facturación desarrollado en C# con .NET Framework para gestión empresarial.</p>
-                <div class="tecnologias-proyecto">
-                    <span class="tech-tag">C#</span>
-                    <span class="tech-tag">.NET</span>
-                    <span class="tech-tag">SQL Server</span>
-                </div>
-                <div class="proyecto-links">
-                    <a href="#" class="btn-proyecto demo">Ver Demo</a>
-                    <a href="https://github.com/JonatanMendez17" target="_blank" class="btn-proyecto github">GitHub</a>
-                </div>
-            </div>
-            
-            <div class="Pre-Proyecto">
-                <div class="proyecto-imagen">
-                    <img src="Imagenes/Portafolio_work.png" alt="Tienda Online WordPress" class="img-proyecto">
-                </div>
-                <h3>Tienda Online</h3>
-                <p class="descripcion-proyecto">E-commerce completo desarrollado con WordPress, WooCommerce y plugins personalizados.</p>
-                <div class="tecnologias-proyecto">
-                    <span class="tech-tag">WordPress</span>
-                    <span class="tech-tag">WooCommerce</span>
-                    <span class="tech-tag">PHP</span>
-                </div>
-                <div class="proyecto-links">
-                    <a href="#" class="btn-proyecto demo">Ver Demo</a>
-                    <a href="https://github.com/JonatanMendez17" target="_blank" class="btn-proyecto github">GitHub</a>
-                </div>
-            </div>   
-        </div>  
-    </section> 
-
-    <!-- CONTACTOS-->
-    <section id="Contactos">
-        <div class="Cuadro_contacto">
-            <div>
-                <h2 class="Titulo_Contacto">Contacto</h2>
-                <p class="Txt_Contacto">Puedes enviarme un mensaje y te respondere a la brevedad. Tambien puedes enviarme sugerencias o tips</p>
-            </div>
-            <div class="imag-forms">
-                <img src="Imagenes/chat.png" alt="Icono de chat para contacto" class="Img-Contacto">
-                <form action="" class="Contenedor-Accion">           
-                        <input id="Nombre" type="text" name="Nombre" placeholder="Nombre" class="Cuadro_Nombre">
-                        <input id="Correo" type="email" name="Correo" placeholder="Correo electronico" class="Cuadro_Correo">
-                        <textarea id="Text" type="text" name="Text" placeholder="Escriba su mensaje aqui..." class="Cuadro_Mensaje"></textarea>
-                        <input type="submit" value="Enviar!" class="Enviar">
-                </form>
-            </div>
+        <div style="margin-top:14px;text-align:center">
+          <a href="#portfolio" style="text-decoration:none;padding:10px 14px;border-radius:12px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:700">Ver más proyectos</a>
         </div>
-    </section>
-    </main> 
+      </section>
 
-     <!-- PIE DE PAGINA-->
-    <footer class="footer">
-        <a href="index.html"><img src="Imagenes/Logo.png" alt="Logo Jonatan Mendez" class="Logo_Footer"></a>
-        <div class="Barra_6"></div>
-        <div>
-            <div>
-                <a href="https://www.linkedin.com/in/jonatan-ezequiel-mendez-6aa1a3176/" target="_blank"><img src="Imagenes/Linkedin_F.png" alt="LinkedIn de Jonatan Mendez" class="Iconos_F"></a>
-                <a href="mailto:jonatanmendez17@hmail.com"><img src="Imagenes/Gmail_F.png" alt="Email de Jonatan Mendez" class="Iconos_F"></a>
-                <a href="https://github.com/JonatanMendez17/Portafolio.git" target="_blank"><img src="Imagenes/GitHub_F.png" alt="GitHub de Jonatan Mendez" class="Iconos_F"></a>
-                <a href="https://wa.me/5493424071523" target="_blank"><img src="Imagenes/whatsapp_F.png" alt="WhatsApp de Jonatan Mendez" class="Iconos_F"></a>
+      <section id="technologies" class="section card">
+        <h3>Tecnologías y Herramientas</h3>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:12px">
+          <div>
+            <h4 style="margin-bottom:8px">Tecnologías</h4>
+            <div class="skills">
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">C#</span>
+              <span class="pill">.NET</span>
+              <span class="pill">GitHub</span>
             </div>
-            <p></p>
-            <small>Muchas gracias por visitar este sitio</small>
-            <p></p>
-            <small>Copyright © | Coded with by Jonatan Mendez</small>
+          </div>
+          <div>
+            <h4 style="margin-bottom:8px">Herramientas</h4>
+            <div class="skills">
+              <span class="pill">WordPress</span>
+              <span class="pill">Figma</span>
+              <span class="pill">Jira</span>
+              <span class="pill">Azure DevOps</span>
+              <span class="pill">SQL Server</span>
+              <span class="pill">Postman</span>
+            </div>
+          </div>
         </div>
-        
+      </section>
+
+      <section id="services" class="section card">
+        <h3>Servicios</h3>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
+          <div style="padding:12px;border-radius:12px;background:rgba(255,255,255,0.02)">
+            <div style="font-weight:800">Desarrollo Web</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px">Desarrollo de aplicaciones web con HTML, CSS, JavaScript y tecnologías modernas.</div>
+          </div>
+
+          <div style="padding:12px;border-radius:12px;background:rgba(255,255,255,0.02)">
+            <div style="font-weight:800">Desarrollo Backend</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px">Implementación de soluciones backend con C#, .NET y SQL Server.</div>
+          </div>
+
+          <div style="padding:12px;border-radius:12px;background:rgba(255,255,255,0.02)">
+            <div style="font-weight:800">Análisis Funcional</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px">Análisis de requerimientos, diseño de sistemas y documentación técnica.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="card" style="display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
+          <div>
+            <h3 style="margin-top:0">Hablemos</h3>
+            <p style="color:var(--muted)">¿Tienes un proyecto o quieres colaborar? Déjame un mensaje y te responderé pronto.</p>
+
+            <form onsubmit="event.preventDefault();alert('Enviar formulario demo — reemplaza con tu endpoint')" style="display:grid;gap:10px;margin-top:8px">
+              <input name="name" placeholder="Nombre" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required>
+              <input name="email" type="email" placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required>
+              <textarea name="message" placeholder="Mensaje" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required></textarea>
+              <div style="display:flex;gap:10px">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+                <button class="btn btn-ghost" type="reset">Limpiar</button>
+              </div>
+            </form>
+          </div>
+
+          <aside style="padding:12px;border-radius:12px;background:rgba(255,255,255,0.02)">
+            <div style="font-weight:800">Contacto directo</div>
+            <div style="color:var(--muted);margin-top:8px">Email: jonatanmendez17@hmail.com</div>
+            <div style="color:var(--muted);margin-top:6px">Ubicación: Santa Fe, Argentina</div>
+
+            <div style="margin-top:12px">
+              <div style="font-weight:800;color:var(--muted);font-size:13px">Redes</div>
+              <div style="display:flex;gap:8px;margin-top:8px">
+                <a href="https://www.linkedin.com/in/jonatan-ezequiel-mendez-6aa1a3176/" target="_blank" aria-label="LinkedIn" style="text-decoration:none;color:var(--muted);font-weight:700">LinkedIn</a>
+                <a href="https://github.com/JonatanMendez17" target="_blank" aria-label="GitHub" style="text-decoration:none;color:var(--muted);font-weight:700">GitHub</a>
+                <a href="https://wa.me/5493424071523" target="_blank" aria-label="WhatsApp" style="text-decoration:none;color:var(--muted);font-weight:700">WhatsApp</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <strong>Jonatan Mendez</strong> — Desarrollador Full Stack • 2025</div>
     </footer>
+  </div>
 
-<!-- SCRIPTS-->
-    <script src="js/script.js"></script> 
-
+  <script src="js/scripts.js"></script>
+</body>
 </html>

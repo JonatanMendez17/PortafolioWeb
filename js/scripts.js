@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     const activeNavigation = () => {
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.Menu a[href^="#"]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
         
         window.addEventListener('scroll', () => {
             let current = '';
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // VALIDACIÓN DE FORMULARIO
     // ========================================
     const formValidation = () => {
-        const form = document.querySelector('.Contenedor-Accion');
+        const form = document.querySelector('form');
         if (!form) return;
         
         const inputs = form.querySelectorAll('input, textarea');
@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!emailRegex.test(value)) {
                 showError(field, 'Por favor ingresa un email válido');
             }
-        } else if (field.type === 'text' && field.name === 'Nombre') {
+        } else if (field.name === 'name') {
             if (value.length < 2) {
                 showError(field, 'El nombre debe tener al menos 2 caracteres');
             }
-        } else if (field.name === 'Text') {
+        } else if (field.name === 'message') {
             if (value.length < 10) {
                 showError(field, 'El mensaje debe tener al menos 10 caracteres');
             }
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
         
-        const form = document.querySelector('.Contenedor-Accion');
+        const form = document.querySelector('form');
         form.parentNode.insertBefore(successDiv, form);
         
         // Remover mensaje después de 5 segundos
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, observerOptions);
 
         // Elementos a animar
-        const animatedElements = document.querySelectorAll('.Tarjeta-Pres, .Contenedor-Exp, .Pre-Proyecto');
+        const animatedElements = document.querySelectorAll('.card, .project, .section');
         
         animatedElements.forEach(el => {
             el.style.opacity = '0';
@@ -214,9 +214,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     const style = document.createElement('style');
     style.textContent = `
-        .Menu a.active {
-            color: var(--secondary-color);
+        nav a.active {
+            color: var(--accent);
             font-weight: 600;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s ease;
+        }
+        
+        .project:hover {
+            transform: translateY(-4px);
+            transition: transform 0.3s ease;
         }
     `;
     document.head.appendChild(style);
