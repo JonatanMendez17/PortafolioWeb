@@ -326,7 +326,8 @@
       grid-template-columns:1fr 380px;
       gap:28px;
       margin-top:28px;
-      align-items:center
+      align-items:stretch;
+      min-height:400px;
     }
 
     .tarjeta{
@@ -334,7 +335,11 @@
       border-radius:var(--radio);
       padding:28px;
       box-shadow:0 8px 30px rgba(2,6,23,0.6);
-      backdrop-filter:blur(6px)
+      backdrop-filter:blur(6px);
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
     }
 
     .titulo-principal{
@@ -374,13 +379,19 @@
     .perfil{
       display:flex;
       flex-direction:column;
-      gap:12px;align-items:center;
-      text-align:center
+      gap:12px;
+      align-items:center;
+      text-align:center;
+      height:100%;
+      justify-content:center;
     }
     
     .avatar{
       width:160px;
-      border-radius:20px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      object-position:center;
     }
 
     /* stats */
@@ -410,9 +421,12 @@
     }
 
     .cuadricula-2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+    /* gap: 20px; */
+    flex-direction: column;
+    text-align: justify;
+    justify-content: center;
     }
 
     .habilidades{
@@ -426,7 +440,92 @@
       border-radius:999px;
       background:rgba(255,255,255,0.03);
       color:var(--apagado);
-      font-weight:600
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:6px;
+      transition:all 0.3s ease;
+      cursor:pointer;
+    }
+
+    .pastilla svg{
+      width:16px;
+      height:16px;
+      flex-shrink:0;
+      transition:all 0.3s ease;
+    }
+
+    /* Hover effects for each technology */
+    .pastilla[data-tech="html"]:hover{
+      background:#e34f26;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="css"]:hover{
+      background:#1572b6;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="javascript"]:hover{
+      background:#f7df1e;
+      color:#000;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="csharp"]:hover{
+      background:#239120;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="dotnet"]:hover{
+      background:#512bd4;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="github"]:hover{
+      background:#333;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="wordpress"]:hover{
+      background:#21759b;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="figma"]:hover{
+      background:#f24e1e;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="jira"]:hover{
+      background:#0052cc;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="azure"]:hover{
+      background:#0078d4;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="sql"]:hover{
+      background:#cc2927;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .pastilla[data-tech="postman"]:hover{
+      background:#ff6c37;
+      color:white;
+      transform:translateY(-2px);
     }
 
     .proyecto{
@@ -452,10 +551,87 @@
     }
 
     footer{
-      margin-top:48px;
-      padding:18px;
-      text-align:center;
-      color:var(--apagado)
+      margin-top:100px;
+      padding:40px 24px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-top:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(6px);
+    }
+
+    .footer-contenido{
+      max-width:1100px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .footer-info{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .footer-nombre{
+      font-size:16px;
+      font-weight:600;
+      color:#e6eef8;
+    }
+
+    .footer-descripcion{
+      font-size:14px;
+      color:var(--apagado);
+    }
+
+    .footer-redes{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      align-items:flex-end;
+    }
+
+    .footer-titulo{
+      font-size:16px;
+      font-weight:600;
+      color:#e6eef8;
+    }
+
+    .redes-sociales-footer{
+      display:flex;
+      gap:20px;
+    }
+
+    .red-social-footer{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:12px 16px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      text-decoration:none;
+      color:var(--apagado);
+      font-weight:600;
+      font-size:14px;
+      transition:all 0.3s ease;
+    }
+
+    .red-social-footer:hover{
+      background:var(--acento);
+      color:white;
+      transform:translateY(-2px);
+      border-color:var(--acento);
+    }
+
+    .red-social-footer svg{
+      width:20px;
+      height:20px;
+      transition:color 0.3s ease;
+    }
+
+    .red-social-footer:hover svg{
+      color:white;
     }
 
     @media (max-width:900px){
@@ -488,9 +664,24 @@
         gap: 16px;
       }
       
+      .footer-contenido{
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+      }
+      
+      .footer-redes{
+        align-items: center;
+      }
+      
+      .redes-sociales-footer{
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
       .heroe     {grid-template-columns:1fr;}
       .perfil  {flex-direction:row;align-items:center;text-align:left}
-      .avatar   {width:96px;height:96px}
+      .avatar   {width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center}
       .titulo-principal {font-size:22px}
       .cuadricula-2   {grid-template-columns:1fr}
     }
