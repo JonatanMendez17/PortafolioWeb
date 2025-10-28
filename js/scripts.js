@@ -340,5 +340,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
+
+    // ========================================
+    // MENÚ HAMBURGUESA
+    // ========================================
+    window.toggleMenu = function() {
+        const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+        const navEnlaces = document.querySelector('.nav-enlaces');
+        
+        menuHamburguesa.classList.toggle('activo');
+        navEnlaces.classList.toggle('activo');
+    };
+
+    // Cerrar menú al hacer clic en un enlace
+    const cerrarMenuAlClic = () => {
+        const navEnlaces = document.querySelector('.nav-enlaces');
+        const enlaces = navEnlaces.querySelectorAll('a');
+        
+        enlaces.forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+                menuHamburguesa.classList.remove('activo');
+                navEnlaces.classList.remove('activo');
+            });
+        });
+    };
+
+    // Ejecutar funciones
+    desplazamientoSuave();
+    navegacionActiva();
+    efectoParallax();
+    animacionesScroll();
+    modoOscuro();
+    cerrarMenuAlClic();
+    mostrarNotificacion('¡Portfolio cargado correctamente!', 'success');
+
     console.log('🚀 Portfolio JavaScript cargado correctamente');
 });
