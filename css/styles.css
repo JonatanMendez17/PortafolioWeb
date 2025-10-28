@@ -136,14 +136,15 @@
       transform: translateY(-2px);
     }
 
-    .red-social img{
+    .red-social svg{
       width: 24px;
       height: 24px;
-      filter: brightness(0) invert(1);
+      color: #e6eef8;
+      transition: color 0.3s ease;
     }
 
-    .red-social:hover img{
-      filter: brightness(0) invert(1);
+    .red-social:hover svg{
+      color: white;
     }
 
     .boton-cv{
