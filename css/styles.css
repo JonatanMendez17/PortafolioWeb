@@ -33,9 +33,190 @@
 
     header{
       display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px
+      flex-direction:column;
+      gap:24px
+    }
+
+    /* Portada */
+    .portada{
+      /* background: var(--fondo); */
+      padding: 60px 0;
+      margin: -24px -24px 0 -24px;
+      margin-top: 80px;
+    }
+
+    .portada-contenido{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      min-height: 70vh;
+    }
+
+    .portada-izquierda{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .saludo{
+      font-size: 18px;
+      color: #e6eef8;
+      font-weight: 400;
+    }
+
+    .nombre-portada{
+      font-size: 48px;
+      font-weight: 800;
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    .nombre-principal{
+      color: #e6eef8;
+    }
+
+    .nombre-destacado{
+      color: var(--acento);
+    }
+
+    .titulo-portada{
+      font-size: 24px;
+      color: #e6eef8;
+      font-weight: 600;
+    }
+
+    .titulo-destacado{
+      color: var(--acento);
+    }
+
+    .cursor{
+      color: var(--acento);
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .descripcion-portada{
+      color: #94a3b8;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 0;
+      text-align: justify;
+    }
+
+    .redes-sociales{
+      display: flex;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .red-social{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid var(--acento);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .red-social:hover{
+      background: var(--acento);
+      transform: translateY(-2px);
+    }
+
+    .red-social img{
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1);
+    }
+
+    .red-social:hover img{
+      filter: brightness(0) invert(1);
+    }
+
+    .boton-cv{
+      background: linear-gradient(90deg, var(--acento), #3b82f6);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      align-self: flex-start;
+    }
+
+    .boton-cv:hover{
+      background: linear-gradient(90deg, #6d28d9, #2563eb);
+      transform: translateY(-2px);
+    }
+
+    .portada-derecha{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-principal{
+      width: 400px;
+      height: 400px;
+      object-fit: contain;
+    }
+
+    .texto-logo{
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--acento);
+      letter-spacing: 4px;
+    }
+
+    .navegacion-principal{
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--fondo);
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navegacion-principal a{
+      color: var(--apagado);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navegacion-principal a:hover{
+      color: var(--acento);
     }
 
     .marca{
@@ -202,6 +383,35 @@
     }
 
     @media (max-width:900px){
+      .portada-contenido{
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      
+      .nombre-portada{
+        font-size: 36px;
+      }
+      
+      .titulo-portada{
+        font-size: 20px;
+      }
+      
+      .logo-principal{
+        width: 150px;
+        height: 150px;
+      }
+      
+      .texto-logo{
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+      
+      .navegacion-principal{
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      
       .heroe     {grid-template-columns:1fr;}
       .perfil  {flex-direction:row;align-items:center;text-align:left}
       .avatar   {width:96px;height:96px}

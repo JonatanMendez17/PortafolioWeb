@@ -14,22 +14,53 @@
 <body>
   <div class="contenedor">
     <header>
-      <div class="marca">
-        <div>
-            <img src="/recursos/Logo.png" class="logo">
-        </div>
-        <div>
-          <div style="font-weight:800">Jonatan Mendez</div>
-          <div style="font-size:13px;color:var(--apagado)">Desarrollador Full Stack • Analista en Sistemas</div>
-        </div>
-      </div>
-      <nav aria-label="Navegación principal">
+      <!-- Navegación -->
+      <nav class="navegacion-principal" aria-label="Navegación principal">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#experiencias">Experiencias</a>
         <a href="#portafolio">Proyectos</a>
         <a href="#tecnologias">Tecnologías</a>
         <a href="#contacto">Contacto</a>
       </nav>
+
+      <!-- Portada -->
+      <section class="portada">
+        <div class="portada-contenido">
+          <div class="portada-izquierda">
+            <div class="saludo">Hola, yo soy</div>
+            <h1 class="nombre-portada">
+              <span class="nombre-principal">Jonatan</span>
+              <span class="nombre-principal">Mendez</span>
+            </h1>
+            <div class="titulo-portada">
+              Soy  <span class="titulo-destacado">Desarrollador FullStack</span><span class="cursor">|</span>
+            </div>
+            <p class="descripcion-portada">
+              Soy un apasionado de aprender y mantenerme actualizado sobre las últimas tendencias y tecnologías en el mundo de la programación. Creo que es esencial para el éxito en esta industria y estoy comprometido a mantenerme en la cima de mi juego para proporcionar el mejor trabajo posible en cada proyecto en el que trabajo.
+            </p>
+            
+            <div class="redes-sociales">
+              <a href="https://github.com/JonatanMendez17" target="_blank" class="red-social">
+                <img src="/recursos/GitHub_F.png" alt="GitHub">
+              </a>
+              <a href="#portafolio" class="red-social">
+                <img src="/recursos/Portafolio_work.png" alt="Portafolio">
+              </a>
+              <a href="https://www.linkedin.com/in/jonatan-ezequiel-mendez-6aa1a3176/" target="_blank" class="red-social">
+                <img src="/recursos/Linkedin_F.png" alt="LinkedIn">
+              </a>
+            </div>
+            
+            <button class="boton-cv" onclick="descargarCV()">Descargar CV</button>
+          </div>
+          
+          <div class="portada-derecha">
+            <div class="logo-container">
+              <img src="/recursos/Logo.png" class="logo-principal" alt="Logo Jonatan Mendez">
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
 
     <main>
