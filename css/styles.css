@@ -606,31 +606,31 @@
 
     /* Hover effects for each technology */
     .pastilla[data-tech="html"]:hover{
-      background:#e34f26;
+      background:#e34f2685;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="css"]:hover{
-      background:#1572b6;
+      background:#1573b682;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="javascript"]:hover{
-      background:#f7df1e;
-      color:#000;
+      background:#f7de1e66;
+      color:#ffffff;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="csharp"]:hover{
-      background:#239120;
+      background:#2491206f;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="dotnet"]:hover{
-      background:#512bd4;
+      background:#502bd47c;
       color:white;
       transform:translateY(-2px);
     }
@@ -642,25 +642,25 @@
     }
 
     .pastilla[data-tech="wordpress"]:hover{
-      background:#21759b;
+      background:#21749b7e;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="figma"]:hover{
-      background:#f24e1e;
+      background:#f24f1e95;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="jira"]:hover{
-      background:#0052cc;
+      background:#0052cc6f;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="azure"]:hover{
-      background:#0078d4;
+      background:#0078d46b;
       color:white;
       transform:translateY(-2px);
     }
@@ -672,20 +672,20 @@
     }
 
     .pastilla[data-tech="postman"]:hover{
-      background:#ff6c37;
+      background:#ff6c3784;
       color:white;
       transform:translateY(-2px);
     }
 
 /* Databases */
 .pastilla[data-tech="mssql"]:hover{
-  background:#cc2927; /* SQL Server red */
+  background:#cc2a2786; /* SQL Server red */
   color:white;
   transform:translateY(-2px);
 }
 
 .pastilla[data-tech="oracle"]:hover{
-  background:#f80000; /* Oracle red */
+  background:#f8000072; /* Oracle red */
   color:white;
   transform:translateY(-2px);
 }
@@ -698,86 +698,86 @@
 
     /* Nuevas tecnologías */
     .pastilla[data-tech="nodejs"]:hover{
-      background:#339933;
+      background:#33993388;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="python"]:hover{
-      background:#3776ab;
+      background:#3777ab7b;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="php"]:hover{
-      background:#777bb4;
+      background:#777bb48b;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="react"]:hover{
-      background:#61dafb;
-      color:#000;
+      background:#61dafb7f;
+      color:#ffffff;
       transform:translateY(-2px);
     }
 
-    .pastilla[data-tech="bootstrap"]:hover{
-      background:#7952b3;
+      .pastilla[data-tech="bootstrap"]:hover{
+      background:#7952b38c;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="photoshop"]:hover{
-      background:#31a8ff;
+      background:#31a9ff81;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="elementor"]:hover{
-      background:#92003b;
+      background:#92003aad;
       color:white;
       transform:translateY(-2px);
     }
 
     .pastilla[data-tech="woocommerce"]:hover{
-      background:#96588a;
+      background:#96588aa6;
       color:white;
       transform:translateY(-2px);
     }
 
 .pastilla[data-tech="divi"]:hover{
-  background:#7c3aed; /* morado acorde al tema */
+  background:#7c3aedab; /* morado acorde al tema */
   color:white;
   transform:translateY(-2px);
 }
 
 /* Dev tools */
 .pastilla[data-tech="gitlab"]:hover{
-  background:#fc6d26;
+  background:#fc6d269a;
   color:white;
   transform:translateY(-2px);
 }
 
 .pastilla[data-tech="bitbucket"]:hover{
-  background:#0052cc;
+  background:#0052cc85;
   color:white;
   transform:translateY(-2px);
 }
 
 .pastilla[data-tech="confluence"]:hover{
-  background:#172b4d;
+  background:#172b4db1;
   color:white;
   transform:translateY(-2px);
 }
 
 .pastilla[data-tech="visualstudio"]:hover{
-  background:#5c2d91;
+  background:#5c2d91b9;
   color:white;
   transform:translateY(-2px);
 }
 
     .pastilla[data-tech="vscode"]:hover{
-      background:#007acc;
+      background:#007accb2;
       color:white;
       transform:translateY(-2px);
     }
