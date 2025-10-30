@@ -161,12 +161,14 @@
       gap: 60px;
       align-items: center;
       min-height: 70vh;
+  grid-template-areas: "left right";
     }
 
     .portada-izquierda{
       display: flex;
       flex-direction: column;
       gap: 20px;
+  grid-area: left;
     }
 
     .saludo{
@@ -288,6 +290,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+  grid-area: right;
     }
 
     .logo-container{
@@ -1041,6 +1044,9 @@
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
+    grid-template-areas:
+      "right"
+      "left";
       }
       
       .nombre-portada{
