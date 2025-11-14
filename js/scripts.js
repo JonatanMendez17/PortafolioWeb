@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    const manejarEnvio = (e) => {
+    const manejarEnvio = async (e) => {
         e.preventDefault();
         
         const formData = new FormData(e.target);
@@ -182,38 +182,67 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        if (isValid) {
-            // Simular envío (aquí conectarías con tu backend)
-            mostrarMensajeExito();
+        if (!isValid) return;
+        
+        // Deshabilitar el botón de envío mientras se procesa
+        const submitButton = e.target.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Enviando...';
+        
+        try {
+            // Verificar que EmailJS esté cargado
+            if (typeof emailjs === 'undefined') {
+                throw new Error('EmailJS no está cargado. Verifica que el script esté incluido en el HTML.');
+            }
+            
+            // Verificar que la configuración esté definida
+            if (typeof EMAILJS_CONFIG === 'undefined' || 
+                EMAILJS_CONFIG.serviceID === 'YOUR_SERVICE_ID' ||
+                EMAILJS_CONFIG.templateID === 'YOUR_TEMPLATE_ID' ||
+                EMAILJS_CONFIG.publicKey === 'YOUR_PUBLIC_KEY') {
+                throw new Error('Por favor configura EmailJS en el archivo js/email-config.js. Ve a https://www.emailjs.com para crear una cuenta gratuita.');
+            }
+            
+            // Enviar email usando EmailJS
+            await emailjs.send(
+                EMAILJS_CONFIG.serviceID, 
+                EMAILJS_CONFIG.templateID, 
+                {
+                    from_name: data.name,
+                    from_email: data.email,
+                    message: data.message,
+                    to_email: EMAILJS_CONFIG.toEmail
+                }, 
+                EMAILJS_CONFIG.publicKey
+            );
+            
+            // Éxito
+            mostrarNotificacion('¡Mensaje enviado correctamente! Te responderé a la brevedad.', 'exito');
             e.target.reset();
+            
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error);
+            let mensajeError = 'Error al enviar el mensaje. Por favor, intenta nuevamente.';
+            
+            // Mensajes de error más específicos
+            if (error.text) {
+                mensajeError = 'Error de configuración: Verifica que EmailJS esté configurado correctamente.';
+            } else if (error.message && error.message.includes('configura')) {
+                mensajeError = 'Error de configuración: Por favor configura EmailJS en js/email-config.js';
+            } else if (error.status) {
+                mensajeError = `Error del servidor (${error.status}). Por favor, intenta más tarde.`;
+            }
+            
+            mostrarNotificacion(mensajeError, 'error');
+        } finally {
+            // Restaurar el botón
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalText;
         }
     };
 
-    const mostrarMensajeExito = () => {
-        const successDiv = document.createElement('div');
-        successDiv.className = 'mensaje-exito';
-        successDiv.innerHTML = `
-            <div style="
-                background: #27ae60;
-                color: white;
-                padding: 15px;
-                border-radius: 10px;
-                margin: 20px 0;
-                text-align: center;
-                font-weight: 600;
-            ">
-                ¡Mensaje enviado correctamente! Te responderé a la brevedad.
-            </div>
-        `;
-        
-        const form = document.querySelector('form');
-        form.parentNode.insertBefore(successDiv, form);
-        
-        // Remover mensaje después de 5 segundos
-        setTimeout(() => {
-            successDiv.remove();
-        }, 5000);
-    };
+    // Función eliminada - ahora se usa mostrarNotificacion() para consistencia
 
     // ========================================
     // ANIMACIONES DE SCROLL
@@ -364,57 +393,125 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Función para mostrar notificaciones
+    // ========================================
+    // FUNCIÓN PARA MOSTRAR NOTIFICACIONES (POPUP)
+    // ========================================
     function mostrarNotificacion(mensaje, tipo = 'info') {
+        // Verificar si ya existe un estilo, si no, agregarlo
+        if (!document.getElementById('notificacion-styles')) {
+            const style = document.createElement('style');
+            style.id = 'notificacion-styles';
+            style.textContent = `
+                @keyframes slideInRight {
+                    from { 
+                        transform: translateX(400px); 
+                        opacity: 0; 
+                    }
+                    to { 
+                        transform: translateX(0); 
+                        opacity: 1; 
+                    }
+                }
+                @keyframes slideOutRight {
+                    from { 
+                        transform: translateX(0); 
+                        opacity: 1; 
+                    }
+                    to { 
+                        transform: translateX(400px); 
+                        opacity: 0; 
+                    }
+                }
+                .notificacion-popup {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 10000;
+                    max-width: 400px;
+                    min-width: 300px;
+                    animation: slideInRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                }
+                .notificacion-popup .notificacion-contenido {
+                    color: white;
+                    padding: 16px 20px;
+                    border-radius: 12px;
+                    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+                .notificacion-popup .notificacion-contenido.exito {
+                    background: #27ae60;
+                }
+                .notificacion-popup .notificacion-contenido.error {
+                    background: #e74c3c;
+                }
+                .notificacion-popup .notificacion-contenido.info {
+                    background: #3498db;
+                }
+                .notificacion-popup .notificacion-icono {
+                    width: 24px;
+                    height: 24px;
+                    flex-shrink: 0;
+                }
+                .notificacion-popup .notificacion-texto {
+                    flex: 1;
+                }
+                .notificacion-popup.cerrando {
+                    animation: slideOutRight 0.3s ease forwards;
+                }
+                @media (max-width: 768px) {
+                    .notificacion-popup {
+                        right: 10px;
+                        left: 10px;
+                        max-width: calc(100% - 20px);
+                        min-width: auto;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Determinar icono según el tipo
+        let icono = '';
+        if (tipo === 'exito') {
+            icono = '<svg class="notificacion-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>';
+        } else if (tipo === 'error') {
+            icono = '<svg class="notificacion-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
+        } else {
+            icono = '<svg class="notificacion-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>';
+        }
+        
+        // Crear elemento de notificación
         const notificacion = document.createElement('div');
-        notificacion.className = `notificacion notificacion-${tipo}`;
+        notificacion.className = 'notificacion-popup';
         notificacion.innerHTML = `
-            <div style="
-                background: ${tipo === 'exito' ? '#27ae60' : tipo === 'error' ? '#e74c3c' : '#3498db'};
-                color: white;
-                padding: 12px 16px;
-                border-radius: 8px;
-                margin: 10px 0;
-                font-weight: 600;
-                font-size: 14px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                animation: slideIn 0.3s ease;
-            ">
-                ${mensaje}
+            <div class="notificacion-contenido ${tipo}">
+                ${icono}
+                <div class="notificacion-texto">${mensaje}</div>
             </div>
         `;
-        
-        // Agregar estilos de animación
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateY(-20px); opacity: 0; }
-                to { transform: translateY(0); opacity: 1; }
-            }
-            .notificacion {
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                z-index: 1000;
-                max-width: 300px;
-            }
-        `;
-        document.head.appendChild(style);
         
         // Insertar notificación
         document.body.appendChild(notificacion);
         
-        // Remover después de 3 segundos
+        // Duración según el tipo (errores duran más tiempo)
+        const duracion = tipo === 'error' ? 5000 : tipo === 'exito' ? 4000 : 3000;
+        
+        // Remover después del tiempo especificado
         setTimeout(() => {
             if (notificacion.parentNode) {
-                notificacion.style.animation = 'slideIn 0.3s ease reverse';
+                notificacion.classList.add('cerrando');
                 setTimeout(() => {
                     if (notificacion.parentNode) {
                         notificacion.remove();
                     }
                 }, 300);
             }
-        }, 3000);
+        }, duracion);
     }
 
 
