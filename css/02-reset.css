@@ -1,0 +1,133 @@
+/* ========================================
+   RESET Y BASE
+   Estilos base y reset del proyecto
+   ======================================== */
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior: smooth;
+}
+
+html,body{
+  height:100%
+}
+
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--fondo);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  padding:24px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo con múltiples nubes borrosas */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Nubes grandes */
+    radial-gradient(ellipse 400px 200px at 10% 20%, rgba(124, 58, 237, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 350px 180px at 90% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 150px at 30% 70%, rgba(124, 58, 237, 0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 320px 160px at 70% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 70%),
+    
+    /* Nubes medianas */
+    radial-gradient(ellipse 200px 100px at 15% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 180px 90px at 85% 15%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 220px 110px at 50% 85%, rgba(124, 58, 237, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 160px 80px at 25% 35%, rgba(59, 130, 246, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 190px 95px at 75% 65%, rgba(124, 58, 237, 0.07) 0%, transparent 60%),
+    
+    /* Nubes pequeñas */
+    radial-gradient(circle 80px at 5% 10%, rgba(124, 58, 237, 0.06) 0%, transparent 50%),
+    radial-gradient(circle 70px at 95% 90%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+    radial-gradient(circle 90px at 20% 60%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+    radial-gradient(circle 75px at 80% 40%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle 85px at 45% 15%, rgba(124, 58, 237, 0.04) 0%, transparent 50%),
+    radial-gradient(circle 65px at 55% 75%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
+    radial-gradient(circle 95px at 35% 45%, rgba(124, 58, 237, 0.03) 0%, transparent 50%),
+    radial-gradient(circle 60px at 65% 25%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+  animation: cloudFloat 25s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes cloudFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(-20px) rotate(1deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-10px) rotate(-1deg);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-30px) rotate(0.5deg);
+    opacity: 0.85;
+  }
+}
+
+/* Segunda capa de nubes con diferentes animaciones */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Nubes grandes adicionales */
+    radial-gradient(ellipse 380px 190px at 5% 75%, rgba(59, 130, 246, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 360px 180px at 95% 25%, rgba(124, 58, 237, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 280px 140px at 40% 5%, rgba(59, 130, 246, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 150px at 60% 95%, rgba(124, 58, 237, 0.06) 0%, transparent 70%),
+    
+    /* Nubes medianas adicionales */
+    radial-gradient(ellipse 170px 85px at 12% 25%, rgba(59, 130, 246, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 210px 105px at 88% 85%, rgba(124, 58, 237, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 150px 75px at 35% 55%, rgba(59, 130, 246, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 200px 100px at 65% 15%, rgba(124, 58, 237, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 180px 90px at 45% 75%, rgba(59, 130, 246, 0.03) 0%, transparent 60%),
+    radial-gradient(ellipse 160px 80px at 75% 35%, rgba(124, 58, 237, 0.03) 0%, transparent 60%),
+    
+    /* Nubes pequeñas adicionales */
+    radial-gradient(circle 55px at 8% 35%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
+    radial-gradient(circle 75px at 92% 65%, rgba(124, 58, 237, 0.04) 0%, transparent 50%),
+    radial-gradient(circle 45px at 18% 85%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+    radial-gradient(circle 65px at 82% 15%, rgba(124, 58, 237, 0.03) 0%, transparent 50%),
+    radial-gradient(circle 50px at 38% 25%, rgba(59, 130, 246, 0.02) 0%, transparent 50%),
+    radial-gradient(circle 70px at 62% 85%, rgba(124, 58, 237, 0.02) 0%, transparent 50%),
+    radial-gradient(circle 40px at 28% 65%, rgba(59, 130, 246, 0.02) 0%, transparent 50%),
+    radial-gradient(circle 60px at 72% 45%, rgba(124, 58, 237, 0.02) 0%, transparent 50%);
+  animation: cloudFloat2 30s ease-in-out infinite reverse;
+  z-index: -1;
+}
+
+@keyframes cloudFloat2 {
+  0%, 100% {
+    transform: translateX(0px) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translateX(15px) scale(1.05);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translateX(-10px) scale(0.95);
+    opacity: 0.4;
+  }
+}
+

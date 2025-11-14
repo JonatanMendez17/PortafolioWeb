@@ -1,0 +1,192 @@
+/* ========================================
+   COMPONENTES
+   Componentes reutilizables (tarjetas, botones, etc.)
+   ======================================== */
+
+.tarjeta{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-radius:var(--radio);
+  padding:28px;
+  box-shadow:0 8px 30px rgba(2,6,23,0.6);
+  backdrop-filter:blur(6px);
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.titulo-principal{
+  font-size:28px;
+  font-weight:800;
+  margin:0
+}
+
+.subtitulo{
+  color:var(--apagado);
+  margin:12px 0 18px
+}
+
+.fila-cta{
+  display:flex;
+  gap:12px;
+  margin-top:8px
+}
+
+.boton{
+  padding:10px 14px;
+  border-radius:12px;
+  font-weight:700;
+  border:0;
+  cursor:pointer
+}
+
+.boton-principal{
+  background:linear-gradient(90deg,var(--acento),#3b82f6);
+  color:white
+}
+
+.boton-fantasma{
+  background: transparent;
+  border: 1px solid rgb(165 165 165);
+}
+
+/* stats */
+.estadisticas{
+  display:flex;
+  gap:12px;
+  margin-top:18px
+}
+
+.estadistica{
+  background:var(--cristal);
+  padding:10px 12px;
+  border-radius:12px;
+  font-weight:700
+}
+
+.estadistica small{
+  display:block;
+  color:var(--apagado);
+  font-weight:600;
+  font-size:13px
+}
+
+.proyecto{
+  display:flex;
+  flex-direction:column;
+  border-radius:12px;
+  overflow:hidden;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+}
+
+.proyecto .miniatura{
+  height:140px;
+  background:linear-gradient(135deg,#071432,#0f274a);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--apagado);
+  font-weight:700
+}
+
+.proyecto .metadatos{
+  padding:14px
+}
+
+/* Tecnologías y habilidades */
+.categorias-tecnologias{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:20px;
+}
+
+.categoria{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.categoria-titulo{
+  font-size:16px;
+  font-weight:700;
+  color:#e6eef8;
+  margin:0;
+  padding-bottom:8px;
+  border-bottom:2px solid var(--acento);
+}
+
+.habilidades{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px
+}
+
+.pastilla{
+  padding:8px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.03);
+  color:var(--apagado);
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  transition:all 0.3s ease;
+  cursor:pointer;
+}
+
+.pastilla svg{
+  width:16px;
+  height:16px;
+  flex-shrink:0;
+  transition:all 0.3s ease;
+}
+
+.pastilla i{
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.pastilla:hover i,
+.pastilla:hover svg{
+  transform: scale(1.1);
+}
+
+/* Hover effects for each technology - se mantienen del archivo original */
+.pastilla[data-tech="html"]:hover{background:#e34f2685;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="css"]:hover{background:#1573b682;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="javascript"]:hover{background:#f7de1e66;color:#ffffff;transform:translateY(-2px);}
+.pastilla[data-tech="csharp"]:hover{background:#2491206f;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="dotnet"]:hover{background:#502bd47c;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="github"]:hover{background:#333;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="wordpress"]:hover{background:#21749b7e;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="figma"]:hover{background:#f24f1e95;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="jira"]:hover{background:#0052cc6f;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="azure"]:hover{background:#0078d46b;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="sql"]:hover{background:#cc2927;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="postman"]:hover{background:#ff6c3784;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="mssql"]:hover{background:#cc2a2786;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="oracle"]:hover{background:#f8000072;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="mysql"]:hover{background:#00758f;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="nodejs"]:hover{background:#33993388;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="python"]:hover{background:#3777ab7b;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="php"]:hover{background:#777bb48b;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="react"]:hover{background:#61dafb7f;color:#ffffff;transform:translateY(-2px);}
+.pastilla[data-tech="bootstrap"]:hover{background:#7952b38c;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="photoshop"]:hover{background:#31a9ff81;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="elementor"]:hover{background:#92003aad;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="woocommerce"]:hover{background:#96588aa6;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="divi"]:hover{background:#7c3aedab;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="gitlab"]:hover{background:#fc6d269a;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="bitbucket"]:hover{background:#0052cc85;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="confluence"]:hover{background:#172b4db1;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="visualstudio"]:hover{background:#5c2d91b9;color:white;transform:translateY(-2px);}
+.pastilla[data-tech="vscode"]:hover{background:#007accb2;color:white;transform:translateY(-2px);}
+
+.descripcion-nueva{
+  color:var(--apagado);
+  font-size:14px;
+  line-height:1.6;
+  margin-top:12px;
+  text-align:justify;
+}
+

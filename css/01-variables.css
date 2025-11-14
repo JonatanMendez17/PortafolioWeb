@@ -1,0 +1,15 @@
+/* ========================================
+   VARIABLES CSS
+   Variables globales del proyecto
+   ======================================== */
+
+:root{
+  --fondo:#0f1724; /* fondo oscuro */
+  --tarjeta:#0b1220;
+  --acento:#7c3aed; /* morado */
+  --apagado:#94a3b8;
+  --cristal: rgba(255,255,255,0.04);
+  --radio:16px;
+  color-scheme: dark;
+}
+
