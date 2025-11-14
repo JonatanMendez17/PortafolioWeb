@@ -19,12 +19,12 @@
       <nav class="navegacion-principal" aria-label="Navegación principal">
         <div class="nav-contenido">
           <div class="nav-logo">
-            <a href="#" onclick="event.preventDefault(); window.location.reload();" style="display:flex; align-items:center; text-decoration:none;">
+            <a href="#" class="logo-link">
               <img src="recursos/Logo.png" alt="Logo de Jonatan Mendez" class="logo-nav">
             </a>
           </div>
           
-          <button type="button" class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-enlaces" onclick="toggleMenu()">
+          <button type="button" class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-enlaces">
             <span class="hamburguesa-linea"></span>
             <span class="hamburguesa-linea"></span>
             <span class="hamburguesa-linea"></span>
@@ -73,7 +73,7 @@
               </a>
             </div>
             
-            <button type="button" class="boton-cv" onclick="descargarCV()">Descargar CV</button>
+            <button type="button" class="boton-cv">Descargar CV</button>
           </div>
           
           <div class="portada-derecha">
@@ -88,18 +88,18 @@
     <main>
       <section class="heroe">
         <div class="tarjeta">
-          <h1 class="titulo-principal">Hola — soy <span style="background:linear-gradient(90deg,var(--acento),#3b82f6);-webkit-background-clip:text;background-clip:text;color:transparent">Jonatan Mendez</span></h1>
+          <h1 class="titulo-principal">Hola — soy <span class="nombre-destacado">Jonatan Mendez</span></h1>
           <p class="subtitulo">Desarrollador FullStack | Instructor en Programación</p>
           <p class="descripcion-nueva">Con una sólida trayectoria en empresas como INDRA, I2T y 2D Soluciones, he participado en todas las etapas del ciclo de desarrollo de software. Complemento mi experiencia técnica con la formación de nuevos talentos como instructor en la plataforma online Eprenda.</p>
           <div class="fila-cta">
-            <button type="button" class="boton boton-principal" onclick="scrollToContact()">Contactarme</button>
-            <button type="button" class="boton boton-fantasma" onclick="descargarCV()">Descargar CV</button>
+            <button type="button" class="boton boton-principal" data-action="contact">Contactarme</button>
+            <button type="button" class="boton boton-fantasma" data-action="cv">Descargar CV</button>
           </div>
 
           <div class="estadisticas">
-            <div class="estadistica"><div style="font-size:18px">+7</div><small>Años de experiencia</small></div>
-            <div class="estadistica"><div style="font-size:18px">+6</div><small>Proyectos</small></div>
-            <div class="estadistica"><div style="font-size:18px">28</div><small>Años de edad</small></div>
+            <div class="estadistica"><div class="estadistica-numero">+7</div><small>Años de experiencia</small></div>
+            <div class="estadistica"><div class="estadistica-numero">+6</div><small>Proyectos</small></div>
+            <div class="estadistica"><div class="estadistica-numero">28</div><small>Años de edad</small></div>
           </div>
 
         </div>
@@ -109,7 +109,7 @@
             <img src="recursos/JM.jpg" class="avatar" alt="Foto de perfil de Jonatan Mendez" loading="lazy">
           </div>
           <div>
-            <p style="color:var(--apagado);margin:8px 0;max-width:260px">💼 Actualmente <br>Participando en un proyecto para implementación de un sistema de procesamientos masivos con arquitectura .NET + React</p>
+            <p class="texto-actualmente">💼 Actualmente <br>Participando en un proyecto para implementación de un sistema de procesamientos masivos con arquitectura .NET + React</p>
           </div>
         </aside>
       </section>
@@ -117,12 +117,12 @@
       <section id="sobre-mi" class="seccion tarjeta">
         <div class="cuadricula-2">
           
-            <h3 style="margin-top:0">Sobre mí</h3>
-            <p style="color:var(--apagado)">
+            <h3 class="sin-margen-superior">Sobre mí</h3>
+            <p class="texto-apagado">
             Soy de Santa Fe, Argentina. Mi interés por la tecnología comenzó desde temprana edad y hoy se ha consolidado como una carrera profesional sólida. Combino mi experiencia práctica en IT con una formación académica que inició en Ingeniería en Sistemas y continuó con la Tecnicatura Universitaria en Informática de Gestión en la UNL, manteniendo siempre un compromiso constante con el crecimiento y la innovación tecnológica.</p>
 
-            <h4 style="margin-bottom:8px">Me dedico a</h4>
-            <ul style="color:var(--apagado);margin-top:0">
+            <h4 class="margen-inferior-pequeño">Me dedico a</h4>
+            <ul class="texto-apagado margen-superior-cero">
               <li>Desarrollo Fullstack con .NET y React</li>
               <li>Creación de APIs REST y arquitecturas de microservicios</li>
               <li>Análisis funcional y documentación técnica</li>

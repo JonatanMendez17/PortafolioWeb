@@ -317,6 +317,40 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ========================================
+    // EVENT LISTENERS PARA BOTONES
+    // ========================================
+    const initEventListeners = () => {
+        // Menú hamburguesa
+        const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+        if (menuHamburguesa) {
+            menuHamburguesa.addEventListener('click', toggleMenu);
+        }
+        
+        // Logo link - recargar página
+        const logoLink = document.querySelector('.logo-link');
+        if (logoLink) {
+            logoLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.reload();
+            });
+        }
+        
+        // Botones con data-action
+        document.querySelectorAll('[data-action="cv"]').forEach(button => {
+            button.addEventListener('click', descargarCV);
+        });
+        
+        document.querySelectorAll('[data-action="contact"]').forEach(button => {
+            button.addEventListener('click', scrollToContact);
+        });
+        
+        // Botones con clase boton-cv
+        document.querySelectorAll('.boton-cv').forEach(button => {
+            button.addEventListener('click', descargarCV);
+        });
+    };
+
+    // ========================================
     // INICIALIZAR TODAS LAS FUNCIONES
     // ========================================
     desplazamientoSuave();
@@ -325,6 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animacionesScroll();
     cerrarMenuAlClic();
     initTypingEffect();
+    initEventListeners();
 
     // ========================================
     // CSS ADICIONAL PARA ANIMACIONES
