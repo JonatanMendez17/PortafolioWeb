@@ -27,5 +27,8 @@
 /* 8. Formulario */
 @import url('09-form.css');
 
-/* 9. Responsive */
+/* 9. Contenido */
+@import url('10-content.css');
+
+/* 10. Responsive */
 @import url('08-responsive.css');
