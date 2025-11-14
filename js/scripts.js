@@ -255,6 +255,28 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ========================================
+    // EFECTO DE ESCRITURA (TYPING EFFECT)
+    // ========================================
+    const initTypingEffect = () => {
+        setTimeout(function() {
+            const texto = "Desarrollador FullStack";
+            const elemento = document.getElementById('typing-text');
+            
+            if (elemento) {
+                let i = 0;
+                function escribir() {
+                    if (i < texto.length) {
+                        elemento.textContent += texto.charAt(i);
+                        i++;
+                        setTimeout(escribir, 120);
+                    }
+                }
+                escribir();
+            }
+        }, 1000);
+    };
+
+    // ========================================
     // INICIALIZAR TODAS LAS FUNCIONES
     // ========================================
     desplazamientoSuave();
@@ -262,6 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
     validacionFormulario();
     animacionesScroll();
     cerrarMenuAlClic();
+    initTypingEffect();
 
     // ========================================
     // CSS ADICIONAL PARA ANIMACIONES
