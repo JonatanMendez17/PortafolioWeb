@@ -306,6 +306,13 @@
       object-fit: contain;
     }
 
+    .texto-logo{
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--acento);
+      letter-spacing: 4px;
+    }
+
     .navegacion-principal{
       position:fixed;
       top:0;
@@ -385,8 +392,6 @@
       border:none;
       cursor:pointer;
       padding:0;
-      z-index:1001;
-      position:relative;
     }
 
     .hamburguesa-linea{
@@ -408,6 +413,21 @@
 
     .menu-hamburguesa.activo .hamburguesa-linea:nth-child(3){
       transform:rotate(-45deg) translate(6px,-6px);
+    }
+
+    .marca{
+      display:flex;
+      gap:12px;
+      align-items:center
+    }
+
+    .logo{
+      width:52px;
+      height:52px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
     }
 
     nav a{
@@ -1042,6 +1062,11 @@
         height: 150px;
       }
       
+      .texto-logo{
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+      
       .nav-enlaces{
         position:fixed;
         top:70px;
@@ -1057,7 +1082,6 @@
         opacity:0;
         visibility:hidden;
         transition:all 0.3s ease;
-        z-index:1000;
       }
 
       .nav-enlaces.activo{

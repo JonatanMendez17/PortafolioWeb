@@ -19,7 +19,7 @@
       <nav class="navegacion-principal" aria-label="Navegación principal">
         <div class="nav-contenido">
           <div class="nav-logo">
-            <img src="recursos/Logo.png" alt="Logo" class="logo-nav">
+            <img src="/recursos/Logo.png" alt="Logo" class="logo-nav">
           </div>
           
           <button class="menu-hamburguesa" aria-label="Abrir menú" onclick="toggleMenu()">
@@ -50,28 +50,6 @@
             <div class="titulo-portada">
               Soy <span class="titulo-destacado" id="typing-text"></span><span class="cursor">|</span>
             </div>
-            
-            <script>
-              // Efecto de escritura simple
-              document.addEventListener('DOMContentLoaded', function() {
-                setTimeout(function() {
-                  const texto = "Desarrollador FullStack";
-                  const elemento = document.getElementById('typing-text');
-                  
-                  if (elemento) {
-                    let i = 0;
-                    function escribir() {
-                      if (i < texto.length) {
-                        elemento.textContent += texto.charAt(i);
-                        i++;
-                        setTimeout(escribir, 120);
-                      }
-                    }
-                    escribir();
-                  }
-                }, 1000);
-              });
-            </script>
             <p class="descripcion-portada">
               Desarrollador con pasión por el aprendizaje continuo y la innovación. Comprometido con aplicar las últimas tecnologías y mejores prácticas para entregar soluciones de alta calidad y valor en cada proyecto.            </p>
             
@@ -98,7 +76,7 @@
           
           <div class="portada-derecha">
             <div class="logo-container">
-              <img src="recursos/Logo.png" class="logo-principal" alt="Logo Jonatan Mendez">
+              <img src="/recursos/Logo.png" class="logo-principal" alt="Logo Jonatan Mendez">
             </div>
           </div>
         </div>
@@ -126,7 +104,7 @@
 
         <aside class="perfil tarjeta">
           <div class="avatar">
-            <img src="recursos/JM.jpg" class="avatar">
+            <img src="/recursos/JM.jpg" class="avatar">
           </div>
           <div>
             <p style="color:var(--apagado);margin:8px 0;max-width:260px">💼 Actualmente <br>Participando en un proyecto para implementación de un sistema de procesamientos masivos con arquitectura .NET + React</b></p>
@@ -496,7 +474,7 @@
           <p style="color:var(--apagado);margin-top:8px">¿Tienes un proyecto en mente o buscas un nuevo colaborador? Escríbeme y hablemos en cómo puedo ayudarte.</p>
         </div>
 
-        <form class="formulario-contacto" onsubmit="event.preventDefault();alert('Enviar formulario demo — reemplaza con tu endpoint')">
+        <form class="formulario-contacto" id="formulario-contacto">
             <div class="campo-formulario">
               <label class="label-formulario" for="name">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

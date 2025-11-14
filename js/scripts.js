@@ -2,48 +2,8 @@
 // PORTFOLIO JONATAN MENDEZ - JAVASCRIPT
 // ========================================
 
-// ========================================
-// MENÚ HAMBURGUESA - Función global
-// Disponible inmediatamente para onclick en HTML
-// ========================================
-window.toggleMenu = function() {
-    const menuHamburguesa = document.querySelector('.menu-hamburguesa');
-    const navEnlaces = document.querySelector('.nav-enlaces');
-    
-    if (!menuHamburguesa || !navEnlaces) {
-        // Si los elementos no existen aún, esperar un momento e intentar de nuevo
-        setTimeout(() => {
-            const menu = document.querySelector('.menu-hamburguesa');
-            const nav = document.querySelector('.nav-enlaces');
-            if (menu && nav) {
-                menu.classList.toggle('activo');
-                nav.classList.toggle('activo');
-            }
-        }, 50);
-        return;
-    }
-    
-    menuHamburguesa.classList.toggle('activo');
-    navEnlaces.classList.toggle('activo');
-};
-
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ========================================
-    // FUNCIÓN AUXILIAR: CERRAR MENÚ HAMBURGUESA
-    // ========================================
-    const cerrarMenuHamburguesa = () => {
-        const menuHamburguesa = document.querySelector('.menu-hamburguesa');
-        const navEnlaces = document.querySelector('.nav-enlaces');
-        
-        if (menuHamburguesa && menuHamburguesa.classList.contains('activo')) {
-            menuHamburguesa.classList.remove('activo');
-        }
-        if (navEnlaces && navEnlaces.classList.contains('activo')) {
-            navEnlaces.classList.remove('activo');
-        }
-    };
-
     // ========================================
     // NAVEGACIÓN SUAVE
     // ========================================
@@ -53,9 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         links.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                // Cerrar menú hamburguesa si está abierto
-                cerrarMenuHamburguesa();
                 
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
@@ -245,23 +202,12 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ========================================
-    // CERRAR MENÚ AL HACER CLIC EN UN ENLACE
-    // (Ya está integrado en desplazamientoSuave, pero lo mantenemos por compatibilidad)
-    // ========================================
-    const cerrarMenuAlClic = () => {
-        // La funcionalidad ya está integrada en desplazamientoSuave
-        // Esta función se mantiene por compatibilidad pero ya no es necesaria
-        // ya que desplazamientoSuave ahora cierra el menú automáticamente
-    };
-
-    // ========================================
     // INICIALIZAR TODAS LAS FUNCIONES
     // ========================================
     desplazamientoSuave();
     navegacionActiva();
     validacionFormulario();
     animacionesScroll();
-    cerrarMenuAlClic();
 
     // ========================================
     // CSS ADICIONAL PARA ANIMACIONES
@@ -394,6 +340,59 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
+
+    // ========================================
+    // MENÚ HAMBURGUESA
+    // ========================================
+    window.toggleMenu = function() {
+        const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+        const navEnlaces = document.querySelector('.nav-enlaces');
+        
+        menuHamburguesa.classList.toggle('activo');
+        navEnlaces.classList.toggle('activo');
+    };
+
+    // Cerrar menú al hacer clic en un enlace
+    const cerrarMenuAlClic = () => {
+        const navEnlaces = document.querySelector('.nav-enlaces');
+        const enlaces = navEnlaces.querySelectorAll('a');
+        
+        enlaces.forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+                menuHamburguesa.classList.remove('activo');
+                navEnlaces.classList.remove('activo');
+            });
+        });
+    };
+
+    // Cerrar menú al hacer clic en un enlace
+    cerrarMenuAlClic();
+
+    // ========================================
+    // EFECTO DE ESCRITURA (TYPING EFFECT)
+    // ========================================
+    const initTypingEffect = () => {
+        setTimeout(function() {
+            const texto = "Desarrollador FullStack";
+            const elemento = document.getElementById('typing-text');
+            
+            if (elemento) {
+                let i = 0;
+                function escribir() {
+                    if (i < texto.length) {
+                        elemento.textContent += texto.charAt(i);
+                        i++;
+                        setTimeout(escribir, 120);
+                    }
+                }
+                escribir();
+            }
+        }, 1000);
+    };
+
+    // Inicializar efecto de escritura
+    initTypingEffect();
 
     console.log('🚀 Portfolio JavaScript cargado correctamente');
 });
