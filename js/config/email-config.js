@@ -15,7 +15,7 @@
 //
 // ========================================
 
-const EMAILJS_CONFIG = {
+export const EMAILJS_CONFIG = {
     serviceID: 'YOUR_SERVICE_ID',      // Reemplaza con tu Service ID
     templateID: 'YOUR_TEMPLATE_ID',   // Reemplaza con tu Template ID
     publicKey: 'YOUR_PUBLIC_KEY',      // Reemplaza con tu Public Key
