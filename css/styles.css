@@ -10,6 +10,10 @@
 
     *{box-sizing:border-box}
 
+    html{
+      scroll-behavior: smooth;
+    }
+
     html,body{
       height:100%
     }
@@ -1150,4 +1154,20 @@
       .avatar   {width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center}
       .titulo-principal {font-size:22px}
       .cuadricula-2   {grid-template-columns:1fr}
+    }
+    
+    /* Grid de proyectos y servicios - 2 columnas en tablets */
+    @media (max-width: 768px) {
+      #portafolio > div[style*="display:grid"],
+      #servicios > div[style*="display:grid"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    
+    /* Grid de proyectos y servicios - 1 columna en móviles */
+    @media (max-width: 480px) {
+      #portafolio > div[style*="display:grid"],
+      #servicios > div[style*="display:grid"] {
+        grid-template-columns: 1fr !important;
+      }
     }

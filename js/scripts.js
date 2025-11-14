@@ -18,6 +18,10 @@ window.toggleMenu = function() {
             if (menu && nav) {
                 menu.classList.toggle('activo');
                 nav.classList.toggle('activo');
+                // Actualizar aria-expanded
+                const isExpanded = menu.classList.contains('activo');
+                menu.setAttribute('aria-expanded', isExpanded);
+                menu.setAttribute('aria-label', isExpanded ? 'Cerrar menú' : 'Abrir menú');
             }
         }, 50);
         return;
@@ -25,6 +29,11 @@ window.toggleMenu = function() {
     
     menuHamburguesa.classList.toggle('activo');
     navEnlaces.classList.toggle('activo');
+    
+    // Actualizar aria-expanded y aria-label
+    const isExpanded = menuHamburguesa.classList.contains('activo');
+    menuHamburguesa.setAttribute('aria-expanded', isExpanded);
+    menuHamburguesa.setAttribute('aria-label', isExpanded ? 'Cerrar menú' : 'Abrir menú');
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -38,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (menuHamburguesa && menuHamburguesa.classList.contains('activo')) {
             menuHamburguesa.classList.remove('activo');
+            menuHamburguesa.setAttribute('aria-expanded', 'false');
+            menuHamburguesa.setAttribute('aria-label', 'Abrir menú');
         }
         if (navEnlaces && navEnlaces.classList.contains('activo')) {
             navEnlaces.classList.remove('activo');
