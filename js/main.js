@@ -9,6 +9,7 @@ import { animacionesScroll, agregarEstilosAnimaciones } from './modules/animatio
 import { initTypingEffect } from './modules/typing-effect.js';
 import { initEventListeners } from './modules/utils.js';
 import { initRender } from './modules/render.js';
+import { initCertificatesCarousel } from './modules/certificates-carousel.js';
 import { EMAILJS_CONFIG } from './config/email-config.js';
 
 // Hacer EMAILJS_CONFIG disponible globalmente para compatibilidad
@@ -34,6 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         animacionesScroll();
     }, 100);
     agregarEstilosAnimaciones();
+    
+    // Inicializar carrusel de certificados (después del renderizado)
+    setTimeout(() => {
+        initCertificatesCarousel();
+    }, 150);
     
     // Inicializar efectos
     initTypingEffect();

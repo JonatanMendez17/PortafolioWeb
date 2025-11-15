@@ -166,3 +166,14 @@ export const tecnologias = {
   ]
 };
 
+export const certificados = [
+  // Ejemplo: Agrega tus certificados aquí
+  {
+     id: 1,
+     titulo: "Certificado de Docker",
+     institucion: "Plataforma de Cursos",
+     fecha: "2024",
+     archivo: "recursos/Certificado_Dockert.pdf"
+  }
+];
+
