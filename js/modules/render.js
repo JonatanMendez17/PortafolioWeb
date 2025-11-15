@@ -52,36 +52,63 @@ export const renderExperiencias = () => {
 
   let html = '<h3>Experiencias Profesionales</h3>';
   
-  // Experiencias principales
-  html += '<div class="experiencias-grid">';
-  experiencias.forEach(exp => {
+  // Experiencias principales - Timeline
+  html += '<div class="experiencias-timeline">';
+  experiencias.forEach((exp, index) => {
+    // Extraer cargo de la fecha
+    const fechaParts = exp.fecha.split('|');
+    const periodo = fechaParts[0]?.trim() || '';
+    const cargo = fechaParts[1]?.trim() || '';
+    
     html += `
-      <div class="experiencia-item ${exp.tieneMargenInferior ? 'margen-inferior' : ''}">
-        <div class="experiencia-empresa">${exp.empresa}</div>
-        <div class="experiencia-fecha"><strong>${exp.fecha}</strong></div>
-        ${exp.descripcion ? `<div class="experiencia-descripcion">${exp.descripcion}</div>` : ''}
-        ${exp.descripciones ? exp.descripciones.map(d => `<div class="experiencia-descripcion">${d}</div>`).join('') : ''}
+      <div class="experiencia-timeline-item ${index === experiencias.length - 1 ? 'last' : ''}">
+        <div class="timeline-marker"></div>
+        <div class="experiencia-content">
+          <div class="experiencia-header">
+            <div class="experiencia-empresa">${exp.empresa}</div>
+            <div class="experiencia-cargo">${cargo}</div>
+            <div class="experiencia-fecha">${periodo}</div>
+          </div>
+          <div class="experiencia-body">
+            ${exp.descripcion ? `
+              <div class="experiencia-descripcion">${exp.descripcion}</div>
+            ` : ''}
+            ${exp.descripciones ? exp.descripciones.map(d => `
+              <div class="experiencia-descripcion">${d}</div>
+            `).join('') : ''}
+          </div>
+        </div>
       </div>
     `;
   });
   html += '</div>';
 
-  // Freelancer
-  html += '<div class="experiencias-grid margen-superior-pequeño">';
-  html += '<div class="experiencia-item">';
-  html += `<h3>${freelancer.titulo}</h3>`;
+  // Freelancer - Sección separada
+  html += '<div class="freelancer-section">';
+  html += `<h3 class="freelancer-titulo">${freelancer.titulo}</h3>`;
+  html += '<div class="freelancer-experiencias">';
   
-  freelancer.experiencias.forEach(exp => {
+  freelancer.experiencias.forEach((exp, index) => {
+    const fechaParts = exp.fecha.split('|');
+    const periodo = fechaParts[0]?.trim() || '';
+    const cargo = fechaParts[1]?.trim() || '';
+    
     html += `
-      <div class="experiencia-empresa">${exp.empresa}</div>
-      <div class="experiencia-fecha"><strong>${exp.fecha}</strong></div>
-      <div class="experiencia-descripcion">${exp.descripcion}</div>
-      ${exp.lista ? `
-        <ul class="experiencia-lista">
-          ${exp.lista.map(item => `<li>${item}</li>`).join('')}
-        </ul>
-        <br>
-      ` : ''}
+      <div class="freelancer-item ${index === freelancer.experiencias.length - 1 ? 'last' : ''}">
+        <div class="freelancer-header">
+          <div class="freelancer-empresa">${exp.empresa}</div>
+          <div class="freelancer-cargo">${cargo}</div>
+          <div class="freelancer-fecha">${periodo}</div>
+        </div>
+        <div class="freelancer-body">
+          <div class="freelancer-descripcion">${exp.descripcion}</div>
+          ${exp.lista ? `
+            <ul class="freelancer-lista">
+              ${exp.lista.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          ` : ''}
+        </div>
+      </div>
     `;
   });
   
