@@ -149,9 +149,7 @@ export const tecnologias = {
     { nombre: "WooCommerce", tech: "woocommerce", icono: "devicon-woocommerce-plain" }
   ],
   herramientas: [
-    { nombre: "GitHub", tech: "github", icono: "devicon-github-original" },
-    { nombre: "GitLab", tech: "gitlab", icono: "devicon-gitlab-plain" },
-    { nombre: "Bitbucket", tech: "bitbucket", icono: "devicon-bitbucket-original" },
+    { nombre: "Git", tech: "git", icono: "devicon-git-plain" },
     { nombre: "Jira", tech: "jira", icono: "devicon-jira-plain" },
     { nombre: "Confluence", tech: "confluence", icono: "devicon-confluence-plain" },
     { nombre: "VSC", tech: "vscode", icono: "devicon-vscode-plain" },
