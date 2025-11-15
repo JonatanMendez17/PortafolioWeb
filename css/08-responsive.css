@@ -141,3 +141,75 @@
   }
 }
 
+/* Carrusel de certificados - Responsive */
+@media (max-width: 900px) {
+  .carrusel-container {
+    padding: 16px;
+  }
+
+  .certificado-pdf {
+    height: 500px;
+  }
+
+  .certificado-titulo {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificado-pdf {
+    height: 400px;
+  }
+
+  .carrusel-track {
+    min-height: 450px;
+  }
+
+  .certificado-descargar {
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .certificado-descargar svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificado-pdf {
+    height: 350px;
+  }
+
+  .carrusel-track {
+    min-height: 400px;
+  }
+
+  .certificado-titulo {
+    font-size: 16px;
+  }
+
+  .certificado-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .carrusel-controls {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .carrusel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carrusel-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+

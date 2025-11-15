@@ -3,7 +3,7 @@
 // Genera HTML dinámicamente desde datos
 // ========================================
 
-import { proyectos, experiencias, freelancer, servicios, tecnologias } from '../data/portfolio-data.js';
+import { proyectos, experiencias, freelancer, servicios, tecnologias, certificados } from '../data/portfolio-data.js';
 
 // SVG de GitHub para repositorios
 const githubIcon = `
@@ -217,6 +217,76 @@ export const renderTecnologias = () => {
 };
 
 /**
+ * Renderiza los certificados en un carrusel
+ */
+export const renderCertificados = () => {
+  const container = document.querySelector('#certificados .certificados-carrusel');
+  if (!container) return;
+
+  // Si no hay certificados, no mostrar nada
+  if (!certificados || certificados.length === 0) {
+    container.innerHTML = '<p class="texto-apagado">No hay certificados disponibles.</p>';
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="carrusel-container">
+      <div class="carrusel-track">
+        ${certificados.map((cert, index) => `
+          <div class="certificado-slide ${index === 0 ? 'active' : ''}" data-index="${index}">
+            <div class="certificado-contenido">
+              <div class="certificado-header">
+                <h4 class="certificado-titulo">${cert.titulo}</h4>
+                <div class="certificado-info">
+                  <span class="certificado-institucion">${cert.institucion}</span>
+                  <span class="certificado-fecha">${cert.fecha}</span>
+                </div>
+              </div>
+              <div class="certificado-pdf">
+                <iframe 
+                  src="${cert.archivo}#toolbar=0&navpanes=0&scrollbar=0" 
+                  type="application/pdf"
+                  class="certificado-iframe"
+                  title="Certificado: ${cert.titulo}"
+                  loading="lazy">
+                </iframe>
+                <a href="${cert.archivo}" target="_blank" rel="noopener noreferrer" class="certificado-descargar" download>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar PDF
+                </a>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      ${certificados.length > 1 ? `
+        <div class="carrusel-controls">
+          <button type="button" class="carrusel-btn carrusel-prev" aria-label="Certificado anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <div class="carrusel-indicators">
+            ${certificados.map((_, index) => `
+              <button type="button" class="carrusel-indicator ${index === 0 ? 'active' : ''}" data-index="${index}" aria-label="Ir al certificado ${index + 1}"></button>
+            `).join('')}
+          </div>
+          <button type="button" class="carrusel-btn carrusel-next" aria-label="Certificado siguiente">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      ` : ''}
+    </div>
+  `;
+};
+
+/**
  * Inicializa el renderizado de todo el contenido
  */
 export const initRender = () => {
@@ -224,5 +294,6 @@ export const initRender = () => {
   renderExperiencias();
   renderServicios();
   renderTecnologias();
+  renderCertificados();
 };
 
