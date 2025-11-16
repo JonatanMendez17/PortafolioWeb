@@ -218,21 +218,37 @@
 }
 
 .proyecto-enlace{
-  display:inline-flex;
+  display:flex;
   align-items:center;
-  gap:8px;
+  justify-content:center;
+  gap:10px;
   text-decoration:none;
   color:inherit;
+  width:100%;
+  height:100%;
+  padding:16px;
+  box-sizing:border-box;
 }
 
 .proyecto-imagen{
-  height:48px;
+  max-height:56px;
+  max-width:80px;
   width:auto;
+  height:auto;
   border-radius:8px;
+  object-fit:contain;
+  flex-shrink:0;
 }
 
 .proyecto-titulo-miniatura{
   font-weight:700;
+  font-size:14px;
+  text-align:center;
+  flex:1;
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 
 .proyecto-titulo{

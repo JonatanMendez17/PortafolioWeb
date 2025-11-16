@@ -28,9 +28,6 @@ export const renderProyectos = () => {
         </a>
       </div>
       <div class="metadatos">
-        <div class="proyecto-titulo">
-          <a href="${proyecto.url}" target="_blank" rel="noopener noreferrer" class="proyecto-enlace-titulo">${proyecto.titulo}</a>
-        </div>
         <div class="proyecto-descripcion">${proyecto.descripcion}</div>
         ${proyecto.tieneRepositorio ? `
           <div class="proyecto-info">
