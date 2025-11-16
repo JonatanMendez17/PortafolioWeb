@@ -18,7 +18,7 @@ Portafolio personal desarrollado con HTML, CSS y JavaScript vanilla. Presenta pr
 - `js/`: JavaScript modular con ES6 modules
   - `data/`: Datos del portafolio (proyectos, experiencias, certificados)
   - `modules/`: Módulos funcionales (render, carrusel, formulario, etc.)
-- `imag/`: Imágenes, íconos y assets visuales
+- `img/`: Imágenes, íconos y assets visuales
 - `doc/`: Certificados en formato PDF
 
 ## Tecnologías 🛠️

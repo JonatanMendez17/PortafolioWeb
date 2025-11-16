@@ -19,7 +19,7 @@ export const proyectos = [
     id: 1,
     titulo: "Calculadora Web",
     descripcion: "Calculadora interactiva desarrollada con JavaScript puro, HTML5 y CSS3. Incluye operaciones básicas. Escalable para operaciones mas avanzadas.",
-    imagen: "./imag/calculadora.png",
+    imagen: "./img/calculadora.png",
     url: "https://github.com/JonatanMendez17/CalculadoraWeb",
     tieneRepositorio: true
   },
@@ -27,7 +27,7 @@ export const proyectos = [
     id: 2,
     titulo: "Generador de Volumetría",
     descripcion: "Herramienta en C#/.NET para generar archivos masivos de datos simulados para pruebas de rendimiento y batch.",
-    imagen: "./imag/generadorVolumetria.png",
+    imagen: "./img/generadorVolumetria.png",
     url: "https://github.com/JonatanMendez17/GeneradorVolumetria",
     tieneRepositorio: true
   },
@@ -35,7 +35,7 @@ export const proyectos = [
     id: 3,
     titulo: "Portafolio Web",
     descripcion: "Portafolio personal con proyectos, experiencia y contacto. Construido con HTML, CSS y JavaScript.",
-    imagen: "./imag/Logo.png",
+    imagen: "./img/logo.png",
     url: "https://github.com/JonatanMendez17/PortafolioWeb",
     tieneRepositorio: true
   },
@@ -43,7 +43,7 @@ export const proyectos = [
     id: 4,
     titulo: "Tienda Online – Toselli Hogar",
     descripcion: "E-commerce completo desarrollado con WordPress, WooCommerce y plugins personalizados.",
-    imagen: "./imag/TosseliHogar.png",
+    imagen: "./img/tosseliHogar.png",
     url: "https://tosellihogar.com.ar",
     tieneRepositorio: false
   },
@@ -51,7 +51,7 @@ export const proyectos = [
     id: 5,
     titulo: "Tienda Alatul",
     descripcion: "Plataforma web con experiencias guiadas, contenido multimedia y tienda de gemas.",
-    imagen: "./imag/alatul.png",
+    imagen: "./img/alatul.png",
     url: "https://alatul.app",
     tieneRepositorio: false
   },
@@ -59,7 +59,7 @@ export const proyectos = [
     id: 6,
     titulo: "Gesprender",
     descripcion: "Software Factory: soluciones a medida, e‑commerce y automatizaciones para negocios.",
-    imagen: "./imag/Gesprender.png",
+    imagen: "./img/gesprender.png",
     url: "https://gesprender.com",
     tieneRepositorio: false
   }
