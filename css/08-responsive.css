@@ -127,17 +127,24 @@
 
 /* Grid de proyectos y servicios - 2 columnas en tablets */
 @media (max-width: 768px) {
-  #portafolio > div[style*="display:grid"],
-  #servicios > div[style*="display:grid"] {
-    grid-template-columns: repeat(2, 1fr) !important;
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Grid de proyectos y servicios - 1 columna en móviles */
+/* Grid de proyectos - 2 columnas en móviles */
 @media (max-width: 480px) {
-  #portafolio > div[style*="display:grid"],
-  #servicios > div[style*="display:grid"] {
-    grid-template-columns: 1fr !important;
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .servicios-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -149,6 +156,7 @@
 
   .certificado-pdf {
     height: 600px;
+    border-radius: 12px;
   }
 
   .certificado-titulo {
@@ -157,12 +165,44 @@
 }
 
 @media (max-width: 768px) {
+  .carrusel-container {
+    padding: 12px;
+  }
+
   .certificado-pdf {
     height: 500px;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
+  .certificado-iframe {
+    border-radius: 8px;
   }
 
   .carrusel-track {
-    min-height: 450px;
+    min-height: 520px;
+  }
+
+  .carrusel-controls {
+    margin-top: 16px;
+    padding-top: 16px;
+    gap: 20px;
+  }
+
+  .carrusel-btn {
+    width: 48px;
+    height: 48px;
+    border-width: 2px;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+  }
+
+  .carrusel-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .carrusel-btn:hover {
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.5);
   }
 
   .certificado-descargar {
@@ -179,12 +219,22 @@
 }
 
 @media (max-width: 480px) {
+  .carrusel-container {
+    padding: 8px;
+  }
+
   .certificado-pdf {
-    height: 450px;
+    height: 420px;
+    border-radius: 8px;
+    border-width: 2px;
+  }
+
+  .certificado-iframe {
+    border-radius: 6px;
   }
 
   .carrusel-track {
-    min-height: 400px;
+    min-height: 440px;
   }
 
   .certificado-titulo {
@@ -198,18 +248,38 @@
   }
 
   .carrusel-controls {
-    flex-wrap: wrap;
-    gap: 12px;
+    margin-top: 12px;
+    padding-top: 12px;
+    gap: 16px;
+    flex-wrap: nowrap;
   }
 
   .carrusel-btn {
-    width: 40px;
-    height: 40px;
+    width: 52px;
+    height: 52px;
+    border-width: 2.5px;
+    box-shadow: 0 3px 10px rgba(124, 58, 237, 0.4);
+    flex-shrink: 0;
   }
 
   .carrusel-btn svg {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .carrusel-btn:hover,
+  .carrusel-btn:active {
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.6);
+    transform: scale(1.05);
+  }
+
+  .carrusel-indicators {
+    gap: 8px;
+  }
+
+  .carrusel-indicator {
+    width: 10px;
+    height: 10px;
   }
 }
 
