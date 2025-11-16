@@ -1,33 +1,46 @@
 ### Portafolio Web ✨
 
-Este repositorio contiene mi portafolio web: una página estática para presentar mis proyectos, habilidades y trayectoria, con enlaces de contacto.
+Portafolio personal desarrollado con HTML, CSS y JavaScript vanilla. Presenta proyectos, experiencias profesionales, tecnologías y certificados.
 
 ## Contenido 🧭
-- Secciones típicas: presentación/inicio, proyectos, habilidades, sobre mí y contacto.
-- Proyectos: tarjetas con descripción breve, tecnologías y enlaces a demo/código.
-- Navegación: menú superior con anclas a cada sección.
-- Diseño: enfoque limpio y responsivo pensado para visualización en móviles y escritorio.
+- **Presentación**: Hero section con información personal y estadísticas
+- **Experiencias**: Timeline de experiencias profesionales y trabajos freelance
+- **Proyectos**: Grid de proyectos con descripción, tecnologías y enlaces
+- **Tecnologías**: Categorías de tecnologías y herramientas
+- **Certificados**: Carrusel automático de certificados en PDF
+- **Contacto**: Formulario de contacto con EmailJS
 
 ## Estructura 📁
-- `index.html`: estructura y contenido principal del sitio.
-- `css/`: estilos y variables de diseño.
-- `js/`: scripts para interacciones ligeras.
-- `imag/`: imágenes, íconos y otros assets.
-- `cv/`: documento(s) de CV descargable(s).
+- `index.html`: Estructura principal del sitio
+- `css/`: Estilos modulares organizados por funcionalidad
+  - `styles.css`: Archivo principal que importa todos los módulos
+  - `01-variables.css` a `10-content.css`: Módulos específicos
+- `js/`: JavaScript modular con ES6 modules
+  - `data/`: Datos del portafolio (proyectos, experiencias, certificados)
+  - `modules/`: Módulos funcionales (render, carrusel, formulario, etc.)
+- `imag/`: Imágenes, íconos y assets visuales
+- `doc/`: Certificados en formato PDF
 
 ## Tecnologías 🛠️
 - HTML5 semántico
-- CSS3 (layouts responsivos)
-- JavaScript vanilla para interactividad
+- CSS3 modular con variables CSS
+- JavaScript ES6+ (módulos, async/await)
+- EmailJS para formulario de contacto
+- Devicon para íconos de tecnologías
+
+## Características ✨
+- **Contenido dinámico**: Proyectos, experiencias y certificados generados desde datos
+- **Diseño responsivo**: Optimizado para móviles, tablets y desktop
+- **Carrusel automático**: Certificados con navegación automática y manual
+- **Formulario funcional**: Integración con EmailJS para envío de mensajes
+- **Animaciones suaves**: Transiciones y efectos visuales
 
 ## Accesibilidad y SEO ♿🔍
-- Etiquetas semánticas (`header`, `nav`, `main`, `section`, `footer`).
-- Imágenes con `alt` descriptivo.
-- Jerarquía correcta de títulos (`h1`–`h3`).
-- Metadatos en `<head>`: `title`, `meta description`, `viewport`.
-
-## Estado y mantenimiento 🔄
-- Se actualiza periódicamente con nuevos proyectos y mejoras visuales/rendimiento.
+- Etiquetas semánticas HTML5
+- Imágenes con `alt` descriptivo
+- ARIA labels en elementos interactivos
+- Metadatos SEO en `<head>`
+- Navegación por teclado
 
 ## Autor y contacto 📬
-- Enlaces de contacto en el sitio (email, LinkedIn, GitHub).
+- Enlaces de contacto en el sitio (email, LinkedIn, GitHub)
