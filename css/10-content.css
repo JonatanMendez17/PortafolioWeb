@@ -130,7 +130,7 @@
 
 /* Certificados - Carrusel */
 .certificados-carrusel{
-  margin-top:12px;
+  margin-top:20px;
 }
 
 .carrusel-container{
@@ -145,19 +145,31 @@
 .carrusel-track{
   position:relative;
   width:100%;
-  min-height:600px;
+  min-height:750px;
+  overflow:hidden;
 }
 
 .certificado-slide{
-  display:none;
-  opacity:0;
-  transition:opacity 0.5s ease-in-out;
+  position:absolute;
+  top:0;
+  left:0;
   width:100%;
+  opacity:0;
+  visibility:hidden;
+  transform:translateX(20px);
+  transition:opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              visibility 0.8s,
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events:none;
+  will-change:opacity, transform;
 }
 
 .certificado-slide.active{
-  display:block;
+  position:relative;
   opacity:1;
+  visibility:visible;
+  transform:translateX(0);
+  pointer-events:auto;
 }
 
 .certificado-contenido{
@@ -200,11 +212,14 @@
 .certificado-pdf{
   position:relative;
   width:100%;
-  height:600px;
+  height:700px;
   border-radius:8px;
   overflow:hidden;
   background:rgba(0,0,0,0.3);
   border:1px solid rgba(255,255,255,0.1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .certificado-iframe{

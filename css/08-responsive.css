@@ -148,7 +148,7 @@
   }
 
   .certificado-pdf {
-    height: 500px;
+    height: 600px;
   }
 
   .certificado-titulo {
@@ -158,7 +158,7 @@
 
 @media (max-width: 768px) {
   .certificado-pdf {
-    height: 400px;
+    height: 500px;
   }
 
   .carrusel-track {
@@ -180,7 +180,7 @@
 
 @media (max-width: 480px) {
   .certificado-pdf {
-    height: 350px;
+    height: 450px;
   }
 
   .carrusel-track {

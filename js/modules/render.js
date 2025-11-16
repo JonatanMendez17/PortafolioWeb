@@ -234,31 +234,14 @@ export const renderCertificados = () => {
       <div class="carrusel-track">
         ${certificados.map((cert, index) => `
           <div class="certificado-slide ${index === 0 ? 'active' : ''}" data-index="${index}">
-            <div class="certificado-contenido">
-              <div class="certificado-header">
-                <h4 class="certificado-titulo">${cert.titulo}</h4>
-                <div class="certificado-info">
-                  <span class="certificado-institucion">${cert.institucion}</span>
-                  <span class="certificado-fecha">${cert.fecha}</span>
-                </div>
-              </div>
-              <div class="certificado-pdf">
-                <iframe 
-                  src="${cert.archivo}#toolbar=0&navpanes=0&scrollbar=0" 
-                  type="application/pdf"
-                  class="certificado-iframe"
-                  title="Certificado: ${cert.titulo}"
-                  loading="lazy">
-                </iframe>
-                <a href="${cert.archivo}" target="_blank" rel="noopener noreferrer" class="certificado-descargar" download>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                  </svg>
-                  Descargar PDF
-                </a>
-              </div>
+            <div class="certificado-pdf">
+              <iframe 
+                src="${cert.archivo}#toolbar=0&navpanes=0&scrollbar=0&zoom=page-fit&view=Fit" 
+                type="application/pdf"
+                class="certificado-iframe"
+                title="Certificado: ${cert.titulo}"
+                loading="lazy">
+              </iframe>
             </div>
           </div>
         `).join('')}
