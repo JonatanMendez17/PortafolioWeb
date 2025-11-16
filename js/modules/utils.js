@@ -11,12 +11,12 @@ import { mostrarNotificacion } from './notifications.js';
 export const descargarCV = function() {
     try {
         // Verificar que el archivo existe antes de intentar descargarlo
-        fetch('recursos/CV_Jonatan__Mendez.pdf')
+        fetch('imag/CV_Jonatan__Mendez.pdf')
             .then(response => {
                 if (response.ok) {
                     // Crear un enlace temporal para descargar el CV
                     const enlace = document.createElement('a');
-                    enlace.href = 'recursos/CV_Jonatan__Mendez.pdf';
+                    enlace.href = 'imag/CV_Jonatan__Mendez.pdf';
                     enlace.download = 'CV_Jonatan_Mendez.pdf';
                     enlace.target = '_blank';
                     

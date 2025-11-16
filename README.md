@@ -12,7 +12,7 @@ Este repositorio contiene mi portafolio web: una página estática para presenta
 - `index.html`: estructura y contenido principal del sitio.
 - `css/`: estilos y variables de diseño.
 - `js/`: scripts para interacciones ligeras.
-- `recursos/`: imágenes, íconos y otros assets.
+- `imag/`: imágenes, íconos y otros assets.
 - `cv/`: documento(s) de CV descargable(s).
 
 ## Tecnologías 🛠️
