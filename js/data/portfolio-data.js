@@ -19,7 +19,7 @@ export const proyectos = [
     id: 1,
     titulo: "Calculadora Web",
     descripcion: "Calculadora interactiva desarrollada con JavaScript puro, HTML5 y CSS3. Incluye operaciones básicas. Escalable para operaciones mas avanzadas.",
-    imagen: "imag/calculadora.png",
+    imagen: "./imag/calculadora.png",
     url: "https://github.com/JonatanMendez17/CalculadoraWeb",
     tieneRepositorio: true
   },
@@ -27,7 +27,7 @@ export const proyectos = [
     id: 2,
     titulo: "Generador de Volumetría",
     descripcion: "Herramienta en C#/.NET para generar archivos masivos de datos simulados para pruebas de rendimiento y batch.",
-    imagen: "imag/generadorVolumetria.png",
+    imagen: "./imag/generadorVolumetria.png",
     url: "https://github.com/JonatanMendez17/GeneradorVolumetria",
     tieneRepositorio: true
   },
@@ -35,7 +35,7 @@ export const proyectos = [
     id: 3,
     titulo: "Portafolio Web",
     descripcion: "Portafolio personal con proyectos, experiencia y contacto. Construido con HTML, CSS y JavaScript.",
-    imagen: "imag/Logo.png",
+    imagen: "./imag/Logo.png",
     url: "https://github.com/JonatanMendez17/PortafolioWeb",
     tieneRepositorio: true
   },
@@ -43,7 +43,7 @@ export const proyectos = [
     id: 4,
     titulo: "Tienda Online – Toselli Hogar",
     descripcion: "E-commerce completo desarrollado con WordPress, WooCommerce y plugins personalizados.",
-    imagen: "imag/TosseliHogar.png",
+    imagen: "./imag/TosseliHogar.png",
     url: "https://tosellihogar.com.ar",
     tieneRepositorio: false
   },
@@ -51,7 +51,7 @@ export const proyectos = [
     id: 5,
     titulo: "Tienda Alatul",
     descripcion: "Plataforma web con experiencias guiadas, contenido multimedia y tienda de gemas.",
-    imagen: "imag/alatul.png",
+    imagen: "./imag/alatul.png",
     url: "https://alatul.app",
     tieneRepositorio: false
   },
@@ -59,7 +59,7 @@ export const proyectos = [
     id: 6,
     titulo: "Gesprender",
     descripcion: "Software Factory: soluciones a medida, e‑commerce y automatizaciones para negocios.",
-    imagen: "imag/Gesprender.png",
+    imagen: "./imag/Gesprender.png",
     url: "https://gesprender.com",
     tieneRepositorio: false
   }
@@ -171,91 +171,91 @@ export const certificados = [
     titulo: "C# - Programación",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy - csharp.pdf"
+    archivo: "./doc/Platzy - csharp.pdf"
   },
   {
     id: 2,
     titulo: "Backend",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_Backend.pdf"
+    archivo: "./doc/Platzy_Diploma_Backend.pdf"
   },
   {
     id: 3,
     titulo: "Computación Básica",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_ComputacionBasica.pdf"
+    archivo: "./doc/Platzy_Diploma_ComputacionBasica.pdf"
   },
   {
     id: 4,
     titulo: "Expresiones Regulares",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_ExpresionesRegulares.pdf"
+    archivo: "./doc/Platzy_Diploma_ExpresionesRegulares.pdf"
   },
   {
     id: 5,
     titulo: "Fundamentos de Ingeniería",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_FundamentosDeIngenieria.pdf"
+    archivo: "./doc/Platzy_Diploma_FundamentosDeIngenieria.pdf"
   },
   {
     id: 6,
     titulo: "Historia de la Programación",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_HistoriaDeLaProgramacion.pdf"
+    archivo: "./doc/Platzy_Diploma_HistoriaDeLaProgramacion.pdf"
   },
   {
     id: 7,
     titulo: "Introducción Web",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_IntroduccionWeb.pdf"
+    archivo: "./doc/Platzy_Diploma_IntroduccionWeb.pdf"
   },
   {
     id: 8,
     titulo: "Introducción a Terminal",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_IntroTerminal.pdf"
+    archivo: "./doc/Platzy_Diploma_IntroTerminal.pdf"
   },
   {
     id: 9,
     titulo: "Pensamiento Lógico",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_PensamientoLogico.pdf"
+    archivo: "./doc/Platzy_Diploma_PensamientoLogico.pdf"
   },
   {
     id: 10,
     titulo: "Pensamiento Lógico: Estructuras",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_PensamientoLogicoEstructuras.pdf"
+    archivo: "./doc/Platzy_Diploma_PensamientoLogicoEstructuras.pdf"
   },
   {
     id: 11,
     titulo: "Pensamiento Lógico: Lenguajes",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_PensamientoLogicoLenguajes.pdf"
+    archivo: "./doc/Platzy_Diploma_PensamientoLogicoLenguajes.pdf"
   },
   {
     id: 12,
     titulo: "Programación Básica",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_ProgramacionBasica.pdf"
+    archivo: "./doc/Platzy_Diploma_ProgramacionBasica.pdf"
   },
   {
     id: 13,
     titulo: "Redes Informáticas",
     institucion: "Platzi",
     fecha: "2024",
-    archivo: "doc/Platzy_Diploma_RedesInformaticas.pdf"
+    archivo: "./doc/Platzy_Diploma_RedesInformaticas.pdf"
   },
   // Certificados SoloLearn
   {
@@ -263,35 +263,35 @@ export const certificados = [
     titulo: "CSS",
     institucion: "SoloLearn",
     fecha: "2024",
-    archivo: "doc/CERTIFICADO_SoloLearn_CSS.pdf"
+    archivo: "./doc/CERTIFICADO_SoloLearn_CSS.pdf"
   },
   {
     id: 15,
     titulo: "HTML",
     institucion: "SoloLearn",
     fecha: "2024",
-    archivo: "doc/CERTIFICADO_SoloLearn_HTML.pdf"
+    archivo: "./doc/CERTIFICADO_SoloLearn_HTML.pdf"
   },
   {
     id: 16,
     titulo: "Introducción a C#",
     institucion: "SoloLearn",
     fecha: "2024",
-    archivo: "doc/CERTIFICADO_SoloLearn_INTRODUCCION A C#.pdf"
+    archivo: "./doc/CERTIFICADO_SoloLearn_INTRODUCCION A C#.pdf"
   },
   {
     id: 17,
     titulo: "SQL",
     institucion: "SoloLearn",
     fecha: "2024",
-    archivo: "doc/CERTIFICADO_SoloLearn_SQL.pdf"
+    archivo: "./doc/CERTIFICADO_SoloLearn_SQL.pdf"
   },
   {
     id: 18,
     titulo: "Team Building",
     institucion: "SoloLearn",
     fecha: "2024",
-    archivo: "doc/CERTIFICADO_SoloLearn_TEAM BUILDING.pdf"
+    archivo: "./doc/CERTIFICADO_SoloLearn_TEAM BUILDING.pdf"
   }
 ];
 
