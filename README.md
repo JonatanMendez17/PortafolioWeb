@@ -35,7 +35,7 @@ Portafolio personal desarrollado con HTML, CSS y JavaScript vanilla. Presenta pr
 - **Formulario funcional**: Integración con EmailJS para envío de mensajes
 - **Animaciones suaves**: Transiciones y efectos visuales
 
-## Accesibilidad y SEO ♿🔍
+## Accesibilidad y SEO 🔍
 - Etiquetas semánticas HTML5
 - Imágenes con `alt` descriptivo
 - ARIA labels en elementos interactivos
