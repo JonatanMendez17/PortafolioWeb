@@ -16,9 +16,9 @@
 // ========================================
 
 export const EMAILJS_CONFIG = {
-    serviceID: 'YOUR_SERVICE_ID',      // Reemplaza con tu Service ID
-    templateID: 'YOUR_TEMPLATE_ID',   // Reemplaza con tu Template ID
-    publicKey: 'YOUR_PUBLIC_KEY',      // Reemplaza con tu Public Key
+    serviceID: 'service_m3av1k6',      // Reemplaza con tu Service ID
+    templateID: 'template_qzttmtmD',   // Reemplaza con tu Template ID
+    publicKey: 'iDV2SoODv9CjJfec1',      // Reemplaza con tu Public Key
     toEmail: 'jonatanmendez17@hotmail.com'  // Tu email de destino
 };
 
