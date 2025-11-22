@@ -277,7 +277,7 @@ export const certificados = [
     titulo: "Introducción a C#",
     institucion: "SoloLearn",
     fecha: "2024",
-    archivo: "./doc/CERTIFICADO_SoloLearn_INTRODUCCION A C#.pdf"
+    archivo: "./doc/CERTIFICADO_SoloLearn_INTRODUCCIONCSHARP.pdf"
   },
   {
     id: 17,
