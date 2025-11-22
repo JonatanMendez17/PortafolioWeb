@@ -333,9 +333,8 @@
     padding: 16px;
   }
 
-  .certificado-pdf {
-    height: 600px;
-    border-radius: 12px;
+  .certificado-imagen-container {
+    max-height: 600px;
   }
 
   .certificado-titulo {
@@ -349,55 +348,46 @@
 
 @media (max-width: 768px) {
   .carrusel-container {
-    padding: 12px;
+    padding: 12px 45px;
   }
 
-  .certificado-pdf {
-    height: 500px;
-    border-radius: 10px;
-    border-width: 2px;
-  }
-
-  .certificado-iframe {
-    border-radius: 8px;
+  .certificado-imagen-container {
+    max-height: 500px;
   }
 
   .carrusel-track {
-    min-height: 520px;
+    min-height: auto;
+  }
+
+  .carrusel-track .carrusel-btn {
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+  }
+
+  .carrusel-track .carrusel-btn.carrusel-prev {
+    left: 8px;
+  }
+
+  .carrusel-track .carrusel-btn.carrusel-next {
+    right: 8px;
+  }
+
+  .carrusel-track .carrusel-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .certificado-info-card {
+    margin-top: 12px;
+    padding: 10px;
   }
 
   .carrusel-controls {
     margin-top: 16px;
     padding-top: 16px;
     gap: 20px;
-  }
-
-  .carrusel-btn {
-    width: 48px;
-    height: 48px;
-    border-width: 2px;
-    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
-  }
-
-  .carrusel-btn svg {
-    width: 22px;
-    height: 22px;
-  }
-
-  .carrusel-btn:hover {
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.5);
-  }
-
-  .certificado-descargar {
-    bottom: 12px;
-    right: 12px;
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  .certificado-descargar svg {
-    width: 16px;
-    height: 16px;
   }
 
   .carrusel-indicators {
@@ -407,21 +397,35 @@
 
 @media (max-width: 480px) {
   .carrusel-container {
-    padding: 8px;
+    padding: 8px 40px;
   }
 
-  .certificado-pdf {
-    height: 420px;
-    border-radius: 8px;
-    border-width: 2px;
-  }
-
-  .certificado-iframe {
-    border-radius: 6px;
+  .certificado-imagen-container {
+    max-height: 400px;
   }
 
   .carrusel-track {
-    min-height: 440px;
+    min-height: auto;
+  }
+
+  .carrusel-track .carrusel-btn {
+    width: 36px;
+    height: 36px;
+    border-width: 2px;
+    box-shadow: 0 3px 10px rgba(124, 58, 237, 0.4);
+  }
+
+  .carrusel-track .carrusel-btn.carrusel-prev {
+    left: 6px;
+  }
+
+  .carrusel-track .carrusel-btn.carrusel-next {
+    right: 6px;
+  }
+
+  .carrusel-track .carrusel-btn svg {
+    width: 18px;
+    height: 18px;
   }
 
   .certificado-titulo {
@@ -434,6 +438,11 @@
     gap: 4px;
   }
 
+  .certificado-info-card {
+    margin-top: 10px;
+    padding: 8px;
+  }
+
   .carrusel-controls {
     margin-top: 12px;
     padding-top: 12px;
@@ -441,36 +450,14 @@
     flex-wrap: nowrap;
   }
 
-  .carrusel-btn {
-    width: 52px;
-    height: 52px;
-    border-width: 2.5px;
-    box-shadow: 0 3px 10px rgba(124, 58, 237, 0.4);
-    flex-shrink: 0;
-  }
-
-  .carrusel-btn svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .carrusel-btn:hover,
-  .carrusel-btn:active {
-    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.6);
-    transform: scale(1.05);
-  }
-
   .carrusel-indicators {
     gap: 8px;
+    display: none;
   }
 
   .carrusel-indicator {
     width: 10px;
     height: 10px;
-  }
-
-  .carrusel-indicators {
-    display: none;
   }
 }
 

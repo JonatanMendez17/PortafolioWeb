@@ -258,35 +258,35 @@ export const renderCertificados = () => {
       <div class="carrusel-track">
         ${certificados.map((cert, index) => `
           <div class="certificado-slide ${index === 0 ? 'active' : ''}" data-index="${index}">
-            <div class="certificado-pdf">
-              <iframe 
-                src="${cert.archivo}#toolbar=0&navpanes=0&scrollbar=0&zoom=page-fit&view=Fit" 
-                type="application/pdf"
-                class="certificado-iframe"
-                title="Certificado: ${cert.titulo}"
+            <div class="certificado-imagen-container">
+              <img 
+                src="${cert.imagen}" 
+                alt="Certificado: ${cert.titulo} - ${cert.institucion}"
+                class="certificado-imagen"
                 loading="lazy">
-              </iframe>
             </div>
           </div>
         `).join('')}
-      </div>
-      ${certificados.length > 1 ? `
-        <div class="carrusel-controls">
+        ${certificados.length > 1 ? `
           <button type="button" class="carrusel-btn carrusel-prev" aria-label="Certificado anterior">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
-          <div class="carrusel-indicators">
-            ${certificados.map((_, index) => `
-              <button type="button" class="carrusel-indicator ${index === 0 ? 'active' : ''}" data-index="${index}" aria-label="Ir al certificado ${index + 1}"></button>
-            `).join('')}
-          </div>
           <button type="button" class="carrusel-btn carrusel-next" aria-label="Certificado siguiente">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </button>
+        ` : ''}
+      </div>
+      ${certificados.length > 1 ? `
+        <div class="carrusel-controls">
+          <div class="carrusel-indicators">
+            ${certificados.map((_, index) => `
+              <button type="button" class="carrusel-indicator ${index === 0 ? 'active' : ''}" data-index="${index}" aria-label="Ir al certificado ${index + 1}"></button>
+            `).join('')}
+          </div>
         </div>
       ` : ''}
     </div>
