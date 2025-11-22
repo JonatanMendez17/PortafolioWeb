@@ -357,43 +357,6 @@
   pointer-events:auto;
 }
 
-.certificado-contenido{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-
-.certificado-header{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-.certificado-titulo{
-  font-weight:800;
-  font-size:20px;
-  color:#e6eef8;
-  margin:0;
-}
-
-.certificado-info{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-  align-items:center;
-}
-
-.certificado-institucion{
-  color:var(--acento);
-  font-weight:600;
-  font-size:14px;
-}
-
-.certificado-fecha{
-  color:var(--apagado);
-  font-size:13px;
-}
-
 .certificado-imagen-container{
   position:relative;
   width:100%;
@@ -430,45 +393,6 @@
   height:100%;
   object-fit:contain;
   display:block;
-}
-
-.certificado-info-card{
-  margin-top:16px;
-  padding:12px;
-  background:rgba(255,255,255,0.02);
-  border-radius:8px;
-  border:1px solid rgba(255,255,255,0.05);
-}
-
-.certificado-descargar{
-  position:absolute;
-  bottom:16px;
-  right:16px;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 16px;
-  background:var(--acento);
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-  font-size:14px;
-  transition:all 0.3s ease;
-  z-index:10;
-  backdrop-filter:blur(10px);
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
-}
-
-.certificado-descargar:hover{
-  background:#6d28d9;
-  transform:translateY(-2px);
-  box-shadow:0 6px 16px rgba(124,58,237,0.5);
-}
-
-.certificado-descargar svg{
-  width:18px;
-  height:18px;
 }
 
 .carrusel-controls{

@@ -10,10 +10,6 @@ import { initTypingEffect } from './modules/typing-effect.js';
 import { initEventListeners } from './modules/utils.js';
 import { initRender } from './modules/render.js';
 import { initCertificatesCarousel } from './modules/certificates-carousel.js';
-import { EMAILJS_CONFIG } from './config/email-config.js';
-
-// Hacer EMAILJS_CONFIG disponible globalmente para compatibilidad
-window.EMAILJS_CONFIG = EMAILJS_CONFIG;
 
 /**
  * Inicializa la aplicación cuando el DOM está listo
