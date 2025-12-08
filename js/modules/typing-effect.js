@@ -3,9 +3,7 @@
 // Maneja el efecto de typing en el título
 // ========================================
 
-/**
- * Inicializa el efecto de escritura (typing effect)
- */
+/* Inicializa el efecto de escritura (typing effect) */
 export const initTypingEffect = () => {
     setTimeout(function() {
         const texto = "Desarrollador FullStack";

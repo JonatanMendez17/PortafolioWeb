@@ -151,7 +151,6 @@
   transform: scale(1.1);
 }
 
-/* Hover effects for each technology - se mantienen del archivo original */
 .pastilla[data-tech="html"]:hover{background:#e34f2685;color:white;transform:translateY(-2px);}
 .pastilla[data-tech="css"]:hover{background:#1573b682;color:white;transform:translateY(-2px);}
 .pastilla[data-tech="javascript"]:hover{background:#f7de1e66;color:#ffffff;transform:translateY(-2px);}

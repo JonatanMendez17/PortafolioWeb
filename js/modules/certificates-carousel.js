@@ -8,9 +8,7 @@ let autoPlayInterval = null;
 let isPaused = false;
 const AUTO_PLAY_DELAY = 5000; // 5 segundos
 
-/**
- * Inicializa el carrusel de certificados
- */
+/* Inicializa el carrusel de certificados */
 export const initCertificatesCarousel = () => {
   const carrusel = document.querySelector('.carrusel-container');
   if (!carrusel) return;
@@ -70,13 +68,10 @@ export const initCertificatesCarousel = () => {
   });
 };
 
-/**
- * Navega a un slide específico
- */
+/* Navega a un slide específico */
 const goToSlide = (index, slides, indicators) => {
   const totalSlides = slides.length;
   
-  // Ajustar índice si está fuera de rango
   if (index < 0) {
     currentIndex = totalSlides - 1;
   } else if (index >= totalSlides) {
@@ -98,9 +93,7 @@ const goToSlide = (index, slides, indicators) => {
   }
 };
 
-/**
- * Inicia el auto-play del carrusel
- */
+/* Inicia el auto-play del carrusel */
 const startAutoPlay = (slides, indicators) => {
   clearInterval(autoPlayInterval);
   
@@ -111,9 +104,7 @@ const startAutoPlay = (slides, indicators) => {
   }, AUTO_PLAY_DELAY);
 };
 
-/**
- * Reinicia el auto-play
- */
+/* Reinicia el auto-play */
 const resetAutoPlay = () => {
   if (!isPaused) {
     const carrusel = document.querySelector('.carrusel-container');

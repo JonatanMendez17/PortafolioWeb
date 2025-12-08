@@ -3,9 +3,7 @@
 // Maneja animaciones de scroll y efectos visuales
 // ========================================
 
-/**
- * Inicializa las animaciones de scroll usando IntersectionObserver
- */
+/* Inicializa las animaciones de scroll usando IntersectionObserver */
 export const animacionesScroll = () => {
     const observerOptions = {
         threshold: 0.1,
@@ -32,9 +30,7 @@ export const animacionesScroll = () => {
     });
 };
 
-/**
- * Agrega estilos CSS dinámicos para animaciones
- */
+/* Agrega estilos CSS dinámicos para animaciones */
 export const agregarEstilosAnimaciones = () => {
     const style = document.createElement('style');
     style.textContent = `

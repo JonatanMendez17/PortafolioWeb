@@ -5,11 +5,10 @@
 
 import { mostrarNotificacion } from './notifications.js';
 
-/**
- * Descarga el CV del usuario
- */
+/* Descarga el CV del usuario */
 export const descargarCV = function() {
     try {
+
         // Verificar que el archivo existe antes de intentar descargarlo
         fetch('./doc/CV_Jonatan__Mendez.pdf')
             .then(response => {
@@ -50,9 +49,7 @@ export const descargarCV = function() {
     }
 };
 
-/**
- * Hace scroll suave hasta la sección de contacto
- */
+/* Hace scroll suave hasta la sección de contacto */
 export const scrollToContact = function() {
     const seccionContacto = document.getElementById('contacto');
     if (seccionContacto) {
@@ -64,10 +61,9 @@ export const scrollToContact = function() {
     }
 };
 
-/**
- * Inicializa los event listeners para botones y acciones
- */
+/* Inicializa los event listeners para botones y acciones */
 export const initEventListeners = () => {
+    
     // Menú hamburguesa
     const menuHamburguesa = document.querySelector('.menu-hamburguesa');
     if (menuHamburguesa) {

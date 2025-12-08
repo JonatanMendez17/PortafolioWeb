@@ -1,18 +1,6 @@
 // ========================================
 // DATOS DEL PORTFOLIO
 // ========================================
-// 
-// Para agregar un nuevo proyecto, simplemente agrega un objeto al array:
-// {
-//   id: número único,
-//   titulo: "Nombre del proyecto",
-//   descripcion: "Descripción del proyecto",
-//   imagen: "ruta/a/imagen.png",
-//   url: "https://url-del-proyecto.com",
-//   tieneRepositorio: true/false
-// }
-//
-// ========================================
 
 export const proyectos = [
   {
@@ -172,7 +160,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy - csharp_page-0001.jpg",
-    archivo: "./doc/Platzy - csharp.pdf"
   },
   {
     id: 2,
@@ -180,7 +167,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_Backend_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_Backend.pdf"
   },
   {
     id: 3,
@@ -188,7 +174,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_ComputacionBasica_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_ComputacionBasica.pdf"
   },
   {
     id: 4,
@@ -196,7 +181,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_ExpresionesRegulares_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_ExpresionesRegulares.pdf"
   },
   {
     id: 5,
@@ -204,7 +188,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_FundamentosDeIngenieria_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_FundamentosDeIngenieria.pdf"
   },
   {
     id: 6,
@@ -212,7 +195,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_HistoriaDeLaProgramacion_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_HistoriaDeLaProgramacion.pdf"
   },
   {
     id: 7,
@@ -220,7 +202,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_IntroduccionWeb_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_IntroduccionWeb.pdf"
   },
   {
     id: 8,
@@ -228,7 +209,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_IntroTerminal_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_IntroTerminal.pdf"
   },
   {
     id: 9,
@@ -236,7 +216,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_PensamientoLogico_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_PensamientoLogico.pdf"
   },
   {
     id: 10,
@@ -244,7 +223,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_PensamientoLogicoEstructuras_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_PensamientoLogicoEstructuras.pdf"
   },
   {
     id: 11,
@@ -252,7 +230,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_PensamientoLogicoLenguajes_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_PensamientoLogicoLenguajes.pdf"
   },
   {
     id: 12,
@@ -260,7 +237,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_ProgramacionBasica_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_ProgramacionBasica.pdf"
   },
   {
     id: 13,
@@ -268,48 +244,56 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy_Diploma_RedesInformaticas_page-0001.jpg",
-    archivo: "./doc/Platzy_Diploma_RedesInformaticas.pdf"
+  },
+  {
+    id: 14,
+    titulo: "Apis con .NET",
+    institucion: "Platzi",
+    fecha: "2025",
+    imagen: "./doc/Platzy_Diploma_ApisConNET_page-0001.jpg",
+  },
+  {
+    id: 15,
+    titulo: "Entity Framework",
+    institucion: "Platzi",
+    fecha: "2025",
+    imagen: "./doc/Platzy_Diploma_EntityFramework_page-0001.jpg",
   },
   // Certificados SoloLearn
   {
-    id: 14,
+    id: 16,
     titulo: "CSS",
     institucion: "SoloLearn",
     fecha: "2024",
     imagen: "./doc/CERTIFICADO_SoloLearn_CSS_page-0001.jpg",
-    archivo: "./doc/CERTIFICADO_SoloLearn_CSS.pdf"
   },
   {
-    id: 15,
+    id: 17,
     titulo: "HTML",
     institucion: "SoloLearn",
     fecha: "2024",
     imagen: "./doc/CERTIFICADO_SoloLearn_HTML_page-0001.jpg",
-    archivo: "./doc/CERTIFICADO_SoloLearn_HTML.pdf"
   },
   {
-    id: 16,
+    id: 18,
     titulo: "Introducción a C#",
     institucion: "SoloLearn",
     fecha: "2024",
     imagen: "./doc/CERTIFICADO_SoloLearn_INTRODUCCIONCSHARP_page-0001.jpg",
-    archivo: "./doc/CERTIFICADO_SoloLearn_INTRODUCCIONCSHARP.pdf"
   },
   {
-    id: 17,
+    id: 19,
     titulo: "SQL",
     institucion: "SoloLearn",
     fecha: "2024",
     imagen: "./doc/CERTIFICADO_SoloLearn_SQL_page-0001.jpg",
-    archivo: "./doc/CERTIFICADO_SoloLearn_SQL.pdf"
   },
   {
-    id: 18,
+    id: 20,
     titulo: "Team Building",
     institucion: "SoloLearn",
     fecha: "2024",
     imagen: "./doc/CERTIFICADO_SoloLearn_TEAM BUILDING_page-0001.jpg",
-    archivo: "./doc/CERTIFICADO_SoloLearn_TEAM BUILDING.pdf"
   }
 ];
 

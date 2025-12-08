@@ -11,9 +11,7 @@ import { initEventListeners } from './modules/utils.js';
 import { initRender } from './modules/render.js';
 import { initCertificatesCarousel } from './modules/certificates-carousel.js';
 
-/**
- * Inicializa la aplicación cuando el DOM está listo
- */
+/* Inicializa la aplicación cuando el DOM está listo */
 document.addEventListener('DOMContentLoaded', function() {
     
     // Renderizar contenido dinámico (debe ir primero)
@@ -26,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar formulario
     validacionFormulario();
     
-    // Inicializar animaciones (después del renderizado para que detecte los elementos dinámicos)
+    // Inicializar animaciones
     setTimeout(() => {
         animacionesScroll();
     }, 100);
     agregarEstilosAnimaciones();
     
-    // Inicializar carrusel de certificados (después del renderizado)
+    // Inicializar carrusel de certificados
     setTimeout(() => {
         initCertificatesCarousel();
     }, 150);

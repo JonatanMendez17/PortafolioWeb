@@ -118,13 +118,33 @@
     padding:12px 20px;
   }
   
-  .heroe{grid-template-columns:1fr;}
-  .perfil{flex-direction:row;align-items:center;text-align:left}
-  .avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center}
-  .titulo-principal{font-size:22px}
-  .cuadricula-2{grid-template-columns:1fr}
+  .heroe{
+    grid-template-columns:1fr;
+  }
+
+  .perfil{
+    flex-direction:row;
+    align-items:center;
+    text-align:left
+  }
+
+  .avatar{
+    width:96px;
+    height:96px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center
+  }
   
-  /* Experiencias Timeline - Responsive */
+  .titulo-principal{
+    font-size:
+    22px
+  }
+
+  .cuadricula-2{
+    grid-template-columns:1fr
+  }
+  
   .experiencias-timeline{
     padding-left:0;
   }
@@ -171,7 +191,7 @@
   }
 }
 
-/* Grid de proyectos y servicios - 2 columnas en tablets */
+/* Grid de proyectos y servicios */
 @media (max-width: 768px) {
   .proyectos-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -181,7 +201,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
   
-  /* Proyectos - Tablet */
   .proyecto-enlace {
     padding: 14px;
   }

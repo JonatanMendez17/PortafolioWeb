@@ -35,20 +35,17 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    /* Nubes grandes */
     radial-gradient(ellipse 400px 200px at 10% 20%, rgba(124, 58, 237, 0.12) 0%, transparent 70%),
     radial-gradient(ellipse 350px 180px at 90% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 70%),
     radial-gradient(ellipse 300px 150px at 30% 70%, rgba(124, 58, 237, 0.1) 0%, transparent 70%),
     radial-gradient(ellipse 320px 160px at 70% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 70%),
     
-    /* Nubes medianas */
     radial-gradient(ellipse 200px 100px at 15% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse 180px 90px at 85% 15%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse 220px 110px at 50% 85%, rgba(124, 58, 237, 0.09) 0%, transparent 60%),
     radial-gradient(ellipse 160px 80px at 25% 35%, rgba(59, 130, 246, 0.09) 0%, transparent 60%),
     radial-gradient(ellipse 190px 95px at 75% 65%, rgba(124, 58, 237, 0.07) 0%, transparent 60%),
     
-    /* Nubes pequeñas */
     radial-gradient(circle 80px at 5% 10%, rgba(124, 58, 237, 0.06) 0%, transparent 50%),
     radial-gradient(circle 70px at 95% 90%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
     radial-gradient(circle 90px at 20% 60%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
@@ -80,7 +77,6 @@ body::before {
   }
 }
 
-/* Segunda capa de nubes con diferentes animaciones */
 body::after {
   content: '';
   position: fixed;
@@ -89,13 +85,11 @@ body::after {
   width: 100%;
   height: 100%;
   background: 
-    /* Nubes grandes adicionales */
     radial-gradient(ellipse 380px 190px at 5% 75%, rgba(59, 130, 246, 0.08) 0%, transparent 70%),
     radial-gradient(ellipse 360px 180px at 95% 25%, rgba(124, 58, 237, 0.08) 0%, transparent 70%),
     radial-gradient(ellipse 280px 140px at 40% 5%, rgba(59, 130, 246, 0.06) 0%, transparent 70%),
     radial-gradient(ellipse 300px 150px at 60% 95%, rgba(124, 58, 237, 0.06) 0%, transparent 70%),
     
-    /* Nubes medianas adicionales */
     radial-gradient(ellipse 170px 85px at 12% 25%, rgba(59, 130, 246, 0.05) 0%, transparent 60%),
     radial-gradient(ellipse 210px 105px at 88% 85%, rgba(124, 58, 237, 0.05) 0%, transparent 60%),
     radial-gradient(ellipse 150px 75px at 35% 55%, rgba(59, 130, 246, 0.04) 0%, transparent 60%),
@@ -103,7 +97,6 @@ body::after {
     radial-gradient(ellipse 180px 90px at 45% 75%, rgba(59, 130, 246, 0.03) 0%, transparent 60%),
     radial-gradient(ellipse 160px 80px at 75% 35%, rgba(124, 58, 237, 0.03) 0%, transparent 60%),
     
-    /* Nubes pequeñas adicionales */
     radial-gradient(circle 55px at 8% 35%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
     radial-gradient(circle 75px at 92% 65%, rgba(124, 58, 237, 0.04) 0%, transparent 50%),
     radial-gradient(circle 45px at 18% 85%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),

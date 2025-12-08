@@ -12,9 +12,7 @@ const githubIcon = `
   </svg>
 `;
 
-/**
- * Renderiza los proyectos del portafolio
- */
+/* Renderiza los proyectos del portafolio */
 export const renderProyectos = () => {
   const container = document.querySelector('#portafolio .proyectos-grid');
   if (!container) return;
@@ -40,9 +38,7 @@ export const renderProyectos = () => {
   `).join('');
 };
 
-/**
- * Renderiza las experiencias profesionales
- */
+/* Renderiza las experiencias profesionales */
 export const renderExperiencias = () => {
   const container = document.querySelector('#experiencias');
   if (!container) return;
@@ -129,9 +125,7 @@ export const renderServicios = () => {
   `).join('');
 };
 
-/**
- * Renderiza las tecnologías
- */
+/* Renderiza las tecnologías */
 export const renderTecnologias = () => {
   const container = document.querySelector('#tecnologias .categorias-tecnologias');
   if (!container) return;
@@ -240,9 +234,7 @@ export const renderTecnologias = () => {
   container.innerHTML = html;
 };
 
-/**
- * Renderiza los certificados en un carrusel
- */
+/* Renderiza los certificados en un carrusel */
 export const renderCertificados = () => {
   const container = document.querySelector('#certificados .certificados-carrusel');
   if (!container) return;
@@ -293,9 +285,7 @@ export const renderCertificados = () => {
   `;
 };
 
-/**
- * Inicializa el renderizado de todo el contenido
- */
+/* Inicializa el renderizado de todo el contenido */
 export const initRender = () => {
   renderProyectos();
   renderExperiencias();

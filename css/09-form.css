@@ -43,13 +43,18 @@
   margin-bottom:4px;
 }
 
+.label-formulario i,
 .label-formulario svg{
   width:16px;
   height:16px;
   color:var(--acento);
   transition:color 0.3s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
 
+.campo-formulario:focus-within .label-formulario i,
 .campo-formulario:focus-within .label-formulario svg{
   color:#3b82f6;
   transform:scale(1.1);
@@ -115,12 +120,17 @@
   overflow:hidden;
 }
 
+.botones-formulario .boton i,
 .botones-formulario .boton svg{
   width:18px;
   height:18px;
   transition:transform 0.3s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
 
+.botones-formulario .boton:hover i,
 .botones-formulario .boton:hover svg{
   transform:translateX(2px);
 }
@@ -136,6 +146,7 @@
   transform:translateY(-2px);
 }
 
+.botones-formulario .boton-fantasma:hover i,
 .botones-formulario .boton-fantasma:hover svg{
   transform:rotate(-5deg);
 }

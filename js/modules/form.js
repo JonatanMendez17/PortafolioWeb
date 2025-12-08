@@ -6,9 +6,7 @@
 import { mostrarNotificacion } from './notifications.js';
 import { EMAILJS_CONFIG } from '../config/email-config.js';
 
-/**
- * Muestra un mensaje de error en un campo del formulario
- */
+/* Muestra un mensaje de error en un campo del formulario */
 const mostrarError = (field, message) => {
     const errorDiv = document.createElement('div');
     errorDiv.className = 'mensaje-error';
@@ -21,9 +19,7 @@ const mostrarError = (field, message) => {
     field.parentNode.appendChild(errorDiv);
 };
 
-/**
- * Limpia los mensajes de error de un campo
- */
+/* Limpia los mensajes de error de un campo */
 const limpiarError = (e) => {
     const field = e.target;
     field.style.borderColor = '';
@@ -34,9 +30,7 @@ const limpiarError = (e) => {
     }
 };
 
-/**
- * Valida un campo individual del formulario
- */
+/* Valida un campo individual del formulario */
 const validarCampo = (e) => {
     const field = e.target;
     const value = field.value.trim();
@@ -61,9 +55,7 @@ const validarCampo = (e) => {
     }
 };
 
-/**
- * Maneja el envío del formulario
- */
+/* Maneja el envío del formulario */
 const manejarEnvio = async (e) => {
     e.preventDefault();
     
@@ -141,9 +133,7 @@ const manejarEnvio = async (e) => {
     }
 };
 
-/**
- * Inicializa la validación del formulario
- */
+/* Inicializa la validación del formulario */
 export const validacionFormulario = () => {
     const form = document.querySelector('form');
     if (!form) return;

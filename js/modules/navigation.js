@@ -3,10 +3,6 @@
 // Maneja el menú hamburguesa y navegación suave
 // ========================================
 
-/**
- * Toggle del menú hamburguesa
- * Función global para compatibilidad
- */
 window.toggleMenu = function() {
     const menuHamburguesa = document.querySelector('.menu-hamburguesa');
     const navEnlaces = document.querySelector('.nav-enlaces');
@@ -34,9 +30,7 @@ window.toggleMenu = function() {
     menuHamburguesa.setAttribute('aria-label', isExpanded ? 'Cerrar menú' : 'Abrir menú');
 };
 
-/**
- * Cierra el menú hamburguesa
- */
+/* Cierra el menú hamburguesa */
 export const cerrarMenuHamburguesa = () => {
     const menuHamburguesa = document.querySelector('.menu-hamburguesa');
     const navEnlaces = document.querySelector('.nav-enlaces');
@@ -51,9 +45,7 @@ export const cerrarMenuHamburguesa = () => {
     }
 };
 
-/**
- * Inicializa el desplazamiento suave para enlaces de anclas
- */
+/* Inicializa el desplazamiento suave para enlaces de anclas */
 export const desplazamientoSuave = () => {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -79,9 +71,7 @@ export const desplazamientoSuave = () => {
     });
 };
 
-/**
- * Actualiza el estado activo de los enlaces de navegación según el scroll
- */
+/* Actualiza el estado activo de los enlaces de navegación según el scroll */
 export const navegacionActiva = () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
