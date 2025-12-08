@@ -68,6 +68,10 @@ export function mostrarNotificacion(mensaje, tipo = 'info') {
                 width: 24px;
                 height: 24px;
                 flex-shrink: 0;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
             }
             .notificacion-popup .notificacion-texto {
                 flex: 1;
@@ -90,11 +94,11 @@ export function mostrarNotificacion(mensaje, tipo = 'info') {
     // Determinar icono según el tipo
     let icono = '';
     if (tipo === 'exito') {
-        icono = '<svg class="notificacion-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>';
+        icono = '<i class="fas fa-check-circle notificacion-icono"></i>';
     } else if (tipo === 'error') {
-        icono = '<svg class="notificacion-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
+        icono = '<i class="fas fa-exclamation-circle notificacion-icono"></i>';
     } else {
-        icono = '<svg class="notificacion-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>';
+        icono = '<i class="fas fa-info-circle notificacion-icono"></i>';
     }
     
     // Crear elemento de notificación
