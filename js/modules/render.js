@@ -209,7 +209,7 @@ export const renderTecnologias = () => {
 
   // Palabras Claves
   html += `
-    <div class="categoria">
+    <div class="categoria categoria-completa">
       <h4 class="categoria-titulo">Palabras Claves</h4>
       <div class="habilidades">
         ${tecnologias.palabrasClaves.map(kw => `

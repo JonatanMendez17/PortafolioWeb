@@ -107,6 +107,10 @@
   gap:12px;
 }
 
+.categoria.categoria-completa{
+  grid-column:1 / -1;
+}
+
 .categoria-titulo{
   font-size:16px;
   font-weight:700;

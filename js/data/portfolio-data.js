@@ -148,7 +148,8 @@ export const tecnologias = {
     { nombre: "APIs", keyword: "apis" },
     { nombre: "Microservicios", keyword: "microservicios" },
     { nombre: "MVC", keyword: "mvc" },
-    { nombre: "Metodologías Scrum", keyword: "scrum" }
+    { nombre: "Metodologías Scrum", keyword: "scrum" },
+    { nombre: "Sistema de colas de mensajería (RabbitMQ)", keyword: "Sistema-de-colas-de-mensajeria" }
   ]
 };
 
