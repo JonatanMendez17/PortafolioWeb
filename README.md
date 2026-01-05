@@ -44,3 +44,7 @@ Portafolio personal desarrollado con HTML, CSS y JavaScript vanilla. Presenta pr
 
 ## Autor y contacto 📬
 - Enlaces de contacto en el sitio (email, LinkedIn, GitHub)
+
+## Previsualizacion 
+<img width="1146" height="756" alt="image" src="https://github.com/user-attachments/assets/ec972c67-81e3-4f32-bbba-fcd6b9e2f66b" />
+
