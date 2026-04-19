@@ -6,7 +6,7 @@ Portafolio personal desarrollado con HTML, CSS y JavaScript vanilla. Presenta pr
 - **Presentación**: Hero section con información personal y estadísticas
 - **Experiencias**: Timeline de experiencias profesionales y trabajos freelance
 - **Proyectos**: Grid de proyectos con descripción, tecnologías y enlaces
-- **Tecnologías**: Categorías de tecnologías y herramientas
+- **Tecnologías**: Categorías de tecnologías
 - **Certificados**: Carrusel automático de certificados en PDF
 - **Contacto**: Formulario de contacto con EmailJS
 
