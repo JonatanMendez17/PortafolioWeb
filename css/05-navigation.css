@@ -62,7 +62,7 @@
 
 .nav-enlaces a:hover,
 .nav-enlaces a.active{
-  color:#e6eef8;
+  color:var(--texto);
 }
 
 .nav-enlaces a.active::after{
@@ -95,7 +95,7 @@
 .hamburguesa-linea{
   width:100%;
   height:3px;
-  background:#e6eef8;
+  background:var(--texto);
   border-radius:2px;
   transition:all 0.3s ease;
   transform-origin:center;

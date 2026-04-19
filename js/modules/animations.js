@@ -5,50 +5,40 @@
 
 /* Inicializa las animaciones de scroll usando IntersectionObserver */
 export const animacionesScroll = () => {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
 
-    // Elementos a animar
-    const elementosAnimados = document.querySelectorAll('.tarjeta, .proyecto, .seccion');
-    
-    elementosAnimados.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    document.querySelectorAll('.tarjeta, .proyecto-card, .seccion').forEach(el => {
+        el.classList.add('animable');
         observer.observe(el);
     });
 };
 
-/* Agrega estilos CSS dinámicos para animaciones */
+/* Agrega estilos CSS para animaciones de entrada */
 export const agregarEstilosAnimaciones = () => {
     const style = document.createElement('style');
     style.textContent = `
-        nav a.activo {
-            color: var(--acento);
-            font-weight: 600;
+        .animable {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
-        
-        .boton:hover {
-            transform: translateY(-2px);
-            transition: transform 0.2s ease;
+        .animable.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-        
-        .proyecto:hover {
-            transform: translateY(-4px);
-            transition: transform 0.3s ease;
+        @media (prefers-reduced-motion: reduce) {
+            .animable { opacity: 1; transform: none; transition: none; }
         }
     `;
     document.head.appendChild(style);
 };
-

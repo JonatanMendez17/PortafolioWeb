@@ -4,12 +4,25 @@
    ======================================== */
 
 :root{
+  /* Colores */
   --fondo:#0f1724;
   --tarjeta:#0b1220;
   --acento:#7c3aed;
   --apagado:#94a3b8;
+  --texto:#e6eef8;
   --cristal: rgba(255,255,255,0.04);
+
+  /* Border radius */
   --radio:16px;
+  --radio-lg:14px;
+  --radio-md:12px;
+  --radio-sm:10px;
+  --radio-full:999px;
+
+  /* Transiciones */
+  --trans:0.25s ease;
+  --trans-lenta:0.35s ease;
+
   color-scheme: dark;
 }
 

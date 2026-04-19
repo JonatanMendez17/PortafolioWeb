@@ -20,12 +20,12 @@
 .exp-card{
   background:var(--cristal);
   border:1px solid rgba(255,255,255,0.07);
-  border-radius:14px;
+  border-radius:var(--radio-lg);
   padding:20px;
   display:flex;
   flex-direction:column;
   gap:14px;
-  transition:border-color 0.25s, transform 0.25s;
+  transition:border-color var(--trans), transform var(--trans);
 }
 
 .exp-card:hover{
@@ -71,7 +71,7 @@
 .exp-cargo{
   font-weight:600;
   font-size:13px;
-  color:#e6eef8;
+  color:var(--texto);
 }
 
 .exp-badge-actual{
@@ -114,7 +114,7 @@
 }
 
 .exp-lista strong{
-  color:#e6eef8;
+  color:var(--texto);
   font-weight:600;
 }
 
@@ -135,12 +135,12 @@
 .proyecto-card{
   background:var(--cristal);
   border:1px solid rgba(255,255,255,0.07);
-  border-radius:14px;
+  border-radius:var(--radio-lg);
   padding:22px;
   display:flex;
   flex-direction:column;
   gap:12px;
-  transition:border-color 0.25s, transform 0.25s;
+  transition:border-color var(--trans), transform var(--trans);
 }
 
 .proyecto-card:hover{
@@ -158,7 +158,7 @@
 .proyecto-card-titulo{
   font-weight:800;
   font-size:16px;
-  color:#e6eef8;
+  color:var(--texto);
   line-height:1.3;
 }
 
@@ -186,7 +186,7 @@
 }
 
 .proyecto-repo-link:hover{
-  color:#e6eef8;
+  color:var(--texto);
 }
 
 .proyecto-tags{
@@ -247,9 +247,9 @@
   flex-shrink:0;
   background:var(--cristal);
   border:1px solid rgba(255,255,255,0.07);
-  border-radius:12px;
+  border-radius:var(--radio-md);
   overflow:hidden;
-  transition:border-color 0.25s, transform 0.25s;
+  transition:border-color var(--trans), transform var(--trans);
 }
 
 .cert-card:hover{
@@ -272,7 +272,7 @@
 .cert-titulo{
   font-size:13px;
   font-weight:700;
-  color:#e6eef8;
+  color:var(--texto);
   line-height:1.3;
   white-space:nowrap;
   overflow:hidden;
@@ -330,7 +330,7 @@
   border-radius:50%;
   border:none;
   background:rgba(255,255,255,0.08);
-  color:#e6eef8;
+  color:var(--texto);
   font-size:18px;
   line-height:1;
   cursor:pointer;
@@ -360,7 +360,7 @@
 .cert-modal-titulo{
   font-size:16px;
   font-weight:700;
-  color:#e6eef8;
+  color:var(--texto);
 }
 
 .cert-modal-meta{

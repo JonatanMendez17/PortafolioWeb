@@ -8,6 +8,80 @@ import { proyectos, experiencias, freelancer, tecnologias, certificados } from '
 // Icono de GitHub para repositorios
 const githubIcon = `<i class="fab fa-github" aria-hidden="true"></i>`;
 
+/**
+ * Inicializa el scroll infinito con drag en un ticker.
+ * @param {HTMLElement} ticker - Contenedor con overflow hidden y cursor grab
+ * @param {HTMLElement} track  - Elemento que se transforma (debe tener items duplicados)
+ * @param {object} opts
+ * @param {number}   opts.speed         - Velocidad base de auto-scroll (px/frame aprox)
+ * @param {Function} [opts.onClick]     - Callback(target) cuando se hace click (no drag)
+ * @returns {{ pause: Function, resume: Function }}
+ */
+const initTickerScroll = (ticker, track, { speed = 0.5, onClick } = {}) => {
+  track.style.animation = 'none';
+
+  let position = 0;
+  let isPaused = false;
+  let isDragging = false;
+  let mouseDownX = 0;
+  let lastX = 0;
+  let velocity = 0;
+
+  const half = () => track.scrollWidth / 2;
+  const wrap = (pos) => {
+    const h = half();
+    if (pos <= -h) return pos + h;
+    if (pos > 0) return pos - h;
+    return pos;
+  };
+
+  const tick = () => {
+    if (!isPaused) {
+      if (!isDragging) {
+        velocity = velocity * 0.95 + speed * 0.05;
+        position = wrap(position - velocity);
+      } else {
+        position = wrap(position);
+      }
+      track.style.transform = `translateX(${position}px)`;
+    }
+    requestAnimationFrame(tick);
+  };
+
+  ticker.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    mouseDownX = e.clientX;
+    lastX = e.clientX;
+    velocity = 0;
+    ticker.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const delta = e.clientX - lastX;
+    position = wrap(position + delta);
+    velocity = -delta;
+    lastX = e.clientX;
+  });
+
+  window.addEventListener('mouseup', (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    ticker.style.cursor = 'grab';
+    if (onClick && Math.abs(e.clientX - mouseDownX) < 5) {
+      onClick(e.target);
+    }
+  });
+
+  requestAnimationFrame(tick);
+
+  return {
+    pause: () => { isPaused = true; },
+    resume: () => { isPaused = false; }
+  };
+};
+
 const renderTagsHtml = (tags) =>
   tags.map(t => `<span class="proyecto-tag">${t}</span>`).join('');
 
@@ -66,11 +140,11 @@ export const renderExperiencias = () => {
   if (!container) return;
 
   container.innerHTML = `
-    <h3>Experiencias Profesionales</h3>
+    <h2>Experiencias Profesionales</h2>
     <div class="exp-grid">
       ${experiencias.map(renderExpCard).join('')}
     </div>
-    <h3 class="exp-titulo-freelancer">Freelancer</h3>
+    <h2 class="exp-titulo-freelancer">Freelancer</h2>
     <div class="exp-grid">
       ${freelancer.map(renderExpCard).join('')}
     </div>
@@ -174,79 +248,22 @@ export const renderCertificados = () => {
   const ticker = container.querySelector('.cert-ticker');
   const track = container.querySelector('.cert-track');
 
-  track.style.animation = 'none';
-
-  const speed = 0.5;
-  let position = 0;
-  let isPaused = false;
-  let isDragging = false;
-  let lastX = 0;
-  let mouseDownX = 0;
-  let velocity = 0;
-
-  const half = () => track.scrollWidth / 2;
-  const wrap = (pos) => {
-    const h = half();
-    if (pos <= -h) return pos + h;
-    if (pos > 0) return pos - h;
-    return pos;
-  };
-
-  const tick = () => {
-    if (!isPaused) {
-      if (!isDragging) {
-        velocity = velocity * 0.95 + speed * 0.05;
-        position = wrap(position - velocity);
-      } else {
-        position = wrap(position);
-      }
-      track.style.transform = `translateX(${position}px)`;
-    }
-    requestAnimationFrame(tick);
-  };
-
-  ticker.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    mouseDownX = e.clientX;
-    lastX = e.clientX;
-    velocity = 0;
-    ticker.style.cursor = 'grabbing';
-    e.preventDefault();
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const delta = e.clientX - lastX;
-    position = wrap(position + delta);
-    velocity = -delta;
-    lastX = e.clientX;
-  });
-
-  window.addEventListener('mouseup', (e) => {
-    if (!isDragging) return;
-    isDragging = false;
-    ticker.style.cursor = 'grab';
-
-    // Si se movió menos de 5px es un click
-    if (Math.abs(e.clientX - mouseDownX) < 5) {
-      const card = e.target.closest('.cert-card');
-      if (card) {
-        const idx = parseInt(card.dataset.certIndex, 10) % certificados.length;
-        isPaused = true;
-        openCertModal(certificados[idx]);
-
-        const modal = document.getElementById('cert-modal');
-        if (modal) {
-          const resume = () => { isPaused = false; };
-          modal.addEventListener('transitionend', (ev) => {
-            if (!modal.classList.contains('cert-modal-visible')) resume();
-          });
-        }
+  const ctrl = initTickerScroll(ticker, track, {
+    speed: 0.5,
+    onClick: (target) => {
+      const card = target.closest('.cert-card');
+      if (!card) return;
+      const idx = parseInt(card.dataset.certIndex, 10) % certificados.length;
+      ctrl.pause();
+      openCertModal(certificados[idx]);
+      const modal = document.getElementById('cert-modal');
+      if (modal) {
+        modal.addEventListener('transitionend', () => {
+          if (!modal.classList.contains('cert-modal-visible')) ctrl.resume();
+        });
       }
     }
   });
-
-  requestAnimationFrame(tick);
 };
 
 /* Renderiza la cinta de tecnologías backend */
@@ -266,58 +283,8 @@ export const renderTechTicker = () => {
   `).join('');
 
   track.innerHTML = items + items;
-  // Quitar animación CSS — la manejamos con JS
-  track.style.animation = 'none';
 
-  const speed = 0.6;
-  let position = 0;
-  let isDragging = false;
-  let lastX = 0;
-  let velocity = 0;
-
-  const half = () => track.scrollWidth / 2;
-
-  const wrap = (pos) => {
-    const h = half();
-    if (pos <= -h) return pos + h;
-    if (pos > 0) return pos - h;
-    return pos;
-  };
-
-  const tick = () => {
-    if (!isDragging) {
-      velocity = velocity * 0.95 + speed * 0.05;
-      position = wrap(position - velocity);
-    } else {
-      position = wrap(position);
-    }
-    track.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(tick);
-  };
-
-  ticker.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    lastX = e.clientX;
-    velocity = 0;
-    ticker.style.cursor = 'grabbing';
-    e.preventDefault();
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const delta = e.clientX - lastX;
-    position = wrap(position + delta);
-    velocity = -delta;
-    lastX = e.clientX;
-  });
-
-  window.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    ticker.style.cursor = 'grab';
-  });
-
-  requestAnimationFrame(tick);
+  initTickerScroll(ticker, track, { speed: 0.6 });
 };
 
 /* Inicializa el renderizado de todo el contenido */
