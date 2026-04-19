@@ -31,7 +31,7 @@
 
 .saludo{
   font-size: 18px;
-  color: #e6eef8;
+  color: var(--texto);
   font-weight: 400;
 }
 
@@ -43,12 +43,12 @@
 }
 
 .nombre-principal{
-  color: #e6eef8;
+  color: var(--texto);
 }
 
 .titulo-portada{
   font-size: 24px;
-  color: #e6eef8;
+  color: var(--texto);
   font-weight: 600;
 }
 
@@ -113,7 +113,7 @@
 .red-social svg{
   width: 24px;
   height: 24px;
-  color: #e6eef8;
+  color: var(--texto);
   transition: color 0.3s ease;
   display: inline-flex;
   align-items: center;
@@ -168,7 +168,7 @@
 /* hero */
 .heroe{
   display:grid;
-  grid-template-columns:1fr 380px;
+  grid-template-columns:1fr 260px;
   gap:28px;
   margin-top:28px;
   align-items:stretch;
@@ -185,12 +185,81 @@
   justify-content:center;
 }
 
-.avatar{
-  width:160px;
-  height:160px;
+.perfil .fila-cta{
+  flex-direction:column;
+  width:100%;
+}
+
+.perfil .fila-cta .boton{
+  width:100%;
+  text-align:center;
+}
+
+.avatar-hex{
+  width:200px;
+  height:200px;
   border-radius:50%;
+  background:linear-gradient(135deg, #7c3aed, #a855f7, #06b6d4);
+  padding:3px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 0 28px rgba(124,58,237,0.45), 0 0 60px rgba(124,58,237,0.15);
+}
+
+.avatar-hex-inner{
+  width:194px;
+  height:194px;
+  border-radius:50%;
+  overflow:hidden;
+}
+
+.avatar{
+  width:194px;
+  height:194px;
   object-fit:cover;
-  object-position:center;
+  object-position:center top;
+  display:block;
+}
+
+/* Tech ticker */
+.tech-ticker{
+  overflow:hidden;
+  margin-top:20px;
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,0.06);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  mask-image:linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image:linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  cursor:grab;
+  user-select:none;
+}
+
+.tech-ticker-track{
+  display:flex;
+  gap:36px;
+  width:max-content;
+  will-change:transform;
+}
+
+.ticker-item{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  font-weight:600;
+  color:var(--apagado);
+  white-space:nowrap;
+  transition:color 0.2s;
+}
+
+.ticker-item i{
+  font-size:16px;
+}
+
+.ticker-item:hover{
+  color:var(--texto);
 }
 
 /* about + portfolio */
@@ -198,12 +267,6 @@
   margin-top:28px
 }
 
-.cuadricula-2{
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
-  justify-content: center;
-}
 
 footer{
   margin-top:100px;
@@ -231,7 +294,7 @@ footer{
 .footer-nombre{
   font-size:16px;
   font-weight:600;
-  color:#e6eef8;
+  color:var(--texto);
 }
 
 .footer-descripcion{
@@ -249,7 +312,7 @@ footer{
 .footer-titulo{
   font-size:16px;
   font-weight:600;
-  color:#e6eef8;
+  color:var(--texto);
 }
 
 .redes-sociales-footer{

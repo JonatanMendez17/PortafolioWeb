@@ -4,110 +4,152 @@
 
 export const proyectos = [
   {
-    id: 1,
-    titulo: "Calculadora Web",
-    descripcion: "Calculadora interactiva desarrollada con JavaScript puro, HTML5 y CSS3. Incluye operaciones básicas. Escalable para operaciones mas avanzadas.",
-    imagen: "./img/calculadora.png",
-    url: "https://github.com/JonatanMendez17/CalculadoraWeb",
+    id: 5,
+    tipo: "principal",
+    titulo: "BULK - Procesamiento masivo",
+    cliente: "Telecom Argentina",
+    descripcion: "Aplicación para procesamiento masivo de datos bajo arquitectura de microservicios. Incluye desarrollo de procesos batch, APIs REST y componentes frontend.",
+    tags: [".NET", "C#", "Web API", "Microservicios", "React", "Oracle"],
+    url: "#",
+    tieneRepositorio: false
+  },
+  {
+    id: 6,
+    tipo: "principal",
+    titulo: "Sistema SISFE",
+    cliente: "Poder Judicial – Santa Fe",
+    descripcion: "Sistema Integral de Expedientes Judiciales. Participación en relevamiento, análisis funcional, diseño de pruebas y capacitación a usuarios finales.",
+    tags: ["Análisis Funcional", "SQL"],
+    url: "#",
+    tieneRepositorio: false
+  },
+  {
+    id: 7,
+    tipo: "principal",
+    titulo: "App de Implementacion ",
+    cliente: "Impronta Solución",
+    descripcion: "Aplicación desktop para optimizar e implementar la migración de nuevos clientes, reduciendo tiempos operativos del equipo.",
+    tags: [".NET", "WPF", "C#"],
+    url: "https://github.com/JonatanMendez17/Implementador",
     tieneRepositorio: true
   },
   {
     id: 2,
+    tipo: "principal",
     titulo: "Generador de Volumetría",
-    descripcion: "Herramienta en C#/.NET para generar archivos masivos de datos simulados para pruebas de rendimiento y batch.",
-    imagen: "./img/generadorVolumetria.png",
+    cliente: "Proyecto personal",
+    descripcion: "Herramienta en C#/.NET para generar archivos masivos de datos simulados para pruebas de rendimiento y procesamiento batch.",
+    tags: ["C#", ".NET", "Batch"],
     url: "https://github.com/JonatanMendez17/GeneradorVolumetria",
     tieneRepositorio: true
   },
   {
+    id: 9,
+    tipo: "principal",
+    titulo: "API de notificaciones escalable",
+    cliente: "Impronta Solución",
+    descripcion: "Desarrollo de API de notificaciones para el envío de mensajes a través de distintos canales, comenzando con integración a Telegram y diseñada para escalar a nuevas plataformas como WhatsApp",
+    tags: [".NET", "Web API", "REST", "SOAP"],
+    url: "https://github.com/JonatanMendez17/Notification-service",
+    tieneRepositorio: true
+  },
+  {
+    id: 8,
+    tipo: "principal",
+    titulo: "Automatización de proceso",
+    cliente: "Impronta Solución",
+    descripcion: "Automatización de procesos internos mediante n8n, reduciendo tareas manuales y mejorando la eficiencia operativa del equipo.",
+    tags: ["n8n", "Automatización", "REST"],
+    url: "https://github.com/JonatanMendez17/hitosMensuales",
+    tieneRepositorio: true
+  },
+  {
     id: 3,
+    tipo: "secundario",
     titulo: "Portafolio Web",
-    descripcion: "Portafolio personal con proyectos, experiencia y contacto. Construido con HTML, CSS y JavaScript.",
-    imagen: "./img/logo.png",
+    descripcion: "Portafolio personal construido con HTML, CSS y JavaScript vanilla.",
+    tags: ["HTML", "CSS", "JavaScript"],
     url: "https://github.com/JonatanMendez17/PortafolioWeb",
     tieneRepositorio: true
   },
   {
     id: 4,
+    tipo: "secundario",
     titulo: "Tienda Online – Toselli Hogar",
     descripcion: "E-commerce completo desarrollado con WordPress, WooCommerce y plugins personalizados.",
-    imagen: "./img/tosseliHogar.png",
+    tags: ["WordPress", "WooCommerce"],
     url: "https://tosellihogar.com.ar",
-    tieneRepositorio: false
-  },
-  {
-    id: 5,
-    titulo: "Tienda Alatul",
-    descripcion: "Plataforma web con experiencias guiadas, contenido multimedia y tienda de gemas.",
-    imagen: "./img/alatul.png",
-    url: "https://alatul.app",
-    tieneRepositorio: false
-  },
-  {
-    id: 6,
-    titulo: "Gesprender",
-    descripcion: "Software Factory: soluciones a medida, e‑commerce y automatizaciones para negocios.",
-    imagen: "./img/gesprender.png",
-    url: "https://gesprender.com",
     tieneRepositorio: false
   }
 ];
 
 export const experiencias = [
   {
+    empresa: "IMPRONTA SOLUCIÓN",
+    periodo: "2025",
+    cargo: "Desarrollador .NET",
+    actual: true,
+    lista: [
+      "Desarrollo de aplicación desktop en <strong>WPF</strong> para optimizar la implementación de nuevos clientes",
+      "Automatización de procesos mediante <strong>n8n</strong>, reduciendo tareas manuales y mejorando eficiencia operativa del equipo",
+      "Implementación y consumo de servicios web (<strong>REST</strong>) para notificaciones e integración entre sistemas",
+      "Desarrollo de funcionalidades backend en <strong>.NET</strong> para integración con sistemas internos"
+    ]
+  },
+  {
     empresa: "2D SOLUCIONES",
-    fecha: "2022 - Al presente | Desarrollador FullStack",
-    descripcion: "Proyecto con <strong>Telecom Argentina</strong> Colabore con la implementacion de una aplicacion para procesamientos masivos, bajo arquitectura de microservicios utilizando .NET, combinado con el mantenimiento y la evolución de componentes frontend en React 17. <br><br> <strong> Contribuciones principales:</strong> Desarrollo de procesos completos, creación de herramientas internas y validaciones automáticas en C#, documentación técnica y funcional de sistemas migrados, optimización de consultas en bases de datos Oracle, diseño de APIs Rest, mantenimiento de componentes"
+    periodo: "2022 – 2025",
+    cargo: "Desarrollador .NET",
+    lista: [
+      "Proyecto con <strong>Telecom Argentina</strong>: implementación de aplicación para procesamientos masivos bajo arquitectura de microservicios con .NET",
+      "Mantenimiento y evolución de componentes frontend en <strong>React 17</strong>",
+      "Desarrollo de procesos completos internas con validaciones automáticas en <strong>C#</strong>",
+      "Documentación técnica y funcional de sistemas migrados",
+      "Optimización de consultas en bases de datos <strong>Oracle</strong> y diseño de APIs REST"
+    ]
   },
   {
     empresa: "I2T SOLUCIONES DE SOFTWARE",
-    fecha: "2021 - 2022 | Desarrollador WordPress & Back-end",
-    descripciones: [
-      "Proyecto con tienda <strong>Toselli Hogar</strong> colaborando en la creación de página web para presentación de sus productos e implementando ecommerce.",
-      "Proyecto con <strong>Jerárquicos Salud</strong>  participado en Implementación de sistema interno con interfaz intuitiva y consultas personalizadas a base de datos para optimizar procesos administrativos."
-    ],
-    tieneMargenInferior: true
+    periodo: "2021 – 2022",
+    cargo: "Desarrollador Backend ",
+    lista: [
+      "Proyecto con tienda <strong>Toselli Hogar</strong>: creación de página web para presentación de productos e implementación de ecommerce",
+      "Proyecto con <strong>Jerárquicos Salud</strong>: implementación de sistema interno con consultas personalizadas a base de datos para optimizar procesos administrativos"
+    ]
   },
   {
     empresa: "INDRA",
-    fecha: "2018 - 2021 | Analista Funcional",
-    descripcion: "Colaboré en el Proyecto de <strong>Transformación Digital</strong> para el <strong>Poder Judicial de la provincia de Santa Fe</strong>, en la implementación de un Sistema Integral de Expedientes Judiciales. <br><br> <strong> Contribuciones principales:</strong> Relevamiento de procesos · Análisis de requerimientos · Diseño de casos de prueba · Elaboración de manuales de uso · Capacitación a usuarios finales"
+    periodo: "2018 – 2021",
+    cargo: "Analista Funcional",
+    lista: [
+      "Proyecto de <strong>Transformación Digital</strong> para el <strong>Poder Judicial de la provincia de Santa Fe</strong>: implementación de Sistema Integral de Expedientes Judiciales",
+      "Relevamiento de procesos y análisis de requerimientos",
+      "Diseño de casos de prueba y elaboración de manuales de uso",
+      "Capacitación a usuarios finales"
+    ]
   }
 ];
 
-export const freelancer = {
-  titulo: "Freelancer",
-  experiencias: [
-    {
-      empresa: "Eprenda - Escuela de Cursos Técnicos",
-      fecha: "2025 | Instructor en Programación Full Stack",
-      descripcion: "Me dedico a la formación de nuevos desarrolladores, guiando su crecimiento desde los fundamentos hasta el dominio de tecnologías modernas.",
-      lista: [
-        "Fundamentos técnicos: Python, JavaScript, MySQL, HTML/CSS, Boostrap",
-        "Integración de IA en desarrollo web y generación de código asistido",
-        "Proyectos prácticos que simulan entornos laborales reales y buenas prácticas de programación"
-      ]
-    },
-    {
-      empresa: "Gesprender",
-      fecha: "2025 | Desarrollador WordPress",
-      descripcion: "Desarrollo y diseño de landing page oficial para Software Factory Gesprender <br> Desarrollo de e-commerce para tiena Alatul - Plataforma de servicios y productos"
-    }
-  ]
-};
-
-export const servicios = [
+export const freelancer = [
   {
-    titulo: "Desarrollo Web",
-    descripcion: "Desarrollo de aplicaciones web con HTML, CSS, JavaScript y tecnologías modernas."
+    empresa: "Eprenda – Escuela de Cursos Técnicos",
+    periodo: "2025",
+    cargo: "Instructor en programación Full Stack",
+    lista: [
+      "Formación de nuevos desarrolladores desde fundamentos hasta tecnologías modernas",
+      "Fundamentos técnicos: Python, JavaScript, MySQL, HTML/CSS, Bootstrap",
+      "Integración de IA en desarrollo web y generación de código asistido",
+      "Proyectos prácticos que simulan entornos laborales reales y buenas prácticas de programación"
+    ]
   },
   {
-    titulo: "Desarrollo Backend",
-    descripcion: "Implementación de soluciones backend con C#, .NET y SQL Server."
-  },
-  {
-    titulo: "Análisis Funcional",
-    descripcion: "Análisis de requerimientos, diseño de sistemas y documentación técnica."
+    empresa: "Gesprender",
+    periodo: "2025",
+    cargo: "Desarrollador WordPress",
+    lista: [
+      "Desarrollo y diseño de landing page oficial para Software Factory Gesprender",
+      "Desarrollo de e-commerce para tienda Alatul – Plataforma de servicios y productos"
+    ]
   }
 ];
 
@@ -115,41 +157,32 @@ export const tecnologias = {
   backend: [
     { nombre: "C#", tech: "csharp", icono: "devicon-csharp-plain" },
     { nombre: ".NET", tech: "dotnet", icono: "devicon-dotnet-plain" },
-    { nombre: "Node.js", tech: "nodejs", icono: "devicon-nodejs-plain" },
-    { nombre: "Python", tech: "python", icono: "devicon-python-plain" },
+    { nombre: "ASP.NET Core", tech: "aspnetcore", icono: "devicon-dotnetcore-plain" },
+    { nombre: "ASP.NET Web API", tech: "webapi", icono: null, fa: "fas fa-plug" },
+    { nombre: "WPF", tech: "wpf", icono: null, fa: "fab fa-windows" },
+    { nombre: "Entity Framework", tech: "ef", icono: null, fa: "fas fa-database" },
     { nombre: "SQL Server", tech: "mssql", icono: "devicon-microsoftsqlserver-plain" },
     { nombre: "Oracle", tech: "oracle", icono: "devicon-oracle-original" },
-    { nombre: "MySQL", tech: "mysql", icono: "devicon-mysql-plain-wordmark" }
-  ],
-  frontend: [
-    { nombre: "React", tech: "react", icono: "devicon-react-original" },
-    { nombre: "JavaScript", tech: "javascript", icono: "devicon-javascript-plain" },
-    { nombre: "HTML5", tech: "html", icono: "devicon-html5-plain" },
-    { nombre: "CSS3", tech: "css", icono: "devicon-css3-plain" },
-    { nombre: "Bootstrap", tech: "bootstrap", icono: "devicon-bootstrap-plain" }
-  ],
-  diseno: [
-    { nombre: "WordPress", tech: "wordpress", icono: "devicon-wordpress-plain" },
-    { nombre: "Figma", tech: "figma", icono: "devicon-figma-plain" },
-    { nombre: "Photoshop", tech: "photoshop", icono: "devicon-photoshop-plain" },
-    { nombre: "Elementor", tech: "elementor", icono: null, svg: true },
-    { nombre: "Divi", tech: "divi", icono: null, svg: true },
-    { nombre: "WooCommerce", tech: "woocommerce", icono: "devicon-woocommerce-plain" }
-  ],
-  herramientas: [
+    { nombre: "MySQL", tech: "mysql", icono: "devicon-mysql-plain-wordmark" },
     { nombre: "Git", tech: "git", icono: "devicon-git-plain" },
+    { nombre: "Docker", tech: "docker", icono: "devicon-docker-plain" },
+    { nombre: "Postman", tech: "postman", icono: "devicon-postman-plain" },
+    { nombre: "n8n", tech: "n8n", icono: null, fa: "fas fa-cogs" }
+  ],
+  frontend: [],
+  herramientas: [
     { nombre: "Jira", tech: "jira", icono: "devicon-jira-plain" },
     { nombre: "Confluence", tech: "confluence", icono: "devicon-confluence-plain" },
-    { nombre: "VSC", tech: "vscode", icono: "devicon-vscode-plain" },
-    { nombre: "VC 2022", tech: "visualstudio", icono: "devicon-visualstudio-plain" },
-    { nombre: "Postman", tech: "postman", icono: "devicon-postman-plain" }
+    { nombre: "React", tech: "react", icono: "devicon-react-original" },
+    { nombre: "JavaScript", tech: "javascript", icono: "devicon-javascript-plain" },
+    { nombre: "HTML", tech: "html", icono: "devicon-html5-plain" },
+    { nombre: "CSS", tech: "css", icono: "devicon-css3-plain" }
   ],
   palabrasClaves: [
-    { nombre: "APIs", keyword: "apis" },
-    { nombre: "Microservicios", keyword: "microservicios" },
-    { nombre: "MVC", keyword: "mvc" },
-    { nombre: "Metodologías Scrum", keyword: "scrum" },
-    { nombre: "Sistema de colas de mensajería (RabbitMQ)", keyword: "Sistema-de-colas-de-mensajeria" }
+{ nombre: "Microservicios", keyword: "microservicios" },
+    { nombre: "Integración de sistemas", keyword: "integracion" },
+    { nombre: "Mensajería (RabbitMQ)", keyword: "rabbitmq" },
+    { nombre: "Clean Architecture", keyword: "clean-architecture" }
   ]
 };
 

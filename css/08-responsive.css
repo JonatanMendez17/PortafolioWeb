@@ -54,10 +54,6 @@
     display:flex;
   }
 
-  .nav-logo .logo-texto{
-    display:none;
-  }
-  
   .footer-contenido{
     grid-template-columns: 1fr;
     gap: 24px;
@@ -79,43 +75,22 @@
   }
 
   /* Formulario responsivo */
-  .contacto-header h3{
-    font-size:24px;
+  .contacto-layout{
+    grid-template-columns:1fr;
+    gap:32px;
   }
 
-  .contacto-header{
-    margin-bottom:24px;
-    padding-bottom:20px;
-  }
-
-  .formulario-contacto{
-    gap:20px;
-    margin-top:24px;
-  }
-
-  .label-formulario{
-    font-size:13px;
+  .campos-fila{
+    grid-template-columns:1fr;
   }
 
   .input-formulario,
   .textarea-formulario{
-    padding:12px 16px;
     font-size:16px; /* Evita zoom en iOS */
-    border-radius:10px;
-  }
-
-  .textarea-formulario{
-    min-height:120px;
   }
 
   .botones-formulario{
     flex-direction:column;
-  }
-
-  .botones-formulario .boton{
-    width:100%;
-    min-width:unset;
-    padding:12px 20px;
   }
   
   .heroe{
@@ -128,12 +103,20 @@
     text-align:left
   }
 
+  .avatar-hex{
+    width:130px;
+    height:130px;
+  }
+
+  .avatar-hex-inner{
+    width:124px;
+    height:124px;
+  }
+
   .avatar{
-    width:96px;
-    height:96px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:center
+    width:124px;
+    height:124px;
+    object-position:center top
   }
   
   .titulo-principal{
@@ -141,323 +124,37 @@
     22px
   }
 
-  .cuadricula-2{
-    grid-template-columns:1fr
-  }
-  
-  .experiencias-timeline{
-    padding-left:0;
-  }
-  
-  .experiencias-timeline::before{
-    display:none;
-  }
-  
-  .timeline-marker{
-    display:none;
-  }
-  
-  .experiencia-content{
-    padding:16px;
-  }
-  
-  .experiencia-empresa{
-    font-size:18px;
-  }
-  
-  .experiencia-cargo{
-    font-size:14px;
-  }
-  
-  .experiencia-descripcion{
-    font-size:14px;
-  }
-  
-  .freelancer-section{
-    margin-top:32px;
-    padding-top:24px;
-  }
-  
-  .freelancer-titulo{
-    font-size:20px;
-  }
-  
-  .freelancer-item{
-    padding:16px;
-  }
-  
-  .freelancer-empresa{
-    font-size:16px;
+  .exp-grid{
+    grid-template-columns:1fr;
   }
 }
 
-/* Grid de proyectos y servicios */
+/* Grid de proyectos */
 @media (max-width: 768px) {
-  .proyectos-grid {
+  .proyectos-principales {
     grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .servicios-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .proyecto-enlace {
-    padding: 14px;
-  }
-  
-  .proyecto-imagen {
-    max-height: 48px;
-    max-width: 70px;
-  }
-  
-  .proyecto-titulo-miniatura {
-    font-size: 13px;
-    white-space: normal;
-    line-height: 1.3;
-    word-wrap: break-word;
-    overflow: visible;
-    text-overflow: clip;
   }
 }
 
-/* Grid de proyectos - 2 columnas en móviles */
 @media (max-width: 480px) {
-  .proyectos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-  
-  .servicios-grid {
+  .proyectos-principales {
     grid-template-columns: 1fr;
   }
-  
-  /* Proyectos - Responsive */
-  .proyecto-enlace {
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px;
+
+  .proyecto-card {
+    padding: 14px;
   }
-  
-  .proyecto-imagen {
-    max-height: 40px;
-    max-width: 60px;
-  }
-  
-  .proyecto-titulo-miniatura {
-    font-size: 12px;
-    white-space: normal;
-    line-height: 1.3;
-    word-wrap: break-word;
-    overflow: visible;
-    text-overflow: clip;
-  }
-  
-  /* Experiencias Timeline - Mobile */
-  .experiencias-timeline{
-    padding-left:0;
-    margin:20px 0;
-  }
-  
-  .experiencias-timeline::before{
-    display:none;
-  }
-  
-  .timeline-marker{
-    display:none;
-  }
-  
-  .experiencia-timeline-item{
-    margin-bottom:24px;
-    padding-bottom:24px;
-  }
-  
-  .experiencia-content{
+
+  .exp-card{
     padding:14px;
   }
-  
-  .experiencia-header{
-    gap:6px;
-    margin-bottom:12px;
-    padding-bottom:12px;
+
+  .exp-empresa{
+    font-size:14px;
   }
-  
-  .experiencia-empresa{
-    font-size:16px;
-  }
-  
-  .experiencia-cargo{
+
+  .exp-lista li{
     font-size:13px;
-  }
-  
-  .experiencia-fecha{
-    font-size:12px;
-  }
-  
-  .experiencia-descripcion{
-    font-size:13px;
-    line-height:1.6;
-  }
-  
-  .freelancer-section{
-    margin-top:24px;
-    padding-top:20px;
-  }
-  
-  .freelancer-titulo{
-    font-size:18px;
-    margin-bottom:16px;
-  }
-  
-  .freelancer-experiencias{
-    gap:16px;
-  }
-  
-  .freelancer-item{
-    padding:14px;
-  }
-  
-  .freelancer-header{
-    gap:6px;
-    margin-bottom:12px;
-    padding-bottom:12px;
-  }
-  
-  .freelancer-empresa{
-    font-size:15px;
-  }
-  
-  .freelancer-cargo{
-    font-size:12px;
-  }
-  
-  .freelancer-fecha{
-    font-size:12px;
-  }
-  
-  .freelancer-descripcion{
-    font-size:13px;
-    line-height:1.6;
-  }
-  
-  .freelancer-lista{
-    font-size:13px;
-    line-height:1.7;
-    padding-left:18px;
-  }
-}
-
-/* Carrusel de certificados - Responsive */
-@media (max-width: 900px) {
-  .carrusel-container {
-    padding: 16px;
-  }
-
-  .certificado-imagen-container {
-    max-height: 600px;
-  }
-
-  .carrusel-indicators {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .carrusel-container {
-    padding: 12px 45px;
-  }
-
-  .certificado-imagen-container {
-    max-height: 500px;
-  }
-
-  .carrusel-track {
-    min-height: auto;
-  }
-
-  .carrusel-track .carrusel-btn {
-    width: 40px;
-    height: 40px;
-    border-width: 2px;
-    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
-  }
-
-  .carrusel-track .carrusel-btn.carrusel-prev {
-    left: 8px;
-  }
-
-  .carrusel-track .carrusel-btn.carrusel-next {
-    right: 8px;
-  }
-
-  .carrusel-track .carrusel-btn i,
-  .carrusel-track .carrusel-btn svg {
-    width: 20px;
-    height: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-  }
-
-  .carrusel-controls {
-    margin-top: 16px;
-    padding-top: 16px;
-    gap: 20px;
-  }
-
-  .carrusel-indicators {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .carrusel-container {
-    padding: 8px 40px;
-  }
-
-  .certificado-imagen-container {
-    max-height: 400px;
-  }
-
-  .carrusel-track {
-    min-height: auto;
-  }
-
-  .carrusel-track .carrusel-btn {
-    width: 36px;
-    height: 36px;
-    border-width: 2px;
-    box-shadow: 0 3px 10px rgba(124, 58, 237, 0.4);
-  }
-
-  .carrusel-track .carrusel-btn.carrusel-prev {
-    left: 6px;
-  }
-
-  .carrusel-track .carrusel-btn.carrusel-next {
-    right: 6px;
-  }
-
-  .carrusel-track .carrusel-btn svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .carrusel-controls {
-    margin-top: 12px;
-    padding-top: 12px;
-    gap: 16px;
-    flex-wrap: nowrap;
-  }
-
-  .carrusel-indicators {
-    gap: 8px;
-    display: none;
-  }
-
-  .carrusel-indicator {
-    width: 10px;
-    height: 10px;
   }
 }
 

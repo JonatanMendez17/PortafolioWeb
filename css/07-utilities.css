@@ -14,30 +14,6 @@
   color:var(--apagado);
 }
 
-.sin-margen-superior{
-  margin-top:0;
-}
-
-.margen-inferior-pequeño{
-  margin-bottom:8px;
-}
-
-.margen-superior-cero{
-  margin-top:0;
-}
-
-.nombre-destacado{
-  background:linear-gradient(90deg,var(--acento),#3b82f6);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.texto-actualmente{
-  color:var(--apagado);
-  margin:8px 0;
-  max-width:260px;
-}
 
 .estadistica-numero{
   font-size:18px;
