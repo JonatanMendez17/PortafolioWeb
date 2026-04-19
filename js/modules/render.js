@@ -8,107 +8,86 @@ import { proyectos, experiencias, freelancer, servicios, tecnologias, certificad
 // Icono de GitHub para repositorios
 const githubIcon = `<i class="fab fa-github" aria-hidden="true"></i>`;
 
+const renderTagsHtml = (tags) =>
+  tags.map(t => `<span class="proyecto-tag">${t}</span>`).join('');
+
 /* Renderiza los proyectos del portafolio */
 export const renderProyectos = () => {
   const container = document.querySelector('#portafolio .proyectos-grid');
   if (!container) return;
 
-  container.innerHTML = proyectos.map(proyecto => `
-    <div class="proyecto">
-      <div class="miniatura">
-        <a href="${proyecto.url}" target="_blank" rel="noopener noreferrer" class="proyecto-enlace">
-          <img src="${proyecto.imagen}" alt="Icono ${proyecto.titulo}" class="proyecto-imagen" loading="lazy">
-          <span class="proyecto-titulo-miniatura">${proyecto.titulo}</span>
-        </a>
-      </div>
-      <div class="metadatos">
-        <div class="proyecto-descripcion">${proyecto.descripcion}</div>
-        ${proyecto.tieneRepositorio ? `
-          <div class="proyecto-info">
+  const principales = proyectos.filter(p => p.tipo === 'principal');
+  const secundarios = proyectos.filter(p => p.tipo === 'secundario');
+
+  const cardPrincipal = (p) => `
+    <div class="proyecto-card">
+      <div class="proyecto-card-header">
+        <div>
+          <div class="proyecto-card-titulo">${p.titulo}</div>
+          ${p.cliente ? `<div class="proyecto-card-cliente">${p.cliente}</div>` : ''}
+        </div>
+        ${p.tieneRepositorio ? `
+          <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="proyecto-repo-link" title="Ver repositorio">
             ${githubIcon}
-            <span>(Repositorio)</span>
-          </div>
-        ` : ''}
+          </a>` : ''}
+      </div>
+      <p class="proyecto-card-desc">${p.descripcion}</p>
+      <div class="proyecto-tags">${renderTagsHtml(p.tags)}</div>
+    </div>
+  `;
+
+  const cardSecundario = (p) => `
+    <div class="proyecto-mini">
+      <div class="proyecto-mini-circulo">
+        ${p.tieneRepositorio
+          ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="proyecto-repo-link" title="Ver repositorio">${githubIcon}</a>`
+          : `<i class="fas fa-code" aria-hidden="true" style="font-size:22px;color:var(--apagado);"></i>`
+        }
+      </div>
+      <div class="proyecto-mini-titulo">${p.titulo}</div>
+    </div>
+  `;
+
+  container.innerHTML = `
+    <div class="proyectos-principales">
+      ${principales.map(cardPrincipal).join('')}
+    </div>
+  `;
+};
+
+const renderExpCard = (exp) => `
+  <div class="exp-card">
+    <div class="exp-card-header">
+      <div class="exp-card-top">
+        <span class="exp-empresa">${exp.empresa}</span>
+        <span class="exp-periodo">${exp.periodo}</span>
+      </div>
+      <div class="exp-card-bottom">
+        <span class="exp-cargo">${exp.cargo}</span>
+        ${exp.actual ? '<span class="exp-badge-actual">Actual</span>' : ''}
       </div>
     </div>
-  `).join('');
-};
+    <ul class="exp-lista">
+      ${exp.lista.map(item => `<li>${item}</li>`).join('')}
+    </ul>
+  </div>
+`;
 
 /* Renderiza las experiencias profesionales */
 export const renderExperiencias = () => {
   const container = document.querySelector('#experiencias');
   if (!container) return;
 
-  let html = '<h3>Experiencias Profesionales</h3>';
-  
-  // Experiencias principales - Timeline
-  html += '<div class="experiencias-timeline">';
-  experiencias.forEach((exp, index) => {
-    // Extraer cargo de la fecha
-    const fechaParts = exp.fecha.split('|');
-    const periodo = fechaParts[0]?.trim() || '';
-    const cargo = fechaParts[1]?.trim() || '';
-    
-    html += `
-      <div class="experiencia-timeline-item ${index === experiencias.length - 1 ? 'last' : ''}">
-        <div class="timeline-marker"></div>
-        <div class="experiencia-content">
-          <div class="experiencia-header">
-            <div class="experiencia-empresa">${exp.empresa}</div>
-            <div class="experiencia-cargo">${cargo}</div>
-            <div class="experiencia-fecha">${periodo}</div>
-          </div>
-          <div class="experiencia-body">
-            ${exp.descripcion ? `
-              <div class="experiencia-descripcion">${exp.descripcion}</div>
-            ` : ''}
-            ${exp.descripciones ? exp.descripciones.map(d => `
-              <div class="experiencia-descripcion">${d}</div>
-            `).join('') : ''}
-            ${exp.lista ? `
-              <ul class="experiencia-lista">
-                ${exp.lista.map(item => `<li>${item}</li>`).join('')}
-              </ul>
-            ` : ''}
-          </div>
-        </div>
-      </div>
-    `;
-  });
-  html += '</div>';
-
-  // Freelancer - Sección separada
-  html += '<div class="freelancer-section">';
-  html += `<h3 class="freelancer-titulo">${freelancer.titulo}</h3>`;
-  html += '<div class="freelancer-experiencias">';
-  
-  freelancer.experiencias.forEach((exp, index) => {
-    const fechaParts = exp.fecha.split('|');
-    const periodo = fechaParts[0]?.trim() || '';
-    const cargo = fechaParts[1]?.trim() || '';
-    
-    html += `
-      <div class="freelancer-item ${index === freelancer.experiencias.length - 1 ? 'last' : ''}">
-        <div class="freelancer-header">
-          <div class="freelancer-empresa">${exp.empresa}</div>
-          <div class="freelancer-cargo">${cargo}</div>
-          <div class="freelancer-fecha">${periodo}</div>
-        </div>
-        <div class="freelancer-body">
-          <div class="freelancer-descripcion">${exp.descripcion}</div>
-          ${exp.lista ? `
-            <ul class="freelancer-lista">
-              ${exp.lista.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-          ` : ''}
-        </div>
-      </div>
-    `;
-  });
-  
-  html += '</div></div>';
-  
-  container.innerHTML = html;
+  container.innerHTML = `
+    <h3>Experiencias Profesionales</h3>
+    <div class="exp-grid">
+      ${experiencias.map(renderExpCard).join('')}
+    </div>
+    <h3 class="exp-titulo-freelancer">Freelancer</h3>
+    <div class="exp-grid">
+      ${freelancer.map(renderExpCard).join('')}
+    </div>
+  `;
 };
 
 /**

@@ -153,111 +153,33 @@
     grid-template-columns:1fr
   }
   
-  .experiencias-timeline{
-    padding-left:0;
-  }
-  
-  .experiencias-timeline::before{
-    display:none;
-  }
-  
-  .timeline-marker{
-    display:none;
-  }
-  
-  .experiencia-content{
-    padding:16px;
-  }
-  
-  .experiencia-empresa{
-    font-size:18px;
-  }
-  
-  .experiencia-cargo{
-    font-size:14px;
-  }
-  
-  .experiencia-descripcion{
-    font-size:14px;
-  }
-  
-  .freelancer-section{
-    margin-top:32px;
-    padding-top:24px;
-  }
-  
-  .freelancer-titulo{
-    font-size:20px;
-  }
-  
-  .freelancer-item{
-    padding:16px;
-  }
-  
-  .freelancer-empresa{
-    font-size:16px;
+  .exp-grid{
+    grid-template-columns:1fr;
   }
 }
 
 /* Grid de proyectos y servicios */
 @media (max-width: 768px) {
-  .proyectos-grid {
+  .proyectos-principales {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .servicios-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .proyecto-enlace {
-    padding: 14px;
-  }
-  
-  .proyecto-imagen {
-    max-height: 48px;
-    max-width: 70px;
-  }
-  
-  .proyecto-titulo-miniatura {
-    font-size: 13px;
-    white-space: normal;
-    line-height: 1.3;
-    word-wrap: break-word;
-    overflow: visible;
-    text-overflow: clip;
   }
 }
 
-/* Grid de proyectos - 2 columnas en móviles */
 @media (max-width: 480px) {
-  .proyectos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .proyectos-principales {
+    grid-template-columns: 1fr;
   }
-  
+
   .servicios-grid {
     grid-template-columns: 1fr;
   }
-  
-  /* Proyectos - Responsive */
-  .proyecto-enlace {
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px;
-  }
-  
-  .proyecto-imagen {
-    max-height: 40px;
-    max-width: 60px;
-  }
-  
-  .proyecto-titulo-miniatura {
-    font-size: 12px;
-    white-space: normal;
-    line-height: 1.3;
-    word-wrap: break-word;
-    overflow: visible;
-    text-overflow: clip;
+
+  .proyecto-card {
+    padding: 14px;
   }
   
   /* Experiencias Timeline - Mobile */
@@ -270,87 +192,16 @@
     display:none;
   }
   
-  .timeline-marker{
-    display:none;
-  }
-  
-  .experiencia-timeline-item{
-    margin-bottom:24px;
-    padding-bottom:24px;
-  }
-  
-  .experiencia-content{
+  .exp-card{
     padding:14px;
   }
-  
-  .experiencia-header{
-    gap:6px;
-    margin-bottom:12px;
-    padding-bottom:12px;
+
+  .exp-empresa{
+    font-size:14px;
   }
-  
-  .experiencia-empresa{
-    font-size:16px;
-  }
-  
-  .experiencia-cargo{
+
+  .exp-lista li{
     font-size:13px;
-  }
-  
-  .experiencia-fecha{
-    font-size:12px;
-  }
-  
-  .experiencia-descripcion{
-    font-size:13px;
-    line-height:1.6;
-  }
-  
-  .freelancer-section{
-    margin-top:24px;
-    padding-top:20px;
-  }
-  
-  .freelancer-titulo{
-    font-size:18px;
-    margin-bottom:16px;
-  }
-  
-  .freelancer-experiencias{
-    gap:16px;
-  }
-  
-  .freelancer-item{
-    padding:14px;
-  }
-  
-  .freelancer-header{
-    gap:6px;
-    margin-bottom:12px;
-    padding-bottom:12px;
-  }
-  
-  .freelancer-empresa{
-    font-size:15px;
-  }
-  
-  .freelancer-cargo{
-    font-size:12px;
-  }
-  
-  .freelancer-fecha{
-    font-size:12px;
-  }
-  
-  .freelancer-descripcion{
-    font-size:13px;
-    line-height:1.6;
-  }
-  
-  .freelancer-lista{
-    font-size:13px;
-    line-height:1.7;
-    padding-left:18px;
   }
 }
 
