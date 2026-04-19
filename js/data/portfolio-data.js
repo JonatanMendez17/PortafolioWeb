@@ -328,6 +328,49 @@ export const certificados = [
     institucion: "SoloLearn",
     fecha: "2024",
     imagen: "./doc/CERTIFICADO_SoloLearn_TEAM BUILDING_page-0001.jpg",
+  },
+  // Certificados Platzi 2025
+  {
+    id: 21,
+    titulo: "Blazor WebAssembly",
+    institucion: "Platzi",
+    fecha: "2025",
+    imagen: "./doc/diploma-blazor-webassembly_page-0001.jpg",
+  },
+  {
+    id: 22,
+    titulo: "Código Limpio",
+    institucion: "Platzi",
+    fecha: "2025",
+    imagen: "./doc/diploma-clean-code-csharp_page-0001.jpg",
+  },
+  {
+    id: 23,
+    titulo: "N8N",
+    institucion: "Platzi",
+    fecha: "2025",
+    imagen: "./doc/diploma-n8n-lowcode_page-0001.jpg",
+  },
+  {
+    id: 24,
+    titulo: "WorkFlows Profesionales con N8N",
+    institucion: "Platzi",
+    fecha: "2025",
+    imagen: "./doc/diploma-n8n-profesional_page-0001.jpg",
+  },
+  {
+    id: 25,
+    titulo: "Principios SOLID",
+    institucion: "Platzi",
+    fecha: "2025",
+    imagen: "./doc/diploma-solid-csharp-net_page-0001.jpg",
+  },
+  {
+    id: 26,
+    titulo: "Unit Testing C#",
+    institucion: "Platzi",
+    fecha: "2025",
+    imagen: "./doc/diploma-unit-testing-csharp_page-0001.jpg",
   }
 ];
 
