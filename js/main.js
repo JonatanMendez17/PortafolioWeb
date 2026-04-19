@@ -9,7 +9,6 @@ import { animacionesScroll, agregarEstilosAnimaciones } from './modules/animatio
 import { initTypingEffect } from './modules/typing-effect.js';
 import { initEventListeners } from './modules/utils.js';
 import { initRender } from './modules/render.js';
-import { initCertificatesCarousel } from './modules/certificates-carousel.js';
 
 /* Inicializa la aplicación cuando el DOM está listo */
 document.addEventListener('DOMContentLoaded', function() {
@@ -29,11 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         animacionesScroll();
     }, 100);
     agregarEstilosAnimaciones();
-    
-    // Inicializar carrusel de certificados
-    setTimeout(() => {
-        initCertificatesCarousel();
-    }, 150);
     
     // Inicializar efectos
     initTypingEffect();

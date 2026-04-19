@@ -110,6 +110,10 @@
       </section>
 
 
+      <div class="tech-ticker" id="tech-ticker">
+        <div class="tech-ticker-track" id="tech-ticker-track"></div>
+      </div>
+
       <section id="experiencias" class="seccion tarjeta">
         <!-- Contenido generado dinámicamente por JavaScript -->
       </section>
@@ -136,44 +140,45 @@
         </div>
       </section>
 
-      <section id="servicios" class="seccion tarjeta">
-        <h3>Servicios</h3>
-        <div class="servicios-grid">
-          <!-- Contenido generado dinámicamente por JavaScript -->
-        </div>
-      </section>
-
       <section id="contacto" class="seccion tarjeta">
-        <div class="contacto-header">
-          <h3 class="sin-margen-superior">Contacto</h3>
-          <p class="texto-apagado margen-superior-pequeño">¿Tienes un proyecto en mente o buscas un nuevo colaborador? Escríbeme y hablemos en cómo puedo ayudarte.</p>
-        </div>
+        <div class="contacto-layout">
 
-        <form class="formulario-contacto" id="formulario-contacto">
-            <div class="campo-formulario">
-              <label class="label-formulario" for="name">
-                <i class="fas fa-user" aria-hidden="true"></i>
-                Nombre
-              </label>
-              <input name="name" id="name" placeholder="Tu nombre completo" class="input-formulario" required>
+          <!-- Columna izquierda: info -->
+          <div class="contacto-info">
+            <h3 class="contacto-titulo">Hablemos</h3>
+            <p class="contacto-descripcion">¿Tenés un proyecto en mente o buscás un nuevo colaborador? Escribime y charlamos cómo puedo ayudarte.</p>
+
+            <div class="contacto-datos">
+              <a href="mailto:jonattan.mendez17@gmail.com" class="contacto-dato" aria-label="Email">
+                <span class="contacto-dato-icono"><i class="fas fa-envelope"></i></span>
+              </a>
+              <a href="https://www.linkedin.com/in/jonatan-ezequiel-mendez-6aa1a3176/" target="_blank" rel="noopener noreferrer" class="contacto-dato" aria-label="LinkedIn">
+                <span class="contacto-dato-icono"><i class="fab fa-linkedin"></i></span>
+              </a>
+              <a href="https://github.com/JonatanMendez17" target="_blank" rel="noopener noreferrer" class="contacto-dato" aria-label="GitHub">
+                <span class="contacto-dato-icono"><i class="fab fa-github"></i></span>
+              </a>
             </div>
-            
-            <div class="campo-formulario">
-              <label class="label-formulario" for="email">
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                Email
-              </label>
-              <input name="email" id="email" type="email" placeholder="tu@email.com" class="input-formulario" required>
+          </div>
+
+          <!-- Columna derecha: formulario -->
+          <form class="formulario-contacto" id="formulario-contacto">
+            <div class="campos-fila">
+              <div class="campo-formulario">
+                <label class="label-formulario" for="name">Nombre</label>
+                <input name="name" id="name" placeholder="Tu nombre completo" class="input-formulario" required>
+              </div>
+              <div class="campo-formulario">
+                <label class="label-formulario" for="email">Email</label>
+                <input name="email" id="email" type="email" placeholder="tu@email.com" class="input-formulario" required>
+              </div>
             </div>
-            
+
             <div class="campo-formulario">
-              <label class="label-formulario" for="message">
-                <i class="fas fa-message" aria-hidden="true"></i>
-                Mensaje
-              </label>
-              <textarea name="message" id="message" placeholder="Cuéntame sobre tu proyecto o colaboración..." class="textarea-formulario" rows="6" required></textarea>
+              <label class="label-formulario" for="message">Mensaje</label>
+              <textarea name="message" id="message" placeholder="Contame sobre tu proyecto o colaboración..." class="textarea-formulario" rows="6" required></textarea>
             </div>
-            
+
             <div class="botones-formulario">
               <button class="boton boton-principal" type="submit">
                 <i class="fas fa-paper-plane" aria-hidden="true"></i>
@@ -184,7 +189,9 @@
                 Limpiar
               </button>
             </div>
-        </form>
+          </form>
+
+        </div>
       </section>
 
     </main>
@@ -192,7 +199,7 @@
     <footer>
       <div class="footer-contenido">
         <div class="footer-info">
-          <div class="footer-nombre">© <strong>Jonatan Mendez</strong> — Desarrollador Full Stack • 2025</div>
+          <div class="footer-nombre">© <strong>Jonatan Mendez</strong></div>
           <div class="footer-descripcion">Desarrollador apasionado por crear soluciones innovadoras</div>
         </div>
         
