@@ -10,13 +10,13 @@ export const descargarCV = function() {
     try {
 
         // Verificar que el archivo existe antes de intentar descargarlo
-        fetch('./doc/CV_Jonatan__Mendez.pdf')
+        fetch('./doc/CV_Jonatan_Mendez_Backend_.NET.pdf')
             .then(response => {
                 if (response.ok) {
                     // Crear un enlace temporal para descargar el CV
                     const enlace = document.createElement('a');
-                    enlace.href = './doc/CV_Jonatan__Mendez.pdf';
-                    enlace.download = 'CV_Jonatan_Mendez.pdf';
+                    enlace.href = './doc/CV_Jonatan_Mendez_Backend_.NET.pdf';
+                    enlace.download = 'CV_Jonatan_Mendez_Backend_.NET.pdf';
                     enlace.target = '_blank';
                     
                     // Agregar el enlace al DOM temporalmente

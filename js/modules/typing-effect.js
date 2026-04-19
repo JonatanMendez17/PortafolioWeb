@@ -6,7 +6,7 @@
 /* Inicializa el efecto de escritura (typing effect) */
 export const initTypingEffect = () => {
     setTimeout(function() {
-        const texto = "Desarrollador FullStack";
+        const texto = "Desarrollador Backend .NET";
         const elemento = document.getElementById('typing-text');
         
         if (elemento) {
