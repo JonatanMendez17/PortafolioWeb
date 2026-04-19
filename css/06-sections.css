@@ -185,12 +185,32 @@
   justify-content:center;
 }
 
-.avatar{
-  width:160px;
-  height:160px;
+.avatar-hex{
+  width:200px;
+  height:200px;
   border-radius:50%;
+  background:linear-gradient(135deg, #7c3aed, #a855f7, #06b6d4);
+  padding:3px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 0 28px rgba(124,58,237,0.45), 0 0 60px rgba(124,58,237,0.15);
+}
+
+.avatar-hex-inner{
+  width:194px;
+  height:194px;
+  border-radius:50%;
+  overflow:hidden;
+}
+
+.avatar{
+  width:194px;
+  height:194px;
   object-fit:cover;
-  object-position:center;
+  object-position:center top;
+  display:block;
 }
 
 /* about + portfolio */

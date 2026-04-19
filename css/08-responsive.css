@@ -128,12 +128,20 @@
     text-align:left
   }
 
+  .avatar-hex{
+    width:130px;
+    height:130px;
+  }
+
+  .avatar-hex-inner{
+    width:124px;
+    height:124px;
+  }
+
   .avatar{
-    width:96px;
-    height:96px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:center
+    width:124px;
+    height:124px;
+    object-position:center top
   }
   
   .titulo-principal{

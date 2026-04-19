@@ -55,6 +55,16 @@ export const proyectos = [
 
 export const experiencias = [
   {
+    empresa: "IMPRONTA SOLUCIÓN",
+    fecha: "Nov 2025 - Actualidad | Desarrollador .NET",
+    lista: [
+      "Desarrollo de aplicación desktop en <strong>WPF</strong> para optimizar la implementación de nuevos clientes",
+      "Automatización de procesos mediante <strong>n8n</strong>, reduciendo tareas manuales y mejorando eficiencia operativa del equipo",
+      "Implementación y consumo de servicios web (<strong>REST/SOAP</strong>) para notificaciones e integración entre sistemas",
+      "Desarrollo de funcionalidades backend en <strong>.NET</strong> para integración con sistemas internos"
+    ]
+  },
+  {
     empresa: "2D SOLUCIONES",
     fecha: "2022 - Al presente | Desarrollador FullStack",
     descripcion: "Proyecto con <strong>Telecom Argentina</strong> Colabore con la implementacion de una aplicacion para procesamientos masivos, bajo arquitectura de microservicios utilizando .NET, combinado con el mantenimiento y la evolución de componentes frontend en React 17. <br><br> <strong> Contribuciones principales:</strong> Desarrollo de procesos completos, creación de herramientas internas y validaciones automáticas en C#, documentación técnica y funcional de sistemas migrados, optimización de consultas en bases de datos Oracle, diseño de APIs Rest, mantenimiento de componentes"

@@ -65,6 +65,11 @@ export const renderExperiencias = () => {
             ${exp.descripciones ? exp.descripciones.map(d => `
               <div class="experiencia-descripcion">${d}</div>
             `).join('') : ''}
+            ${exp.lista ? `
+              <ul class="experiencia-lista">
+                ${exp.lista.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            ` : ''}
           </div>
         </div>
       </div>
