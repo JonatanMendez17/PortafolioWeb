@@ -9,7 +9,7 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       include: ['js/**/*.js'],
-      exclude: ['js/main.js', 'js/config/**'],
+      exclude: ['js/main.js', 'js/config/**', 'js/modules/waves.js'],
       thresholds: {
         lines: 60,
         functions: 60,

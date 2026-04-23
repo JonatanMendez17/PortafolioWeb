@@ -1,6 +1,7 @@
 // Setup global para jsdom
-global.requestAnimationFrame = (cb) => setTimeout(cb, 0);
-global.cancelAnimationFrame = (id) => clearTimeout(id);
+// No-op: evita que el loop de animación siga corriendo después del teardown
+global.requestAnimationFrame = () => 0;
+global.cancelAnimationFrame = () => {};
 
 // IntersectionObserver no existe en jsdom
 global.IntersectionObserver = class {
