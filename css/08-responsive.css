@@ -54,21 +54,6 @@
     display:flex;
   }
 
-  .footer-contenido{
-    grid-template-columns: 1fr;
-    gap: 24px;
-    text-align: center;
-  }
-  
-  .footer-redes{
-    align-items: center;
-  }
-  
-  .redes-sociales-footer{
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
   .categorias-tecnologias{
     grid-template-columns: 1fr;
     gap: 20px;
