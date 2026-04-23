@@ -4,26 +4,6 @@
 
 export const proyectos = [
   {
-    id: 5,
-    tipo: "principal",
-    titulo: "BULK - Procesamiento masivo",
-    cliente: "Telecom Argentina",
-    descripcion: "Aplicación para procesamiento masivo de datos bajo arquitectura de microservicios. Incluye desarrollo de procesos batch, APIs REST y componentes frontend.",
-    tags: [".NET", "C#", "Web API", "Microservicios", "React", "Oracle"],
-    url: "#",
-    tieneRepositorio: false
-  },
-  {
-    id: 6,
-    tipo: "principal",
-    titulo: "Sistema SISFE",
-    cliente: "Poder Judicial – Santa Fe",
-    descripcion: "Sistema Integral de Expedientes Judiciales. Participación en relevamiento, análisis funcional, diseño de pruebas y capacitación a usuarios finales.",
-    tags: ["Análisis Funcional", "SQL"],
-    url: "#",
-    tieneRepositorio: false
-  },
-  {
     id: 7,
     tipo: "principal",
     titulo: "App de Implementacion ",
@@ -32,6 +12,16 @@ export const proyectos = [
     tags: [".NET", "WPF", "C#"],
     url: "https://github.com/JonatanMendez17/Implementador",
     tieneRepositorio: true
+  },
+  {
+    id: 5,
+    tipo: "principal",
+    titulo: "BULK - Procesamiento masivo",
+    cliente: "Telecom Argentina",
+    descripcion: "Aplicación para procesamiento masivo de datos bajo arquitectura de microservicios. Incluye desarrollo de procesos batch, APIs REST y componentes frontend.",
+    tags: [".NET", "C#", "Web API", "Microservicios", "React", "Oracle"],
+    url: "#",
+    tieneRepositorio: false
   },
   {
     id: 2,
@@ -194,41 +184,6 @@ export const certificados = [
     institucion: "Platzi",
     fecha: "2024",
     imagen: "./doc/Platzy - csharp_page-0001.jpg",
-  },
-  {
-    id: 4,
-    titulo: "Expresiones Regulares",
-    institucion: "Platzi",
-    fecha: "2024",
-    imagen: "./doc/Platzy_Diploma_ExpresionesRegulares_page-0001.jpg",
-  },
-  {
-    id: 6,
-    titulo: "Historia de la Programación",
-    institucion: "Platzi",
-    fecha: "2024",
-    imagen: "./doc/Platzy_Diploma_HistoriaDeLaProgramacion_page-0001.jpg",
-  },
-  {
-    id: 7,
-    titulo: "Introducción Web",
-    institucion: "Platzi",
-    fecha: "2024",
-    imagen: "./doc/Platzy_Diploma_IntroduccionWeb_page-0001.jpg",
-  },
-  {
-    id: 8,
-    titulo: "Introducción a Terminal",
-    institucion: "Platzi",
-    fecha: "2024",
-    imagen: "./doc/Platzy_Diploma_IntroTerminal_page-0001.jpg",
-  },
-  {
-    id: 13,
-    titulo: "Redes Informáticas",
-    institucion: "Platzi",
-    fecha: "2024",
-    imagen: "./doc/Platzy_Diploma_RedesInformaticas_page-0001.jpg",
   },
   {
     id: 14,
