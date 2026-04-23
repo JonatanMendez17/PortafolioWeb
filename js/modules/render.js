@@ -144,11 +144,24 @@ export const renderExperiencias = () => {
     <div class="exp-grid">
       ${experiencias.map(renderExpCard).join('')}
     </div>
-    <h2 class="exp-titulo-freelancer">Freelancer</h2>
-    <div class="exp-grid">
+    <button type="button" class="exp-freelancer-toggle" aria-expanded="false" aria-controls="exp-freelancer-grid">
+      <span>Freelancer</span>
+      <i class="fas fa-chevron-down exp-freelancer-chevron" aria-hidden="true"></i>
+    </button>
+    <div class="exp-grid exp-freelancer-grid" id="exp-freelancer-grid">
       ${freelancer.map(renderExpCard).join('')}
     </div>
   `;
+
+  const toggle = container.querySelector('.exp-freelancer-toggle');
+  const grid = container.querySelector('#exp-freelancer-grid');
+
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    toggle.classList.toggle('exp-freelancer-toggle--open', !expanded);
+    grid.classList.toggle('exp-freelancer-grid--open', !expanded);
+  });
 };
 
 /**

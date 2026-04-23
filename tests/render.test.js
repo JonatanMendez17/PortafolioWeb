@@ -71,7 +71,9 @@ describe('renderExperiencias', () => {
   it('genera sección de Experiencias Profesionales y Freelancer', () => {
     renderExperiencias();
     const titulos = document.querySelectorAll('#experiencias h2');
-    expect(titulos.length).toBe(2);
+    expect(titulos.length).toBe(1);
+    const toggleFreelancer = document.querySelector('.exp-freelancer-toggle');
+    expect(toggleFreelancer).not.toBeNull();
   });
 
   it('crea tarjetas con empresa, cargo y lista de ítems', () => {

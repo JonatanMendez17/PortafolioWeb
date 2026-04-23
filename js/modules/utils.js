@@ -61,6 +61,20 @@ export const scrollToContact = function() {
     }
 };
 
+/* Botón de subir arriba */
+const initBtnSubir = () => {
+    const btn = document.getElementById('btn-subir');
+    if (!btn) return;
+
+    window.addEventListener('scroll', () => {
+        btn.classList.toggle('btn-subir--visible', window.scrollY > 300);
+    }, { passive: true });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+};
+
 /* Inicializa los event listeners para botones y acciones */
 export const initEventListeners = () => {
     
@@ -92,6 +106,8 @@ export const initEventListeners = () => {
     document.querySelectorAll('.boton-cv').forEach(button => {
         button.addEventListener('click', descargarCV);
     });
+
+    initBtnSubir();
 };
 
 // Exportar funciones globales para compatibilidad

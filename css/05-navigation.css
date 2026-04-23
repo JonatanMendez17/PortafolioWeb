@@ -49,7 +49,7 @@
 
 .nav-enlaces{
   display:flex;
-  gap:32px;
+  gap:12px;
 }
 
 .nav-enlaces a{

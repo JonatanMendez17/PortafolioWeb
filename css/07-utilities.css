@@ -19,3 +19,36 @@
   font-size:18px;
 }
 
+/* Botón subir arriba */
+.btn-subir{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  width:44px;
+  height:44px;
+  border-radius:var(--radio-full);
+  border:1px solid rgba(255,255,255,0.12);
+  background:var(--acento);
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(12px);
+  transition:opacity 0.25s ease, transform 0.25s ease;
+  z-index:999;
+}
+
+.btn-subir--visible{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+
+.btn-subir:hover{
+  filter:brightness(1.15);
+}
+
